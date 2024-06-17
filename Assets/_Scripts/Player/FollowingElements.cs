@@ -2,14 +2,13 @@
 using UnityEngine;
 
 public class FollowingElements : MonoBehaviour {
-    private float _speed = 1f;
-    private float _distanceBeetwen = 1f;
+    private ParametrsPlayer _parametrsPlayer;
     private Player _player;
+
     private List<Section> _bodyElements => _player.bodyElements;
 
-    public void Initialize(float speed, float distanceBeetwen, Player player/*, Section head*/) {
-        _speed = speed;
-        _distanceBeetwen = distanceBeetwen;
+    public void Initialize(ParametrsPlayer parametrsPlayer, Player player/*, Section head*/) {
+        _parametrsPlayer = parametrsPlayer;
         _player = player;
         /*_bodyElements.Add(head);*/
     }
@@ -32,7 +31,7 @@ public class FollowingElements : MonoBehaviour {
     }
 
     private float CalculateCoefficient(int index) {
-        return (GetTotalSizeBeetwenCenterSection(index) + _distanceBeetwen) / GetLengthBeetwenSection(index);
+        return (GetTotalSizeBeetwenCenterSection(index) + _parametrsPlayer.DistanceBeetwenSection) / GetLengthBeetwenSection(index);
     }
 
     private void RotateBody(int index, Vector3 backNext) {
@@ -40,7 +39,7 @@ public class FollowingElements : MonoBehaviour {
     }
 
     private void MoveBody(int index, float coefficient) {
-        _bodyElements[index].transform.position += GetDirectionMove(index) * _speed / coefficient * Time.deltaTime;
+        _bodyElements[index].transform.position += GetDirectionMove(index) * _parametrsPlayer.Speed / coefficient * Time.deltaTime;
     }
 
     private float GetLengthBeetwenSection(int index) {
