@@ -1,79 +1,31 @@
-<mxfile host="Electron" modified="2024-06-14T15:00:31.198Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="jej0em0gtL_rSLWCibLP" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-06-14T16:38:20.149Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="uGCLyr_IdyqfwTjMbU8K" version="24.0.4" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
     <mxGraphModel dx="1434" dy="1944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="o35nTmQz4s1ocoGLp38L-1" value="Что нужно реализовать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="-1100" width="240" height="78" as="geometry" />
+        <mxCell id="o35nTmQz4s1ocoGLp38L-1" value="Что нужно реализовать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="-1100" width="240" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-2" value="Основные механики тетриса" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="-1100" width="210" height="300" as="geometry" />
+        <mxCell id="o35nTmQz4s1ocoGLp38L-25" value="+ Создаём контроллер управления&lt;span style=&quot;background-color: initial;&quot;&gt;, передающий координаты мыши&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-1" vertex="1">
+          <mxGeometry y="26" width="240" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-3" value="+ Спавн фигуры, либо за предалами карты, либо в ней" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-2">
-          <mxGeometry y="26" width="210" height="34" as="geometry" />
+        <mxCell id="o35nTmQz4s1ocoGLp38L-26" value="+ Создаём игрока, который с опрделённой скоростью(задаём), двигатся по направлнию к мыши" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-1" vertex="1">
+          <mxGeometry y="60" width="240" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-4" value="&lt;div&gt;+ Управление фигурой(перемещение вправо/влево, вращение, ускорение, моментальное опускание фигуры)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-2">
-          <mxGeometry y="60" width="210" height="70" as="geometry" />
+        <mxCell id="o35nTmQz4s1ocoGLp38L-27" value="+ Создаём камеру, которая наблюдает за нашим игроком" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-1" vertex="1">
+          <mxGeometry y="110" width="240" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-5" value="+ При сборе всей линии, она уничтожается и зачисляется бал" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-2">
-          <mxGeometry y="130" width="210" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-6" value="+ Свап фигуры, то есть смена её на другую" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-2">
-          <mxGeometry y="170" width="210" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-7" value="+ Заранее мы знаем 4 фигуры, какие и в каком порядке идут" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-2">
-          <mxGeometry y="210" width="210" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-8" value="+ Тень фигуры, то есть отображение того куда она будет падать" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-2">
-          <mxGeometry y="250" width="210" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-9" value="Основные проблемы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="o35nTmQz4s1ocoGLp38L-9" value="Основные проблемы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="280" y="-1100" width="240" height="56" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-10" value="+ Не отображается лого" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-9">
+        <mxCell id="o35nTmQz4s1ocoGLp38L-10" value="+" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-9" vertex="1">
           <mxGeometry y="26" width="240" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-11" value="Какой класс за что отвечает" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="280" y="-800" width="240" height="390" as="geometry" />
+        <mxCell id="o35nTmQz4s1ocoGLp38L-23" value="&lt;div style=&quot;&quot;&gt;Добавить сохранения и лидерборды для YG&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="-880" width="240" height="76" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-12" value="+ Bootstrap - инициализация и прокидование всех нужных компонентов на сцене" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-11">
-          <mxGeometry y="26" width="240" height="54" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-13" value="+ InputKeyboard - получение данных с клавиатуры и выполнение событий" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-11">
-          <mxGeometry y="80" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-14" value="+ Cell - включение отключение ячейки заполнения и хранит информацию о заполнении" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-11">
-          <mxGeometry y="120" width="240" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-15" value="+ FigureController - отвечает за обработку событий движения ввода, опускание фигуры, проверка за то, что остановились мы или нет," style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-11">
-          <mxGeometry y="170" width="240" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-16" value="+ FigureData - хранит местоположение ячеек фигуры" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-11">
-          <mxGeometry y="240" width="240" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-17" value="+ PlayingField - отвечает за спавн поля, за контроль поля(удаление заполненых ячеек, покрас поля при смещении фигуры, проверки можел ли фигура смещаться в новое положение или нет), за спавн новой фигуры, при уничтожении старой" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-11">
-          <mxGeometry y="280" width="240" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-18" value="что я хочу отточить на этом проекте" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="560" y="-750" width="210" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-19" value="+ Принципы SOLID (разбиение классов, абстрогирование)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-18">
-          <mxGeometry y="26" width="210" height="34" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-20" value="&lt;div&gt;+ Подгрузка ресурсов из resources, для того, чтобы меньше было прокидований в инспекторе&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-18">
-          <mxGeometry y="60" width="210" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-21" value="+ Принцип чистого кода" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-18">
-          <mxGeometry y="110" width="210" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-22" value="+ Патерн Observe" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-18">
-          <mxGeometry y="130" width="210" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-23" value="&lt;div style=&quot;&quot;&gt;Добавить сохранения и лидерборды для YG&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="-954" width="240" height="76" as="geometry" />
-        </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-24" value="+ Сохранять нужно только, наилучший результат, то есть кол-во очков и кол-во уничтоженных линий" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="o35nTmQz4s1ocoGLp38L-23">
+        <mxCell id="o35nTmQz4s1ocoGLp38L-24" value="+&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-23" vertex="1">
           <mxGeometry y="26" width="240" height="50" as="geometry" />
         </mxCell>
       </root>
