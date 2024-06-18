@@ -1,27 +1,24 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
+
 public class Player : MonoBehaviour {
-    [SerializeField] ParametrsPlayer parametrsPlayer;
     [SerializeField] public List<Section> bodyElements;
+    [SerializeField] private Rigidbody rb;
 
     private ControlledElement _controlledElement;
-    private FollowingElements _followingElements;
+    private FollowingElements _followingElements;  
+    private ParametsSnake _parametrsSnake;
 
-    [Inject]
-    private void Construct() {
+    public void Initialize() {
+        GetComponents();
         InitializeComponents();
     }
 
-    private void Start() {
-        CreateComponents();
-        GetComponents();
-    }
-
-    private void CreateComponents() {
-        /*_inputGame = new InputDesktop();*/
+    [Inject]
+    public void Construct(SnakeConfig snake, InputGame inputGame) {
+        _parametrsSnake = new ParametsSnake(snake, inputGame);
     }
 
     private void GetComponents() {
@@ -30,7 +27,7 @@ public class Player : MonoBehaviour {
     }
 
     private void InitializeComponents() {
-        _controlledElement.Initialize(parametrsPlayer, this);
-        _followingElements.Initialize(parametrsPlayer, this);
+        _controlledElement.Initialize(_parametrsSnake);
+        _followingElements.Initialize(_parametrsSnake, this);
     }
 }

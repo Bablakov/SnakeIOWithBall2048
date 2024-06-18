@@ -1,7 +1,8 @@
 ﻿using System;
 using UnityEngine;
+using Zenject;
 
-public abstract class InputGame {
+public abstract class InputGame : MonoBehaviour {
     public event Action SpeededUp;
     public event Action SpeededDown;
     

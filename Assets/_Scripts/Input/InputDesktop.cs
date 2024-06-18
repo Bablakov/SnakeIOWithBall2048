@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using Zenject;
 
-public class InputDesktop : InputGame, ITickable {
+public class InputDesktop : InputGame {
     private int HEIGHT_POINT = 0;
 
     private Vector3 _mousePosition;
@@ -10,7 +9,7 @@ public class InputDesktop : InputGame, ITickable {
 
     private bool _speededUp = false;
 
-    public void Tick() {
+    private void Update() {
         if (Input.GetMouseButtonDown(0) && !_speededUp) {
             SpeedUp();
             _speededUp = true;

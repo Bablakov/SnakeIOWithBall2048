@@ -1,24 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AI;
+using Zenject;
 
 public class ControlledElement : MonoBehaviour {
-    private ParametrsPlayer _parametrsPlayer;
+    private ParametsSnake _parametrsPlayer;
+    private SignalBus _signalBus;
     private Rotation _rotation;
     private Movement _movement;
-    private Player _player;
 
-    private List<Section> bodyElements {
-        get {
-            return _player.bodyElements;
-        }
-
-        set { _player.bodyElements = value; }
+    [Inject]
+    public void Construct(SignalBus signalBus) {
+        _signalBus = signalBus;
     }
 
-    public void Initialize(ParametrsPlayer parametrsPlayer, Player player) {
+    public void Initialize(ParametsSnake parametrsPlayer) {
         _parametrsPlayer = parametrsPlayer;
-        _player = player;
         CreateComponents();
     }
 
@@ -28,7 +24,8 @@ public class ControlledElement : MonoBehaviour {
     }
 
     private void CreateComponents() {
-        _movement = new Movement(transform);
+        var seciton = GetComponentInChildren<Section>();
+        _movement = new Movement(transform, seciton);
         _rotation = new Rotation(transform);
     }
 
@@ -41,31 +38,21 @@ public class ControlledElement : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.transform.parent != null && other.transform.parent.TryGetComponent(out Section section)) {
-            if (!bodyElements.Contains(section) && bodyElements[0].Level >= section.Level) {
-                bodyElements.Add(section);
-                CheckElementsDublicate();
-                bodyElements = bodyElements
-                    .OrderByDescending(section => section.Level)
-                    .ToList();
-            }
+        if (TryGetComponentSection(other, out Section section)) {
+            _signalBus.Fire(new AddedSectionSignal(section));
         }
     }
 
-    private void CheckElementsDublicate() {
-        var collection = bodyElements.GroupBy(section => section.Level);
-        if (collection.Any(element => element.Count() > 1)) {
-            var beetwen = collection
-                .Where(element => element.Count() > 1)
-                .ToList();
-            foreach (var element in beetwen) {
-                element.First().Upgrade();
-                for (int i = 1; i < element.Count(); i++) {
-                    bodyElements.Remove(element.ElementAt(i));
-                    Destroy(element.ElementAt(i).transform.gameObject);
-                }
-            }
-            CheckElementsDublicate();
-        }
+    private static bool TryGetComponentSection(Collider other, out Section section) {
+        section = null;
+        return TryGetParent(other) && TryGetComponentSectionOnParent(other, out section);
+    }
+
+    private static bool TryGetComponentSectionOnParent(Collider other, out Section section) {
+        return other.transform.parent.TryGetComponent(out section);
+    }
+
+    private static bool TryGetParent(Collider other) {
+        return other.transform.parent != null;
     }
 }

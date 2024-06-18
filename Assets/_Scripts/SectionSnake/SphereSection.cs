@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Zenject;
 
 public class SphereSection : Section {
     [SerializeField] private int level;
@@ -8,11 +9,10 @@ public class SphereSection : Section {
     
     private SphereCollider _collider;
     private MeshRenderer _meshRenderer;
-    private SectionConfig _sectionConfig;
 
-    protected override void Awake() {
-        base.Awake();
-        _sectionConfig = Resources.Load<SectionConfig>("SectionConfig");
+    [Inject]
+    protected override void Construct(SectionConfig sectionConfig) {
+        base.Construct(sectionConfig);
         Level = level;
         CalculateScale();
         SetValueAppropriateLevel();
@@ -28,16 +28,17 @@ public class SphereSection : Section {
         Width = _collider.radius * transform.localScale.z;
     }
 
-    public override void Upgrade(/*SectionInfo sectionInfo*/) {
+    public override void Upgrade() {
         UpdateLevel();
         level = Level;
         CalculateScale();
+        CalculateValues();
         SetValueAppropriateLevel();
     }
 
     private void SetValueAppropriateLevel() {
-        _meshRenderer.material.color = _sectionConfig.Sections[level].ColorSection;
-        Text.text = _sectionConfig.Sections[level].Text;
+        _meshRenderer.material.color = SectionConfig.Sections[level].ColorSection;
+        Text.text = SectionConfig.Sections[level].Text;
     }
 
     private void CalculateScale() {

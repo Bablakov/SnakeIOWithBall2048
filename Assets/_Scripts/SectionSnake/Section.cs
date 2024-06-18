@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using Zenject;
 
 public abstract class Section : MonoBehaviour {
     public abstract Vector3 PositionFront { get; }
@@ -9,12 +10,13 @@ public abstract class Section : MonoBehaviour {
     public int Level { get; protected set; }
     public Vector3 Position => transform.position;
 
-    protected Section PreviousSection;
-    protected Section NextSection;
     protected SectionInfo SectionInfo;
     protected TextMeshProUGUI Text;
+    protected SectionConfig SectionConfig;
 
-    protected virtual void Awake() {
+    [Inject]
+    protected virtual void Construct(SectionConfig sectionConfig) {
+        SectionConfig = sectionConfig;
         GetComponents();
         CalculateValues();
     }
