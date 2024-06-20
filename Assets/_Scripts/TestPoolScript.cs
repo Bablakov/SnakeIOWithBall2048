@@ -12,14 +12,12 @@ public class TestPoolScript : MonoBehaviour {
     [Inject]
     private void Construct(SectionPool sectionPool) {
         _sectionPool = sectionPool;
-        Debug.Log("Construct");
     }
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             var go = _sectionPool.Spawn();
             go.transform.position = GetRandomPosition();
-            Debug.Log($"Spawn {go}, {go.transform.position}");
         }
     }
 

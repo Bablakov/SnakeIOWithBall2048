@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 public class ControllerFreeSectionOnScene : MonoBehaviour {
@@ -8,45 +9,72 @@ public class ControllerFreeSectionOnScene : MonoBehaviour {
     [SerializeField] private float minY = -49f;
     [SerializeField] private float maxY = 49f;
     [SerializeField] private int countFreeSection = 50;
-    [SerializeField] private int currentCountSection;
+
+    private bool CanSpawn => _freeSection.Count < countFreeSection;
+    private int CountSpawn => countFreeSection - _freeSection.Count;
 
     private List<Section> _freeSection;
     private SectionPool _sectionPool;
     private SignalBus _signalBus;
 
-    private void Start() {
+    public void Initialize() {
         _freeSection = new List<Section>();
         SpawnSections();
+        Subscribe();
     }
 
     [Inject]
     private void Construct(SectionPool sectionPool, SignalBus signaleBus) {
         _sectionPool = sectionPool;
         _signalBus = signaleBus;
-
-        _signalBus.Subscribe<AddedSectionSignal>(OnAddedSectionSignal);
     }
 
-    private void OnAddedSectionSignal(AddedSectionSignal signal) {
-        _freeSection.Remove(signal.SectionAdded);
+    private void Subscribe() {
+        _signalBus.Subscribe<AddedSectionSignal>(OnAddedSection);
+        _signalBus.Subscribe<ReleasedSectionSignal>(OnReleasedSection);
+    }
+
+    private void Unsubscribe() {
+        _signalBus.Unsubscribe<AddedSectionSignal>(OnAddedSection);
+        _signalBus.Unsubscribe<ReleasedSectionSignal>(OnReleasedSection);
+    }
+
+    private void OnAddedSection(AddedSectionSignal signal) {
+        RemoveFromCollection(signal.SectionAdded);
         SpawnSections();
     }
 
+    private void OnReleasedSection(ReleasedSectionSignal signal) {
+        _sectionPool.Despawn(signal.SectionReleased);
+    }
+
+    private void RemoveFromCollection(Section section) {
+        _freeSection.Remove(section);
+    }
+
     private void SpawnSections() {
-        if (_freeSection.Count < countFreeSection) {
-            var countNeedSpawn = countFreeSection - _freeSection.Count;
-            for (int i = 0; i < countNeedSpawn; i++) {
-                var go = _sectionPool.Spawn();
-                go.transform.position = GetRandomPosition();
-                _freeSection.Add(go);
-            }
+        if (CanSpawn) {
+            SpawnMissingSection();
         }
-        currentCountSection = _freeSection.Count;
+    }
+
+    private void SpawnMissingSection() {
+        var countNeedSpawn = CountSpawn;
+        for (int i = 0; i < countNeedSpawn; i++) {
+            SpawnOnRandomPlaceAndAddInCollection();
+        }
+    }
+
+    private void SpawnOnRandomPlaceAndAddInCollection() {
+        var gameObject = _sectionPool.Spawn();
+        gameObject.transform.position = GetRandomPosition();
+        gameObject.transform.SetParent(transform);
+        _freeSection.Add(gameObject);
     }
 
     private Vector3 GetRandomPosition() {
         var randomX = Random.Range(minX, maxX);
-        var randomY = Random.Range(minY, maxY);
-        return new Vector3(randomX, 0, randomY);
+        var randomZ = Random.Range(minY, maxY);
+        return new Vector3(randomX, 0, randomZ);
     }
 }

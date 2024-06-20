@@ -14,22 +14,32 @@ public abstract class Section : MonoBehaviour {
     protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;
 
+    public virtual void Upgrade() {
+        UpdateLevel();
+        UpdateSection();
+    }
+
     [Inject]
     protected virtual void Construct(SectionConfig sectionConfig) {
         SectionConfig = sectionConfig;
         GetComponents();
-        CalculateValues();
+        UpdateSection();
     }
 
     protected virtual void GetComponents() {
         Text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
-    protected void UpdateLevel() {
+    private void UpdateLevel() {
         Level++;
     }
 
-    public abstract void Upgrade(/*SectionInfo sectionInfo*/);
+    private void UpdateSection() {
+        CalculateValues();
+        SetValueAppropriateLevel();
+    }
 
     protected abstract void CalculateValues();
+
+    protected abstract void SetValueAppropriateLevel();
 }

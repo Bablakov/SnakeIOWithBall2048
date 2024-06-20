@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using Zenject;
+﻿using Zenject;
 
 public class SectionPool : MemoryPool<Section> {
     protected override void OnSpawned(Section item) {

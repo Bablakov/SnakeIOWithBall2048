@@ -7,11 +7,23 @@ public class GameInstaller : MonoInstaller {
     [SerializeField] private InputGame _inputGame;
 
     public override void InstallBindings() {
-        Container.Bind<InputGame>().FromInstance(_inputGame);
+        BindInputSystem();
+        BindMemoryPool();
+        BindSignal();
+    }
 
+    private void BindInputSystem() {
+        Container.Bind<InputGame>().FromInstance(_inputGame);
+    }
+
+    private void BindMemoryPool() {
+        Container.BindMemoryPool<Section, SectionPool>().FromComponentInNewPrefab(section);
+    }
+
+    private void BindSignal() {
         SignalBusInstaller.Install(Container);
 
         Container.DeclareSignal<AddedSectionSignal>().OptionalSubscriber();
-        Container.BindMemoryPool<Section, SectionPool>().FromComponentInNewPrefab(section);
+        Container.DeclareSignal<ReleasedSectionSignal>().OptionalSubscriber();
     }
 }   
