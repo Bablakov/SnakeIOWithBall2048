@@ -1,21 +1,57 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Zenject;
+using UnityEngine;
+using System;
 
 public class ControllerSection {
-    public IReadOnlyList<Section> Sections => _sections;
+    public IReadOnlyCollection<Section> Sections => _sections;
 
     private CollisionHandler _collisionHandler;
-    private List<Section> _sections;
+    private LinkedList<Section> _sections;
     private SignalBus _signalBus;
     private Section _head;
-    
+    private Unit _owner;
+
     public ControllerSection(CollisionHandler collisionHandler, SignalBus signalBus, Section head) {
         _collisionHandler = collisionHandler;
         _signalBus = signalBus;
         _head = head;
-        _sections = new List<Section>() { head };
+        _head.SetNewControllerSection(this);
+        _sections = new LinkedList<Section>();
+        _sections.AddFirst(head);
         Subscribe();
+    }
+    
+    public void AddElement(Section section) {
+        OnAddedSeciton(section);
+    }
+
+    public void DeleteSectionFromCollection(Section section) {
+        var nodeSection = _sections.Find(section);
+
+        if (nodeSection != null) {
+            var next = nodeSection.Next;
+            _sections.Remove(section);
+            if (next != null) {
+                DeleteSectionFromCollection(next);
+            }
+        }
+        
+    }
+
+    public void FreeCollection() {
+        if (_sections.First.Next != null) {
+            DeleteSectionFromCollection(_sections.First.Next);
+        }
+    }
+
+    private void DeleteSectionFromCollection(LinkedListNode<Section> node) {
+        var next = node.Next;
+        _sections.Remove(node);
+        if (next != null) {
+            DeleteSectionFromCollection(next);
+        }
     }
 
     private void Subscribe() {
@@ -29,8 +65,6 @@ public class ControllerSection {
     private void OnAddedSeciton(Section section) {
         if (IsNotItemInCollection(section) && IsLevelSitualbe(section)) {
             AddElementInCollection(section);
-            CheckElementsDublicate();
-            SortCollection();
         }
     }
 
@@ -39,61 +73,63 @@ public class ControllerSection {
     }
 
     private bool IsLevelSitualbe(Section section) {
-        return _sections[0].Level >= section.Level;
+        return _sections.First.Value.Level >= section.Level;
     }
 
     private void AddElementInCollection(Section section) {
         _signalBus.Fire(new AddedSectionSignal(section));
-        _sections.Add(section);
-    }
+        
+        LinkedListNode<Section> currentSection = _sections.First;
+        bool combine = false;
 
-    private void CheckElementsDublicate() {
-        var collection = GroupCollection();
-
-        if (AreIndenticalItemsInCollection(collection)) {
-            var beetwen = SelectionIdenticalItems(collection);
-            foreach (var collectionIndeticalItems in beetwen) {
-                MergeSection(collectionIndeticalItems);
+        while (true) {
+            if (currentSection.Value.Level == section.Level) {
+                combine = true;
+                break;
             }
-            CheckElementsDublicate();
+            else if (currentSection.Value.Level < section.Level) {
+                currentSection = currentSection.Previous;
+                break;
+            }
+            else if (currentSection.Next == null) {
+                break;
+            }
+
+            if (currentSection.Next.Value.Level >= section.Level) {
+                currentSection = currentSection.Next;
+            }
+            else {
+                break;
+            } 
+        }
+
+        if (combine) {
+            section.SetNewControllerSection(this);
+            MergeSections(currentSection, section);
+        }
+        else {
+            section.SetNewControllerSection(this);
+            _sections.AddAfter(currentSection, section);
         }
     }
 
-    private void SortCollection() {
-        _sections = _sections
-                        .OrderByDescending(section => section.Level)
-                        .ToList();
+    private void MergeSections(LinkedListNode<Section> sectionCombine, Section section) {
+        sectionCombine.Value.Upgrade();
+        _signalBus.Fire(new ReleasedSectionSignal(section));
+
+        if (sectionCombine != _sections.First && sectionCombine.Previous.Value.Level == sectionCombine.Value.Level) {
+            MergeSections(sectionCombine.Previous);
+        }
     }
 
-    private IEnumerable<IGrouping<int, Section>> GroupCollection() {
-        return _sections
-                    .GroupBy(section => section.Level);
-    }
+    private void MergeSections(LinkedListNode<Section> sectionCombine) {
+        sectionCombine.Value.Upgrade();
+        var beetwen = sectionCombine.Next;
+        _sections.Remove(beetwen);
+        _signalBus.Fire(new ReleasedSectionSignal(beetwen.Value));
 
-    private static bool AreIndenticalItemsInCollection(IEnumerable<IGrouping<int, Section>> collection) {
-        return collection.Any(element => element.Count() > 1);
-    }
-
-    private static List<IGrouping<int, Section>> SelectionIdenticalItems(IEnumerable<IGrouping<int, Section>> collection) {
-        return collection
-            .Where(element => element.Count() > 1)
-            .ToList();
-    }
-
-    private void MergeSection(IGrouping<int, Section> element) {
-        UpgradeFirstSection(element);
-        RemoveRemainingSection(element);
-    }
-
-    private static void UpgradeFirstSection(IGrouping<int, Section> element) {
-        element.First().Upgrade();
-    }
-
-    private void RemoveRemainingSection(IGrouping<int, Section> element) {
-        for (int i = 1; i < element.Count(); i++) {
-            var releaseSection = element.ElementAt(i);
-            _sections.Remove(releaseSection);
-            _signalBus.Fire(new ReleasedSectionSignal(releaseSection));
+        if (sectionCombine != _sections.First && sectionCombine.Previous.Value.Level == sectionCombine.Value.Level) {
+            MergeSections(sectionCombine.Previous);
         }
     }
 }

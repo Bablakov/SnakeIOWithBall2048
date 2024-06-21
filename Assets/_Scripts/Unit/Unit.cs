@@ -2,32 +2,47 @@ using UnityEngine;
 using Zenject;
 
 public class Unit : MonoBehaviour {
-    [SerializeField] private Section head;
-    private CollisionHandler _collisionHandler;
-    private FollowingElements _followingElements;
-    private ControllerSection _controllerSection;
-    private ParametrsSnake _parametrsSnake;
+    [SerializeField] protected Section head;
+    protected CollisionHandler CollisionHandler;
+    protected FollowingElements FollowingElements;
+    protected ControllerSection ControllerSection;
+    protected ParametrsSnake ParametrsSnake;
 
-    public void Initialize() {
+    public Transform transformParent => head.transform;
+    public int Level => head.Level;
+    public Vector3 Position => head.Position;
+
+    public void SetOff() {
+        Debug.Log($"Unit SetOff- {gameObject}");
+        ControllerSection.FreeCollection();
+        gameObject.SetActive(false);
+    }
+
+    public void AddSeciton(Section section) {
+        ControllerSection.AddElement(section);
+    }
+
+    public virtual void Initialize() {
         InitializeComponents();
     }
 
     [Inject]
     public void Construct(SnakeConfig snake, SignalBus signalBus) {
         GetComponents();
-        _parametrsSnake = new ParametrsSnake(snake, head);
-        _controllerSection = new(_collisionHandler, signalBus, head);
+        ParametrsSnake = new ParametrsSnake(snake, head);
+        ControllerSection = new (CollisionHandler, signalBus, head);
+        CollisionHandler.Initialize(signalBus, this);
     }
 
-    private void Update() {
-        _followingElements.Update();
+    protected virtual void Update() {
+        FollowingElements.Update();
     }
 
-    private void GetComponents() {
-        _collisionHandler = GetComponentInChildren<CollisionHandler>();
+    protected virtual void GetComponents() {
+        CollisionHandler = GetComponentInChildren<CollisionHandler>();
     }
 
-    private void InitializeComponents() {
-        _followingElements = new FollowingElements(_parametrsSnake, _controllerSection);
+    protected virtual void InitializeComponents() {
+        FollowingElements = new FollowingElements(ParametrsSnake, ControllerSection);
     }
 }

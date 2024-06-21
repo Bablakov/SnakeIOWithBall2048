@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class FollowingElements {
     private ParametrsSnake _parametrsPlayer;
     private ControllerSection _controllerSection;
-    private IReadOnlyList<Section> bodyElements => _controllerSection.Sections;
+    private IReadOnlyCollection<Section> bodyElements => _controllerSection.Sections;
 
     public FollowingElements(ParametrsSnake parametrsPlayer, ControllerSection controllerSection) {
         _parametrsPlayer = parametrsPlayer;
@@ -21,7 +22,7 @@ public class FollowingElements {
     }
 
     private void MoveAndRotateSection(int index) {
-        var backPartNextSection = bodyElements[index - 1].PositionBack;
+        var backPartNextSection = bodyElements.ElementAt(index - 1).PositionBack;
         var coeficientMovement = CalculateCoefficient(index);
         RotateBody(index, backPartNextSection);
         MoveBody(index, coeficientMovement);
@@ -32,22 +33,22 @@ public class FollowingElements {
     }
 
     private void RotateBody(int index, Vector3 backNext) {
-        bodyElements[index].transform.LookAt(backNext);
+        bodyElements.ElementAt(index).transform.LookAt(backNext);
     }
 
     private void MoveBody(int index, float coefficient) {
-        bodyElements[index].transform.position += GetDirectionMove(index) * _parametrsPlayer.Speed / coefficient * Time.deltaTime;
+        bodyElements.ElementAt(index).transform.position += GetDirectionMove(index) * _parametrsPlayer.Speed / coefficient * Time.deltaTime;
     }
 
     private float GetLengthBeetwenSection(int index) {
-        return (bodyElements[index - 1].Position - bodyElements[index].Position).magnitude;
+        return (bodyElements.ElementAt(index - 1).Position - bodyElements.ElementAt(index).Position).magnitude;
     }
 
     private float GetTotalSizeBeetwenCenterSection(int index) {
-        return bodyElements[index].Width + bodyElements[index - 1].Width;
+        return bodyElements.ElementAt(index).Width + bodyElements.ElementAt(index - 1).Width;
     }
 
     private Vector3 GetDirectionMove(int index) {
-        return (bodyElements[index - 1].Position - bodyElements[index].Position).normalized;
+        return (bodyElements.ElementAt(index - 1).Position - bodyElements.ElementAt(index).Position).normalized;
     }
 }

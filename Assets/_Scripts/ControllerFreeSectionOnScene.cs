@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using Zenject;
 
 public class ControllerFreeSectionOnScene : MonoBehaviour {

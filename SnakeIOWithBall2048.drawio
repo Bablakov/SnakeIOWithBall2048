@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-06-16T17:00:24.268Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="zzpwknnWiQdtcHj_yDbo" version="24.4.0" type="device">
+<mxfile host="Electron" modified="2024-06-21T10:10:21.466Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="eG4GMn3N9CCSLHAXK1Am" version="24.4.0" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="270" dy="1573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="989" dy="1682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,10 +17,10 @@
           <mxGeometry y="110" width="240" height="50" as="geometry" />
         </mxCell>
         <mxCell id="o35nTmQz4s1ocoGLp38L-9" value="Основные проблемы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="280" y="-1100" width="240" height="56" as="geometry" />
+          <mxGeometry x="280" y="-1100" width="240" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="o35nTmQz4s1ocoGLp38L-10" value="+" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-9" vertex="1">
-          <mxGeometry y="26" width="240" height="30" as="geometry" />
+        <mxCell id="o35nTmQz4s1ocoGLp38L-10" value="+ При столкновении объектов, получается так, что два объекта пытаются друг друга обработать, что и приводить к ошибкам" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-9" vertex="1">
+          <mxGeometry y="26" width="240" height="74" as="geometry" />
         </mxCell>
         <mxCell id="o35nTmQz4s1ocoGLp38L-23" value="Как должна работать змейка, вернее её элементы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry y="-880" width="240" height="90" as="geometry" />
@@ -28,68 +28,98 @@
         <mxCell id="o35nTmQz4s1ocoGLp38L-24" value="+ Если части находятся на расстояние, при котором нам не нужно двигаться, мы не двигаемся, в противном случае мы двигаемся к цели" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="o35nTmQz4s1ocoGLp38L-23" vertex="1">
           <mxGeometry y="26" width="240" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-1" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-1" value="" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="550" y="-870" width="120" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="410" y="-860" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="320" y="-850" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
           <mxGeometry x="550" y="-825" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
           <mxGeometry x="660" y="-800" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="1" vertex="1">
           <mxGeometry x="480" y="-825" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
           <mxGeometry x="410" y="-825" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
           <mxGeometry x="510" y="-825" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
           <mxGeometry x="445" y="-825" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
           <mxGeometry x="605" y="-815" width="10" height="10" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-11" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="RLXHw8mBurTLIKT9N1X5-4">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-11" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="RLXHw8mBurTLIKT9N1X5-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="800" y="-870" as="sourcePoint" />
             <mxPoint x="540" y="-850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-12" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="RLXHw8mBurTLIKT9N1X5-6" target="RLXHw8mBurTLIKT9N1X5-4">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-12" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="RLXHw8mBurTLIKT9N1X5-6" target="RLXHw8mBurTLIKT9N1X5-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="590" y="-800" as="sourcePoint" />
             <mxPoint x="640" y="-850" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-13" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RLXHw8mBurTLIKT9N1X5-2">
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-13" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="RLXHw8mBurTLIKT9N1X5-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="590" y="-800" as="sourcePoint" />
             <mxPoint x="800" y="-870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-14" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="-640" width="300" height="150" as="geometry" />
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-14" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="-1100" width="300" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="680" y="-640" width="60" height="60" as="geometry" />
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="780" y="-1100" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="630" y="-635" width="50" height="50" as="geometry" />
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-16" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="675" y="-1095" width="50" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="510" y="-632.5" width="45" height="45" as="geometry" />
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-17" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="725" y="-1097.5" width="55" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="RLXHw8mBurTLIKT9N1X5-18" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="585" y="-632.5" width="45" height="45" as="geometry" />
+        <mxCell id="RLXHw8mBurTLIKT9N1X5-18" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="630" y="-1092.5" width="45" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-1" value="Как должны обрабатывать столкновения" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="-760" width="250" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-2" value="+ Мы сталкиваемся с секцией, проверяем, что она может быть поглощена нами, если да, то поглащаем, но она может быть секцией другого юнита&lt;div&gt;+ Значить мы через секцию должны отправлять, то что она поглащена другим объектом&lt;/div&gt;&lt;div&gt;+ В случае если секции выше наше уровная и она является секцией юнита мы умираем, освобождаем секции, но при этом они должны остать на месте&lt;/div&gt;&lt;div&gt;+ При смерти юнитов, секции не высвобождаются, а у них перестаёт быть какой-либо хозяин и они просто лежат на карте&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YZh2mQiyHCvXwFm2wKaK-1" vertex="1">
+          <mxGeometry y="26" width="250" height="314" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-6" value="Section" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="355" y="-670" width="230" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-7" value="+ PreviousSection" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YZh2mQiyHCvXwFm2wKaK-6" vertex="1">
+          <mxGeometry y="26" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-8" value="+ NextSection" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YZh2mQiyHCvXwFm2wKaK-6" vertex="1">
+          <mxGeometry y="50" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-9" value="Move" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YZh2mQiyHCvXwFm2wKaK-6" vertex="1">
+          <mxGeometry y="76" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-10" value="SetPreviousSection, когда нам устанавливают новую секцию как предыдущую, то мы забываем и про следуюшую секцию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YZh2mQiyHCvXwFm2wKaK-6" vertex="1">
+          <mxGeometry y="102" width="230" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-11" value="SetNextSection, когда намговорят установить следующую сецкию, то нам не обязательно забывать предыдущую" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YZh2mQiyHCvXwFm2wKaK-6" vertex="1">
+          <mxGeometry y="170" width="230" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-12" value="Столкновение юнитов:&lt;div&gt;-Зарегистрировали столкновения, значит отправляем обработчику столкновений то, что мы столкнулись с таким объектом и отправляем себя и противоположного объекта&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Обработчик столкновения смотрит, кто сильнее и слабого юнита он выключает и отдаёт сигнал контроллеру всех врагов, что он свободен, победившему же юниту мы спавним новую секцию соответствующих характеристик врага&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- При отключении юнита, так же нужно контроллер его секций освободить кроме головы&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="850" y="-1097.5" width="300" height="417.5" as="geometry" />
+        </mxCell>
+        <mxCell id="YZh2mQiyHCvXwFm2wKaK-13" value="&lt;div&gt;Как будет происходить процесс храннения&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Коллекция хранит данные, только о начале и конце коллекции&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-Когда добавляется элемент и он становиться самым последним в нашей коллекции, мы ставим его как наш самый последний элемент&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-В случае апгрейда ячеек, у нас последняя ячейка освобождается и мы опрделяем новую последнюю ячейку&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-Когда нам переопределяют следующую ячейку, мы проверяемначиная с головы, все наши ячейки и доходи до момента пока мы не встретим null, чтобы установить новый хвост&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="-1097.5" width="300" height="423.75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

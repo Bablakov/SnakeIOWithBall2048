@@ -2,9 +2,10 @@
 using Zenject;
 
 public class GameInstaller : MonoInstaller {
+    [SerializeField] private InputGame _inputGame;
     [SerializeField] private Section section;
     [SerializeField] private Player player;
-    [SerializeField] private InputGame _inputGame;
+    [SerializeField] private Enemy enemy;
 
     public override void InstallBindings() {
         BindInputSystem();
@@ -18,6 +19,7 @@ public class GameInstaller : MonoInstaller {
 
     private void BindMemoryPool() {
         Container.BindMemoryPool<Section, SectionPool>().FromComponentInNewPrefab(section);
+        Container.BindMemoryPool<Enemy, EnemyPool>().FromComponentInNewPrefab(enemy);
     }
 
     private void BindSignal() {
@@ -25,5 +27,7 @@ public class GameInstaller : MonoInstaller {
 
         Container.DeclareSignal<AddedSectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedSectionSignal>().OptionalSubscriber();
+        Container.DeclareSignal<KilledEnemySignal>().OptionalSubscriber();
+        Container.DeclareSignal<CollisionedUnitsSignal>().OptionalSubscriber();
     }
 }   

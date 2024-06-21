@@ -5,18 +5,24 @@ using Zenject;
 public abstract class Section : MonoBehaviour {
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
+    public Vector3 Position => transform.position;
     
     public float Width { get; protected set; }
     public int Level { get; protected set; }
-    public Vector3 Position => transform.position;
 
-    protected SectionInfo SectionInfo;
     protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;
+
+    private ControllerSection _controllerSection;
 
     public virtual void Upgrade() {
         UpdateLevel();
         UpdateSection();
+    }
+
+    public void SetNewControllerSection(ControllerSection controllerSection) {
+        _controllerSection?.DeleteSectionFromCollection(this);
+        _controllerSection = controllerSection;
     }
 
     [Inject]

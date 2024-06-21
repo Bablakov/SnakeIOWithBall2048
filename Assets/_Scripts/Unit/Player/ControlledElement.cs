@@ -4,9 +4,9 @@ using Zenject;
 public class ControlledElement : MonoBehaviour {
     private const int SPEED_MULTIPLIER = 2;
 
-    private Vector3 DirectionMovement => _inputGame.GetDirectionMovememt();
+    public Vector3 DirectionMovement => _inputGame.GetDirectionMovememt();
 
-    private ParametrsSnake _parametrsSnake;
+    public ParametrsSnake _parametrsSnake;
     private InputGame _inputGame;
     private Rotation _rotation;
     private Movement _movement;
@@ -47,7 +47,7 @@ public class ControlledElement : MonoBehaviour {
     }
 
     private void Move() {
-            _movement.Move(_parametrsSnake.Speed);
+        _movement.Move(_parametrsSnake.Speed);
     }
 
     private void OnSpededUp() {
