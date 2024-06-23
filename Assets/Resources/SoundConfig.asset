@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2373155d2232bce4b8ceff1449badaf9, type: 3}
+  m_Name: SoundConfig
+  m_EditorClassIdentifier: 
+  <ClickButton>k__BackingField: {fileID: 8300000, guid: c22e89705bb83ee4bb114032450a97b4,
+    type: 3}
+  <PickUpSection>k__BackingField: {fileID: 8300000, guid: 2ca354d0bf20543409769bbdd1eacee8,
+    type: 3}
+  <Background>k__BackingField: {fileID: 8300000, guid: ea5d361151545b94ab9a313d8679bc61,
+    type: 3}

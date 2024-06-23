@@ -7,8 +7,10 @@ public abstract class Unit : MonoBehaviour {
     protected FollowingElements FollowingElements;
     protected ControllerSection ControllerSection;
     protected ParametrsSnake ParametrsSnake;
+    protected NickUnit NickUnit;
 
     public Transform transformParent => Head.transform;
+    public string Nickname { get; private set; }
     public int Level => Head.Level;
     public Vector3 Position => Head.Position;
     public Unit ConflictUnit;
@@ -19,11 +21,12 @@ public abstract class Unit : MonoBehaviour {
         ControllerSection.FreeCollection();
     }
 
-    public void AddSeciton(Section section) {
+    public virtual void AddSeciton(Section section) {
         ControllerSection.AddElement(section);
     }
 
-    public void Initialize() {
+    public void Initialize(string nickname) {
+        SetNewNickName(nickname);
         InitializeComponents();
     }
 
@@ -31,7 +34,7 @@ public abstract class Unit : MonoBehaviour {
     public void Construct(SnakeConfig snake, SignalBus signalBus) {
         GetComponents();
         ParametrsSnake = new ParametrsSnake(snake, Head);
-        ControllerSection = new (CollisionHandler, signalBus, Head);
+        ControllerSection = new (CollisionHandler, signalBus, Head, this);
         CollisionHandler.Initialize(signalBus, this);
     }
 
@@ -39,8 +42,13 @@ public abstract class Unit : MonoBehaviour {
         FollowingElements.Update();
     }
 
+    protected void SetNewNickName(string nickName) {
+        NickUnit.Initialize(nickName);
+    }
+
     protected virtual void GetComponents() {
         CollisionHandler = GetComponentInChildren<CollisionHandler>();
+        NickUnit = GetComponentInChildren<NickUnit>();
     }
 
     protected virtual void InitializeComponents() {

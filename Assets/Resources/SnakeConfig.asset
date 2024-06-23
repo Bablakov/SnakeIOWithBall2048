@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10798d6d934e7947a70eefcdacb8b8c, type: 3}
   m_Name: SnakeConfig
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 15
+  <Speed>k__BackingField: 5
   <DistanceBeetwen>k__BackingField: 0.5

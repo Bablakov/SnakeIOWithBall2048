@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using Zenject;
 
 public class ControllerUnits : ControllerObject<Unit> {
@@ -9,9 +10,11 @@ public class ControllerUnits : ControllerObject<Unit> {
     protected override int CountSpawn => GameplayConfig.NumberSpawnedEnemy - _units.Count;
 
     private List<Unit> _units;
-
+    private string[] _nicknames;
+    
     public override void Initialize() {
         _units = new List<Unit>();
+        _nicknames = GameplayConfig.Nicknames.Split(',');
         base.Initialize();
     }
 
@@ -22,7 +25,7 @@ public class ControllerUnits : ControllerObject<Unit> {
 
     protected override void InitializeComponent(Unit gameObject) {
         base.InitializeComponent(gameObject);
-        gameObject.Initialize();
+        gameObject.Initialize(_nicknames[Random.Range(0, _nicknames.Length-1)]);
     }
 
     protected override void RemoveFromCollection(Unit removedObject) {

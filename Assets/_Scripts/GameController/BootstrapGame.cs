@@ -3,15 +3,17 @@ using Zenject;
 
 public class BootstrapGame : MonoBehaviour{
     [SerializeField] private Player player;
-    [SerializeField] private ControllerSections _controllerSections;
-    [SerializeField] private ControllerUnits _controllerUnits;
+    [SerializeField] private ControllerSections controllerSections;
+    [SerializeField] private ControllerUnits controllerUnits;
+    [SerializeField] private SoundController soundController;
 
     private ConflictControllerUnit _collisionControllerUnit;
 
     private void Awake() {
-        player.Initialize();
-        _controllerSections.Initialize();
-        _controllerUnits.Initialize();
+        controllerSections.Initialize();
+        controllerUnits.Initialize();
+        soundController.Initialize();
+        player.Initialize("Вы");
     }
 
     [Inject]

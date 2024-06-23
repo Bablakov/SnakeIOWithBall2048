@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Zenject;
 
 public class ControllerSection {
@@ -12,12 +13,13 @@ public class ControllerSection {
     private Section _head;
     private Unit _owner;
 
-    public ControllerSection(CollisionHandler collisionHandler, SignalBus signalBus, Section head) {
+    public ControllerSection(CollisionHandler collisionHandler, SignalBus signalBus, Section head, Unit owner) {
         _sections = new LinkedList<Section>();
 
         _collisionHandler = collisionHandler;
         _signalBus = signalBus;
         _head = head;
+        _owner = owner;
 
         _sections.AddFirst(head);
 
@@ -51,6 +53,10 @@ public class ControllerSection {
         if (IsNotItemInCollection(element) && IsLevelSitualbe(element)) {
             AddElementInCollection(element);
             AddedSection?.Invoke(element);
+            if (_owner is Player) {
+                _signalBus.Fire(new PutOnSectionSignal());
+                Debug.Log("PutOnSection");
+            }
         }
     }
 

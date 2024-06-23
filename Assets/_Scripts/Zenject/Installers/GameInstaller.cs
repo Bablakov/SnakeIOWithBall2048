@@ -6,6 +6,7 @@ public class GameInstaller : MonoInstaller {
     [SerializeField] private ControllerUnits controllerUnits;
     [SerializeField] private InputGame _inputGame;
     [SerializeField] private Section section;
+    [SerializeField] private Camera _camera;
     [SerializeField] private Player player;
     [SerializeField] private Unit unit;
 
@@ -18,11 +19,11 @@ public class GameInstaller : MonoInstaller {
     }
 
     private void BindInputSystem() {
-        Container.Bind<InputGame>().FromInstance(_inputGame);
-
         _navigatorEnemy = new NavigatorEnemy(player, controllerUnits, controllerSections);
 
         Container.Bind<NavigatorEnemy>().FromInstance(_navigatorEnemy);
+        Container.Bind<InputGame>().FromInstance(_inputGame);
+        Container.Bind<Camera>().FromInstance(_camera);
     }
 
     private void BindMemoryPool() {
@@ -37,5 +38,6 @@ public class GameInstaller : MonoInstaller {
         Container.DeclareSignal<ReleasedObjectSignal<Section>>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedObjectSignal<Unit>>().OptionalSubscriber();
         Container.DeclareSignal<ConflictedUnitsSignal>().OptionalSubscriber();
+        Container.DeclareSignal<PutOnSectionSignal>().OptionalSubscriber();
     }
 }   

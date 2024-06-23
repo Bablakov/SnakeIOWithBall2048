@@ -15,4 +15,21 @@ MonoBehaviour:
   <PointSpawn>k__BackingField: {x: 0, y: 0, z: 0}
   <NumberSpawnedEnemy>k__BackingField: 20
   <NumberSpawnedSection>k__BackingField: 50
+  nicknames: Shadow_92, Firestorm-777, IceQueen43, Thunderbolt_88, Nightshade_66,
+    Phoenix_101, Cyclone-123, Crystal_55, Mystic_79, Blaze_17, Frostbite-44, Stormy_22,
+    Eclipse_98, Inferno-33, Aurora_12, Venom_90, Spectre_61, Frostfire-25, Dragonfire_36,
+    Moonlight_85, Blizzard-50, Ember_08, Midnight_03, Thunderstorm-91, Shadowhunter_74,
+    Frostwolf-29, Thunderclaw_16, Drakon_58, Phoenixfire_07, Nightstalker-38, Darkfire_80,
+    Frostnova-11, Thunderwing_40, Icefury-99, Swiftshadow_70, Blazeheart-23, Sapphire_47,
+    Darkphoenix-65, Thunderstrike_60, Stardust_75, Frozenflame-28, Nightfall_84,
+    Thunderblaze-19, Shadowfang_57, Drakonemperor-37, Iceheart_81, Venomstrike-14,
+    Moonshadow-43, Thunderboltz_64, Frostbite_45, Sunfire-89, Stonewrath_95, Nightwhisper_71,
+    Firestorm_26, Thunderwingz_53, Shadowflame_32, Frostclaw_49, Icecrystal_92, Thundercrash-68,
+    Spiritwolf_67, Blazeclaw-22, Darkmoon_69, Frostphoenix_18, Thunderhawk-47, Shadowfangz_24,
+    Phoenixflame-54, Stormbringer-31, Icephoenix_96, Shadowblade_35, Frostburn_02,
+    Thundercrystal_56, Nightfury_13, Firehold-42, Thunderheart_72, Shadowstorm_09,
+    Froststrike_34, Icefang_83, Thunderstormz_20, Darkflame_76, Frostlight-01, Thunderstrikez_46,
+    Shadowlurker_59, Blazefang-21, Frostwind_04, Sunshadow_91, Thunderblast-27, Moonfire_78,
+    Darkraven_41, Frostbitez_15, Thunderclawz_30, Nightshroud_93, Fireclaw-10, Thunderflame_63,
+    Shadowdancer_79, Frostheart-48, Icestorm_94
   radiusSpawn: 49

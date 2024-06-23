@@ -12,5 +12,6 @@ public class GameConfigInstaller : ScriptableObjectInstaller<GameConfigInstaller
         Container.Bind<SnakeConfig>().FromInstance(gameConfig.Snake);
         Container.Bind<SectionConfig>().FromInstance(gameConfig.Section);
         Container.Bind<GameplayConfig>().FromInstance(gameConfig.Gameplay);
+        Container.Bind<SoundConfig>().FromInstance(gameConfig.Sound);
     }
 }

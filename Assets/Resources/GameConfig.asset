@@ -18,3 +18,5 @@ MonoBehaviour:
     type: 2}
   <Gameplay>k__BackingField: {fileID: 11400000, guid: 1169577497c568a40b21d169c44e49bf,
     type: 2}
+  <Sound>k__BackingField: {fileID: 11400000, guid: 17dee9f342713db4b92bf85bb0c13399,
+    type: 2}
