@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using Zenject;
-using UnityEngine;
-using System;
 
 public class ControllerSection {
     public IReadOnlyCollection<Section> Sections => _sections;
+    public event Action<Section> AddedSection;
 
     private CollisionHandler _collisionHandler;
     private LinkedList<Section> _sections;
@@ -14,12 +13,15 @@ public class ControllerSection {
     private Unit _owner;
 
     public ControllerSection(CollisionHandler collisionHandler, SignalBus signalBus, Section head) {
+        _sections = new LinkedList<Section>();
+
         _collisionHandler = collisionHandler;
         _signalBus = signalBus;
         _head = head;
-        _head.SetNewControllerSection(this);
-        _sections = new LinkedList<Section>();
+
         _sections.AddFirst(head);
+
+        SetController(_head);
         Subscribe();
     }
     
@@ -27,31 +29,14 @@ public class ControllerSection {
         OnAddedSeciton(section);
     }
 
-    public void DeleteSectionFromCollection(Section section) {
-        var nodeSection = _sections.Find(section);
-
-        if (nodeSection != null) {
-            var next = nodeSection.Next;
-            _sections.Remove(section);
-            if (next != null) {
-                DeleteSectionFromCollection(next);
-            }
-        }
-        
-    }
-
     public void FreeCollection() {
         if (_sections.First.Next != null) {
-            DeleteSectionFromCollection(_sections.First.Next);
+            DeleteElementFromCollection(_sections.First.Next);
         }
     }
 
-    private void DeleteSectionFromCollection(LinkedListNode<Section> node) {
-        var next = node.Next;
-        _sections.Remove(node);
-        if (next != null) {
-            DeleteSectionFromCollection(next);
-        }
+    public void DeleteElementFromCollection(Section section) {
+        _sections.Remove(section);
     }
 
     private void Subscribe() {
@@ -62,9 +47,10 @@ public class ControllerSection {
         _collisionHandler.AddedSection -= OnAddedSeciton;
     }
 
-    private void OnAddedSeciton(Section section) {
-        if (IsNotItemInCollection(section) && IsLevelSitualbe(section)) {
-            AddElementInCollection(section);
+    private void OnAddedSeciton(Section element) {
+        if (IsNotItemInCollection(element) && IsLevelSitualbe(element)) {
+            AddElementInCollection(element);
+            AddedSection?.Invoke(element);
         }
     }
 
@@ -76,60 +62,83 @@ public class ControllerSection {
         return _sections.First.Value.Level >= section.Level;
     }
 
-    private void AddElementInCollection(Section section) {
-        _signalBus.Fire(new AddedSectionSignal(section));
-        
-        LinkedListNode<Section> currentSection = _sections.First;
-        bool combine = false;
+    private void AddElementInCollection(Section element) {
+        _signalBus.Fire(new AddedSectionSignal(element));
+        var previousElment = FindPrecedingElement(element, out bool combine);
 
+        SetController(element);
+        if (combine) {
+            MergeElement(previousElment, element);
+        } else {
+            _sections.AddAfter(previousElment, element);
+        }
+    }
+
+    private void DeleteElementFromCollection(LinkedListNode<Section> node) {
+        var nextNode = node.Next;
+        var beetwen = node.Value;
+        _sections.Remove(beetwen);
+        _signalBus.Fire(new ReleasedObjectSignal<Section>(beetwen));
+        DeleteController(beetwen);
+        if (nextNode != null) {
+            DeleteElementFromCollection(nextNode);
+        }
+    }
+
+    private LinkedListNode<Section> FindPrecedingElement(Section element, out bool combine) {
+        var currentElement = _sections.First;
+        combine = false;
         while (true) {
-            if (currentSection.Value.Level == section.Level) {
+            if (currentElement.Value.Level == element.Level) {
                 combine = true;
                 break;
-            }
-            else if (currentSection.Value.Level < section.Level) {
-                currentSection = currentSection.Previous;
+            } else if (currentElement.Value.Level < element.Level) {
+                currentElement = currentElement.Previous;
                 break;
-            }
-            else if (currentSection.Next == null) {
+            } else if (currentElement.Next == null) {
                 break;
             }
 
-            if (currentSection.Next.Value.Level >= section.Level) {
-                currentSection = currentSection.Next;
-            }
-            else {
+            if (currentElement.Next.Value.Level >= element.Level) {
+                currentElement = currentElement.Next;
+            } else {
                 break;
-            } 
+            }
         }
 
-        if (combine) {
-            section.SetNewControllerSection(this);
-            MergeSections(currentSection, section);
-        }
-        else {
-            section.SetNewControllerSection(this);
-            _sections.AddAfter(currentSection, section);
+        return currentElement;
+    }
+
+    private void SetController(Section element) {
+        element.SetNewControllerSection(this);
+    }
+
+    private void DeleteController(Section element) {
+        element.SetNewControllerSection(null);
+    }
+
+    private void MergeElement(LinkedListNode<Section> elementCombine, Section section) {
+        _signalBus.Fire(new ReleasedObjectSignal<Section>(section, true));
+        DeleteController(section);
+
+        elementCombine.Value.Upgrade();
+
+        if (elementCombine != _sections.First && elementCombine.Previous.Value.Level == elementCombine.Value.Level) {
+            MergeElement(elementCombine.Previous);
         }
     }
 
-    private void MergeSections(LinkedListNode<Section> sectionCombine, Section section) {
-        sectionCombine.Value.Upgrade();
-        _signalBus.Fire(new ReleasedSectionSignal(section));
-
-        if (sectionCombine != _sections.First && sectionCombine.Previous.Value.Level == sectionCombine.Value.Level) {
-            MergeSections(sectionCombine.Previous);
-        }
-    }
-
-    private void MergeSections(LinkedListNode<Section> sectionCombine) {
-        sectionCombine.Value.Upgrade();
-        var beetwen = sectionCombine.Next;
+    private void MergeElement(LinkedListNode<Section> elementCombine) {
+        var beetwen = elementCombine.Next;
+        var beetwenSignal = elementCombine.Next.Value;
         _sections.Remove(beetwen);
-        _signalBus.Fire(new ReleasedSectionSignal(beetwen.Value));
+        DeleteController(beetwenSignal);
+        
+        elementCombine.Value.Upgrade();
+        _signalBus.Fire(new ReleasedObjectSignal<Section>(beetwenSignal, true));
 
-        if (sectionCombine != _sections.First && sectionCombine.Previous.Value.Level == sectionCombine.Value.Level) {
-            MergeSections(sectionCombine.Previous);
+        if (elementCombine != _sections.First && elementCombine.Previous.Value.Level == elementCombine.Value.Level) {
+            MergeElement(elementCombine.Previous);
         }
     }
 }

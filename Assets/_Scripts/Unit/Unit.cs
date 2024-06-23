@@ -1,36 +1,37 @@
 using UnityEngine;
 using Zenject;
 
-public class Unit : MonoBehaviour {
-    [SerializeField] protected Section head;
+public abstract class Unit : MonoBehaviour {
+    [SerializeField] public Section Head;
     protected CollisionHandler CollisionHandler;
     protected FollowingElements FollowingElements;
     protected ControllerSection ControllerSection;
     protected ParametrsSnake ParametrsSnake;
 
-    public Transform transformParent => head.transform;
-    public int Level => head.Level;
-    public Vector3 Position => head.Position;
+    public Transform transformParent => Head.transform;
+    public int Level => Head.Level;
+    public Vector3 Position => Head.Position;
+    public Unit ConflictUnit;
+    public bool IsConflict;
+
 
     public void SetOff() {
-        Debug.Log($"Unit SetOff- {gameObject}");
         ControllerSection.FreeCollection();
-        gameObject.SetActive(false);
     }
 
     public void AddSeciton(Section section) {
         ControllerSection.AddElement(section);
     }
 
-    public virtual void Initialize() {
+    public void Initialize() {
         InitializeComponents();
     }
 
     [Inject]
     public void Construct(SnakeConfig snake, SignalBus signalBus) {
         GetComponents();
-        ParametrsSnake = new ParametrsSnake(snake, head);
-        ControllerSection = new (CollisionHandler, signalBus, head);
+        ParametrsSnake = new ParametrsSnake(snake, Head);
+        ControllerSection = new (CollisionHandler, signalBus, Head);
         CollisionHandler.Initialize(signalBus, this);
     }
 

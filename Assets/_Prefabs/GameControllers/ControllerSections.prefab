@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7118052791385137979}
   - component: {fileID: 974987410132783804}
   m_Layer: 0
-  m_Name: ControllerFreeSection
+  m_Name: ControllerSections
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

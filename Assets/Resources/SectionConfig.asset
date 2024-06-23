@@ -27,3 +27,21 @@ MonoBehaviour:
     text: 64
   - color: {r: 0.50095034, g: 0.90588236, b: 0, a: 0}
     text: 128
+  - color: {r: 0.90588236, g: 0.3874431, b: 0, a: 0}
+    text: 256
+  - color: {r: 1, g: 0.1462264, b: 0.2866125, a: 0}
+    text: 512
+  - color: {r: 0, g: 0.7801818, b: 0.90588236, a: 0}
+    text: 1k
+  - color: {r: 0.9304825, g: 1, b: 0, a: 0}
+    text: 2k
+  - color: {r: 1, g: 0, b: 0.9397106, a: 0}
+    text: 4k
+  - color: {r: 0.039849162, g: 1, b: 0, a: 0}
+    text: 8k
+  - color: {r: 0, g: 0.17138839, b: 1, a: 0}
+    text: 16k
+  - color: {r: 0, g: 1, b: 0.6998248, a: 0}
+    text: 32k
+  - color: {r: 0.8973725, g: 1, b: 0.08962262, a: 0}
+    text: 64k

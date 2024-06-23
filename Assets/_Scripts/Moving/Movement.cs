@@ -3,27 +3,39 @@ using UnityEngine.AI;
 
 public class Movement {
     private Transform _movingObject;
-    private Section _seciton;
+    private Section _section;
 
     public Movement(Transform movingObject, Section section) {
         _movingObject = movingObject;
-        _seciton = section;
+        _section = section;
     }
 
     public void Move(float speed) {
-        var pointMovement = speed * _movingObject.forward * Time.deltaTime;
-        var pointMovementX = speed * new Vector3(_movingObject.forward.x, 0, 0) * Time.deltaTime;
-        var pointMovementZ = speed * new Vector3(0, 0, _movingObject.forward.z) * Time.deltaTime;
+        var defaultMovement = CalculateDirectionMovement(_movingObject.forward, speed);
+        var pointMovementX = CalculateDirectionMovement(new Vector3(_movingObject.forward.x, 0, 0), speed);
+        var pointMovementZ = CalculateDirectionMovement(new Vector3(0, 0, _movingObject.forward.z), speed);
 
-        if (NavMesh.SamplePosition(pointMovement + _seciton.PositionFront, out _, 0f, NavMesh.AllAreas)) {
-            _movingObject.position += pointMovement;
+        if (CanMoveHere(pointMovementX, _section.PositionFront)) {
+            Move(defaultMovement);
         } 
-        else if (NavMesh.SamplePosition(pointMovementX + _movingObject.position, out _, 0f, NavMesh.AllAreas)) {
-            _movingObject.position += pointMovementX;
+        else if (CanMoveHere(pointMovementX, _movingObject.position)) {
+            Move(pointMovementX);
         } 
-        else if (NavMesh.SamplePosition(pointMovementZ + _movingObject.position, out _, 0f, NavMesh.AllAreas)) {
-            _movingObject.position += pointMovementZ;
+        else if (CanMoveHere(pointMovementZ, _movingObject.position)) {
+            Move(pointMovementZ);
         }
-        
+
+    }
+
+    private Vector3 CalculateDirectionMovement(Vector3 directionMovement, float speed) {
+        return directionMovement * speed * Time.deltaTime;
+    }
+
+    private bool CanMoveHere(Vector3 directionMovement, Vector3 startMovememtPoint) {
+        return NavMesh.SamplePosition(directionMovement + startMovememtPoint, out _, 0f, NavMesh.AllAreas);
+    }
+
+    private void Move(Vector3 defaultMovement) {
+        _movingObject.position += defaultMovement;
     }
 }

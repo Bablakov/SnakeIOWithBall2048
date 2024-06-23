@@ -16,12 +16,35 @@ public class CollisionHandler : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (TryGetComponentSection(other, out Section section)) {
             if (TryGetComponentUnit(other, out Unit unit)) {
-                _signalBus.Fire(new CollisionedUnitsSignal(_mineUnit, unit));
+                if (_mineUnit.ConflictUnit == unit && _mineUnit.IsConflict) {
+                    _mineUnit.ConflictUnit = null;
+                    _mineUnit.IsConflict = false;
+                }
+                else {
+                    unit.IsConflict = true;
+                    unit.ConflictUnit = _mineUnit;
+                    _signalBus.Fire(new ConflictedUnitsSignal(_mineUnit, unit));
+                }
             } 
             else {
                 AddedSection?.Invoke(section);
             }
-            Debug.Log($"Collision {_mineUnit}");
+        }
+    }
+    private void OnTriggerExit(Collider other) {
+        if (TryGetComponentSection(other, out Section section)) {
+            if (TryGetComponentUnit(other, out Unit unit)) {
+                if (_mineUnit.ConflictUnit == unit && _mineUnit.IsConflict) {
+                    _mineUnit.ConflictUnit = null;
+                    _mineUnit.IsConflict = false;
+                } else {
+                    unit.IsConflict = true;
+                    unit.ConflictUnit = _mineUnit;
+                    _signalBus.Fire(new ConflictedUnitsSignal(_mineUnit, unit));
+                }
+            } else {
+                AddedSection?.Invoke(section);
+            }
         }
     }
 
@@ -31,15 +54,7 @@ public class CollisionHandler : MonoBehaviour {
     }
 
     private static bool TryGetComponentSection(Collider other, out Section section) {
-        section = null;
-        return TryGetParent(other) && TryGetComponentSectionOnParent(other, out section);
-    }
-
-    private static bool TryGetComponentSectionOnParent(Collider other, out Section section) {
-        return other.transform.parent.TryGetComponent(out section);
-    }
-
-    private static bool TryGetParent(Collider other) {
-        return other.transform.parent != null;
+        section = other.GetComponentInParent<Section>();
+        return section != null;
     }
 }

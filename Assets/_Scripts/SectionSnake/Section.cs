@@ -10,6 +10,8 @@ public abstract class Section : MonoBehaviour {
     public float Width { get; protected set; }
     public int Level { get; protected set; }
 
+    public bool IsUnit => _controllerSection != null;
+
     protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;
 
@@ -20,8 +22,13 @@ public abstract class Section : MonoBehaviour {
         UpdateSection();
     }
 
+    public void SetLevel(int level) {
+        Level = level;
+        UpdateSection();
+    }
+
     public void SetNewControllerSection(ControllerSection controllerSection) {
-        _controllerSection?.DeleteSectionFromCollection(this);
+        _controllerSection?.DeleteElementFromCollection(this);
         _controllerSection = controllerSection;
     }
 

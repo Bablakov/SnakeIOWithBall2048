@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2635512756023221529}
   - component: {fileID: 1780074872201244267}
   m_Layer: 0
-  m_Name: ControllerFreeEnemy
+  m_Name: ControllerUnits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

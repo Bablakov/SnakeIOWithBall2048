@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b10798d6d934e7947a70eefcdacb8b8c, type: 3}
-  m_Name: SnakeConfig
+  m_Script: {fileID: 11500000, guid: 33e53d5a83696d9418aebbe010ab489b, type: 3}
+  m_Name: GameplayConfig
   m_EditorClassIdentifier: 
-  <Speed>k__BackingField: 15
-  <DistanceBeetwen>k__BackingField: 0.5
+  <PointSpawn>k__BackingField: {x: 0, y: 0, z: 0}
+  <NumberSpawnedEnemy>k__BackingField: 20
+  <NumberSpawnedSection>k__BackingField: 50
+  radiusSpawn: 49

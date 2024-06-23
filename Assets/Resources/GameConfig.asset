@@ -16,3 +16,5 @@ MonoBehaviour:
     type: 2}
   <Snake>k__BackingField: {fileID: 11400000, guid: d8a6762283332864cb8bd458381b6393,
     type: 2}
+  <Gameplay>k__BackingField: {fileID: 11400000, guid: 1169577497c568a40b21d169c44e49bf,
+    type: 2}
