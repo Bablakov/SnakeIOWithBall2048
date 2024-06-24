@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Zenject;
 
 public class ControllerUnits : ControllerObject<Unit> {
-    public override List<Section> Objects => _units.Select(unit => unit.Head).ToList();
+    public override IReadOnlyList<Unit> Objects => _units;
 
     protected override bool CanSpawn => _units.Count < GameplayConfig.NumberSpawnedEnemy;
     protected override int CountSpawn => GameplayConfig.NumberSpawnedEnemy - _units.Count;

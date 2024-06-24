@@ -6,6 +6,7 @@ public class BootstrapGame : MonoBehaviour{
     [SerializeField] private ControllerSections controllerSections;
     [SerializeField] private ControllerUnits controllerUnits;
     [SerializeField] private SoundController soundController;
+    [SerializeField] private UIController uiController;
 
     private ConflictControllerUnit _collisionControllerUnit;
 
@@ -13,6 +14,7 @@ public class BootstrapGame : MonoBehaviour{
         controllerSections.Initialize();
         controllerUnits.Initialize();
         soundController.Initialize();
+        uiController.Initialize();
         player.Initialize("Вы");
     }
 

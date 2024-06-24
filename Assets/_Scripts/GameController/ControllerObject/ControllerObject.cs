@@ -3,7 +3,7 @@ using UnityEngine;
 using Zenject;
 
 public abstract class ControllerObject<TypeObject> : MonoBehaviour where TypeObject : MonoBehaviour {
-    public abstract List<Section> Objects { get; }
+    public abstract IReadOnlyList<TypeObject> Objects { get; }
 
     protected abstract bool CanSpawn { get; }
     protected abstract int CountSpawn { get; }

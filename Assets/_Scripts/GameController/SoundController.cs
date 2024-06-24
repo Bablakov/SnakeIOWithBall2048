@@ -4,6 +4,8 @@ using UnityEngine;
 public class SoundController : MonoBehaviour, IDisposable{
     private SoundPickUpSection _soundPickUpSection;
     private SoundBackground _soundBackground;
+    private SoundDeathPlayer _deathPlayer;
+    private SoundDeathEnemy _deathEnemy;
     //private SoundButton _soundButton;
 
     public void Initialize() {
@@ -14,12 +16,16 @@ public class SoundController : MonoBehaviour, IDisposable{
     private void GetComponents() {
         _soundPickUpSection = GetComponentInChildren<SoundPickUpSection>();
         _soundBackground = GetComponentInChildren<SoundBackground>();
+        _deathPlayer = GetComponentInChildren<SoundDeathPlayer>();
+        _deathEnemy = GetComponentInChildren<SoundDeathEnemy>();
         //_soundButton = GetComponentInChildren<SoundButton>();
     }
 
     private void InitializeComponents() {
         _soundPickUpSection.Initialize();
         _soundBackground.Initialize();
+        _deathPlayer.Initialize();
+        _deathEnemy.Initialize();
         //_soundButton.Initialize();
     }
 

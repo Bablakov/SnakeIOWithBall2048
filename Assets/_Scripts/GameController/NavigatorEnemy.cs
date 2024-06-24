@@ -13,7 +13,7 @@ public class NavigatorEnemy {
     }
 
     public Section FindTarget(Section sectionStart) {
-        var general = _controllerSection.Objects.Concat(_controllerEnemy.Objects).ToList();
+        var general = _controllerSection.Objects.Concat(_controllerEnemy.Objects.Select(unit => unit.Head)).ToList();
 
         if (_player.gameObject.activeSelf) {
             general.Add(_player.Head);

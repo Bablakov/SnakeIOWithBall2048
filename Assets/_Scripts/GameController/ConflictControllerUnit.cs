@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using TMPro;
+using Zenject;
 
 public class ConflictControllerUnit {
     private SignalBus _signalBus;
@@ -45,6 +46,7 @@ public class ConflictControllerUnit {
         var section = SpawnSection(winner, loser);
         GiveSection(winner, section);
         DisableUnit(loser);
+        _signalBus.Fire(new CompletedMurderSignal(winner.Nickname, loser.Nickname));
     }
 
     private void DisableUnit(Unit unit) {
@@ -54,6 +56,7 @@ public class ConflictControllerUnit {
         }
         else if (unit is Player player) {
             player.gameObject.SetActive(false);
+            _signalBus.Fire(new DiedPlayerSignal());
         }
     }
 

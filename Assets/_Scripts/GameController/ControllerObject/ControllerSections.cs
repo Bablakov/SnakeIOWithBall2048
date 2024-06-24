@@ -2,7 +2,7 @@
 using Zenject;
 
 public class ControllerSections : ControllerObject<Section> {
-    public override List<Section> Objects => _sections;
+    public override IReadOnlyList<Section> Objects => _sections;
 
     protected override bool CanSpawn => _sections.Count < GameplayConfig.NumberSpawnedSection;
     protected override int CountSpawn => GameplayConfig.NumberSpawnedSection - _sections.Count;

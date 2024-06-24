@@ -25,9 +25,8 @@ public class SoundPickUpSection : Sound {
         _signalBus.Unsubscribe<PutOnSectionSignal>(PlaySound);
     }
 
-    private void PlaySound(PutOnSectionSignal signal) {
+    private void PlaySound() {
         AudioSource.pitch = Random.Range(0.90f, 1.10f);
         AudioSource.Play();
-        Debug.Log("SoundPickUp");
     }
 }

@@ -3,11 +3,6 @@ using Zenject;
 
 public abstract class Unit : MonoBehaviour {
     [SerializeField] public Section Head;
-    protected CollisionHandler CollisionHandler;
-    protected FollowingElements FollowingElements;
-    protected ControllerSection ControllerSection;
-    protected ParametrsSnake ParametrsSnake;
-    protected NickUnit NickUnit;
 
     public Transform transformParent => Head.transform;
     public string Nickname { get; private set; }
@@ -16,6 +11,12 @@ public abstract class Unit : MonoBehaviour {
     public Unit ConflictUnit;
     public bool IsConflict;
 
+    protected CollisionHandler CollisionHandler;
+    protected FollowingElements FollowingElements;
+    protected ControllerSection ControllerSection;
+    protected ParametrsSnake ParametrsSnake;
+    protected NickUnit NickUnit;
+    protected SignalBus SignalBus;
 
     public void SetOff() {
         ControllerSection.FreeCollection();
@@ -33,6 +34,7 @@ public abstract class Unit : MonoBehaviour {
     [Inject]
     public void Construct(SnakeConfig snake, SignalBus signalBus) {
         GetComponents();
+        SignalBus = signalBus;
         ParametrsSnake = new ParametrsSnake(snake, Head);
         ControllerSection = new (CollisionHandler, signalBus, Head, this);
         CollisionHandler.Initialize(signalBus, this);
@@ -44,6 +46,7 @@ public abstract class Unit : MonoBehaviour {
 
     protected void SetNewNickName(string nickName) {
         NickUnit.Initialize(nickName);
+        Nickname = nickName;
     }
 
     protected virtual void GetComponents() {

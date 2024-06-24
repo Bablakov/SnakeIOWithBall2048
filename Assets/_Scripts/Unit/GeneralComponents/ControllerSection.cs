@@ -28,7 +28,8 @@ public class ControllerSection {
     }
     
     public void AddElement(Section section) {
-        OnAddedSeciton(section);
+        AddElementInCollection(section);
+        AddedSection?.Invoke(section);
     }
 
     public void FreeCollection() {
@@ -55,7 +56,6 @@ public class ControllerSection {
             AddedSection?.Invoke(element);
             if (_owner is Player) {
                 _signalBus.Fire(new PutOnSectionSignal());
-                Debug.Log("PutOnSection");
             }
         }
     }
