@@ -6,9 +6,9 @@ public abstract class Unit : MonoBehaviour {
     public string Nickname { get; private set; }
     public int Level => Head.Level;
 
-    protected CollisionHandler CollisionHandler;
-    protected FollowingElements FollowingElements;
     protected ControllerStorageSection ControllerStorageSection;
+    protected FollowingElements FollowingElements;
+    protected CollisionHandler CollisionHandler;
     protected StorageSection StorageSection;
     protected ParametrsSnake ParametrsSnake;
     protected NickUnit NickUnit;
@@ -38,7 +38,7 @@ public abstract class Unit : MonoBehaviour {
     }
 
     protected virtual void GetComponents() {
-        CollisionHandler = GetComponentInChildren<CollisionHandler>();
+        CollisionHandler = GetComponent<CollisionHandler>();
         NickUnit = GetComponentInChildren<NickUnit>();
         Head = GetComponentInChildren<Section>();
     }

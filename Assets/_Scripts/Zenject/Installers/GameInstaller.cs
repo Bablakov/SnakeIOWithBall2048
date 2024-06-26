@@ -10,24 +10,21 @@ public class GameInstaller : MonoInstaller {
     [SerializeField] private Player player;
     [SerializeField] private Unit unit;
     
-    private NavigatorEnemy _navigatorEnemy;
-
     public override void InstallBindings() {
-        BindInputSystem();
+        BindObject();
         BindMemoryPool();
         BindSignal();
     }
 
-    private void BindInputSystem() {
-        _navigatorEnemy = new NavigatorEnemy(player, controllerUnits, controllerSections);
-
+    private void BindObject() {
+        Container.Bind<ControllerSections>().FromInstance(controllerSections);
         Container.Bind<ControllerUnits>().FromInstance(controllerUnits);
-        Container.Bind<NavigatorEnemy>().FromInstance(_navigatorEnemy);
         Container.Bind<Camera>().FromInstance(_camera);
         Container.Bind<Player>().FromInstance(player);
 
-        Container.Bind<ConflictController>().AsSingle();
         Container.Bind<CounterKilles>().AsSingle();
+        Container.Bind<NavigatorEnemy>().AsSingle();
+        Container.Bind<ConflictController>().AsSingle();
         Container.Bind<InputGame>().To<InputDesktop>().AsSingle();
     }
 

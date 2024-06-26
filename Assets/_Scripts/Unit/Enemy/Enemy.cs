@@ -1,4 +1,5 @@
 using Zenject;
+using UnityEngine;
 
 public class Enemy : Unit {
     private SignalBus _signalBus;
@@ -28,12 +29,12 @@ public class Enemy : Unit {
 
     protected override void InitializeComponents() {
         base.InitializeComponents();
-        _controlledElmentEnemy.Initialize(ParametrsSnake, CollisionHandler);
+        _controlledElmentEnemy.Initialize(ParametrsSnake, CollisionHandler, this);
     }
 
     protected override void GetComponents() {
         base.GetComponents();
-        _controlledElmentEnemy = GetComponentInChildren<ControlledElementEnemy>();
+        _controlledElmentEnemy = GetComponent<ControlledElementEnemy>();
     }
 
     private void Subscribe() {

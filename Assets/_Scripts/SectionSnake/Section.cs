@@ -3,7 +3,6 @@ using TMPro;
 using Zenject;
 
 public abstract class Section : MonoBehaviour {
-    public bool IsUnit;
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
     public Vector3 Position => transform.position;

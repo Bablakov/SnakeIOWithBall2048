@@ -69,7 +69,8 @@ public abstract class ControllerObject<TypeObject> : MonoBehaviour where TypeObj
     }
 
     private void SetParent(TypeObject gameObject) {
-        gameObject.transform.SetParent(transform);
+        if (gameObject.transform.parent != this)
+            gameObject.transform.SetParent(transform);
     }
 
     private Vector3 GetRandomPosition() {

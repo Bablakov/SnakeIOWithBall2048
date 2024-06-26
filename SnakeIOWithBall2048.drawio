@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-06-26T04:00:20.230Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="DAXXojOsn1pJ-HGN5W1b" version="24.4.0" type="device">
+<mxfile host="Electron" modified="2024-06-26T11:48:19.750Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="aplXD_SwvlGKGovaZPBV" version="24.4.0" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="4834" dy="4144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4766" dy="4104" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -962,13 +962,139 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1RjqgWXyVxkbBXCVlGGC-197" value="Что нам нужно переделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="70" y="-1980" width="320" height="120" as="geometry" />
+          <mxGeometry x="70" y="-1980" width="320" height="66" as="geometry" />
         </mxCell>
-        <mxCell id="1RjqgWXyVxkbBXCVlGGC-199" value="+ Выносим инициализацию имени игрока отдельно, чтобы самому не прокидывать имя" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-199" value="+ Реализовать интерфейсы IInitializable, ITickable, IDisposable от zenject для боллее правильной работы" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
           <mxGeometry y="26" width="320" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="1RjqgWXyVxkbBXCVlGGC-201" value="+ Создать класс прослойку, для взаимодействия с хранилищем секций" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
-          <mxGeometry y="66" width="320" height="54" as="geometry" />
+        <mxCell id="nuIALPx5yWqciM5iSzQI-1" value="NavigatorEnemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" vertex="1" parent="1">
+          <mxGeometry x="-570" y="-1100" width="180" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-2" value="Получает коллекции юнитов и секций" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-1">
+          <mxGeometry y="26" width="180" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-3" value="Преобразует из юнитов в секции" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-1">
+          <mxGeometry y="60" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-4" value="Персонально для каждого в зависимости от его уровня находит путь" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-1">
+          <mxGeometry y="100" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1230" y="-1097.5" width="600" height="660" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-820" y="-1040" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-1100" y="-1075" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+          <mxGeometry x="-890" y="-1037.5" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-1200" y="-1010" width="45" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-1125" y="-565" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-770" y="-590" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="-1070" y="-660" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-13" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+          <mxGeometry x="-925" y="-770" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-14" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-795" y="-835" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" vertex="1" parent="1">
+          <mxGeometry x="-1047.5" y="-880" width="55" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-16" value="Unit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1075" y="-647.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-18" value="Unit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-930" y="-757.5" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-20" value="Unit" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-895" y="-1030" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-23" value="Нынешний алггоритм нахожддения цели" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-565" y="-925" width="190" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-24" value="+ Каждый врга, сам отправляет событие о нахождении ему цели" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-23">
+          <mxGeometry y="30" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-25" value="+ Каждый раз мы берём из двух имеющихся контроллеров(юнитов и секций) коллекции с доступными элементами" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-23">
+          <mxGeometry y="80" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-26" value="+ Сортируем полученные коллекции, каждую по наименьшему растоянию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-23">
+          <mxGeometry y="180" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-27" value="+ Выбираем сецкии и юнитов, которые подходят нам по уровню" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-23">
+          <mxGeometry y="230" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-28" value="+ Выбираем из двух коллекций, по одному первому элементу, если конечно же он есть" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-23">
+          <mxGeometry y="280" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-29" value="+ Выбираем один из двух наилучших элементов" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-23">
+          <mxGeometry y="330" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-30" value="Проблема алгоритма" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="-925" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-31" value="+ Мы не контроллируем установку целей" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-30">
+          <mxGeometry y="30" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-32" value="+ Много запросов на нахождение цели" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-30">
+          <mxGeometry y="60" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-33" value="+ Большой алгоритм, тяжеловесный" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-30">
+          <mxGeometry y="110" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-37" value="Что я хочу от алгоритма" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-340" y="-727.5" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-38" value="+ Нахождения ближайшей подходящей цели" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-37">
+          <mxGeometry y="30" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-39" value="+ Много запросов на нахождение цели" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-37">
+          <mxGeometry y="60" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-40" value="+ Большой алгоритм, тяжеловесный" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-37">
+          <mxGeometry y="110" width="220" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-41" value="Новый алгоритм" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-565" y="-520" width="190" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-46" value="+ Будет создан отдельный скрипт для нахождения целей и передан в контролллер врага" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="30" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-42" value="+ Создаём коллаёдер, который будет настраиваемого размера" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="80" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-43" value="+ На даднном коллайдере будет висеть объект обрабатывающий столкновения" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="130" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-44" value="+ Если в коллайдер вошли(добавляем объект в коллекцию целей, в нашем радиусе)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="230" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-45" value="+ Если из коллайдера вышли удаляем объект из коллекции" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="290" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-47" value="+ После выхода элемента из коллайдера, проверяем его на то, что является ли он текущей целью" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="340" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-48" value="+ Если он является таковым, то находим новую цель, а если нет, то ничего не меняем" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="400" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-49" value="+ Когда мы поглатили цель, мы должны найти новую цель" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="460" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nuIALPx5yWqciM5iSzQI-50" value="+ Если в радиусе нет никаких целей, то тогда мы выбираем рандомную точку на карте, но ровно то того случая пока кто-то не попадёт в коллайдер" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="nuIALPx5yWqciM5iSzQI-41">
+          <mxGeometry y="520" width="190" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

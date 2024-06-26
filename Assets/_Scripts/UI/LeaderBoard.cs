@@ -8,6 +8,9 @@ public class LeaderBoard : MonoBehaviour {
     private SectionConfig _sectionConfig;
     private ControllerUnits _controllerUnits;
 
+    private float _currentTime = 0f;
+    private float _timeUpdate = 5f;
+
     public void Initailize() {
         _linesLeaderBoard = GetComponentsInChildren<ViewLineLeaderBoard>();
     }
@@ -20,17 +23,24 @@ public class LeaderBoard : MonoBehaviour {
     }
 
     private void Update() {
-        var list = _controllerUnits.Objects.ToList();
-        list.Add(_player);
+        if (_currentTime > _timeUpdate) {
+            var list = _controllerUnits.Objects.ToList();
+            list.Add(_player);
 
-        var beetwen = list
-            .OrderByDescending(unit => unit.Level)
-            .ThenByDescending(unit => unit.Nickname)
-            .Take(_linesLeaderBoard.Length)
-            .ToArray();
+            var beetwen = list
+                .OrderByDescending(unit => unit.Level)
+                .ThenByDescending(unit => unit.Nickname)
+                .Take(_linesLeaderBoard.Length)
+                .ToArray();
 
-        for (int i = 0; i < _linesLeaderBoard.Length; i++) {
-            _linesLeaderBoard[i].SetValue((i+1).ToString(), beetwen[i].Nickname, _sectionConfig.Sections[beetwen[i].Level].Text);
+            for (int i = 0; i < _linesLeaderBoard.Length; i++) {
+                _linesLeaderBoard[i].SetValue((i+1).ToString(), beetwen[i].Nickname, _sectionConfig.Sections[beetwen[i].Level].Text);
+            }
+
+            _currentTime = 0f;
+        }
+        else {
+            _currentTime += Time.deltaTime;
         }
     }
 }

@@ -39,7 +39,6 @@ public class ControllerStorageSection {
     }
 
     private void OnDeletedSection(Section section, bool needSpawn) {
-        Debug.Log($"OnDeletedSection {_head.transform.parent.name}");
         _signalBus.Fire(new ReleasedObjectSignal<Section>(section, needSpawn));
     }
 

@@ -14,7 +14,7 @@ public class Player : Unit {
 
     protected override void GetComponents() {
         base.GetComponents();
-        _controlledElement = GetComponentInChildren<ControlledElement>();
+        _controlledElement = GetComponent<ControlledElement>();
     }
 
     protected override void InitializeComponents() {
