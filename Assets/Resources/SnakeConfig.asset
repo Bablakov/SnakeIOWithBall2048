@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SnakeConfig
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 5
-  <DistanceBeetwen>k__BackingField: 0.5
+  <DistanceBeetwen>k__BackingField: 0.2

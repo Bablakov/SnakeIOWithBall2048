@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-06-24T08:42:29.939Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="VfzYxySjxaQ-nxvMoaMZ" version="24.4.0" type="device">
+<mxfile host="Electron" modified="2024-06-26T04:00:20.230Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="DAXXojOsn1pJ-HGN5W1b" version="24.4.0" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="1418" dy="1928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4834" dy="4144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -159,6 +159,816 @@
         </mxCell>
         <mxCell id="bJMq_DwpuXEaJmJ7ODae-15" value="+ У нас существует коллекция, которая хранит, как свободные шарики, так и врагов их головы, внутри себя и при помощи математики расчитыват какой шар ближе к нам" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="bJMq_DwpuXEaJmJ7ODae-13" vertex="1">
           <mxGeometry y="80" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-53" value="Bootstrap" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2320" y="-2750" width="140" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-54" value="+ Player" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-53" vertex="1">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-55" value="+ ControllerSections" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-53" vertex="1">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-56" value="+ ControllerUnits&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-53" vertex="1">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-57" value="+ SoundController" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-53" vertex="1">
+          <mxGeometry y="104" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-58" value="+ UIController&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-53" vertex="1">
+          <mxGeometry y="130" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-103" value="Zenject" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2515" y="-2750" width="140" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-104" value="+ InputField" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-105" value="+ SpawnField" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-106" value="+ ControllerField" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-107" value="+ SpawnFigure" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="104" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-108" value="+ ControllerFigure" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="130" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-109" value="+ Figure" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="156" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-110" value="- Initialize()" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-103" vertex="1">
+          <mxGeometry y="182" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-111" value="ControllerSections" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="2110" y="-2280" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-112" value="+ SectionsPool" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-111" vertex="1">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-113" value="+ Sections" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-111" vertex="1">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-114" value="Хранит ссылки на Section" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-111" vertex="1">
+          <mxGeometry y="78" width="180" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-115" value="Просит заспавнить секции, если их становиться мало на сцене" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-111" vertex="1">
+          <mxGeometry y="110" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-116" value="Взаимодействет с пулом объектов Section" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-111" vertex="1">
+          <mxGeometry y="160" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-117" value="ControllerUnits" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="1900" y="-2280" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-118" value="+ UnitsPool" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-117" vertex="1">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-119" value="+ Units" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="eBAXqZQzckK9jQEUbmt5-117" vertex="1">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-120" value="Хранит ссылки на Units" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-117" vertex="1">
+          <mxGeometry y="78" width="180" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-121" value="Просит заспавнить юнита, если их становиться мало на сцене" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-117" vertex="1">
+          <mxGeometry y="110" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-122" value="Взаимодействет с пулом объектов" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-117" vertex="1">
+          <mxGeometry y="160" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-123" value="ConflictControllerUnit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="-2280" width="180" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-124" value="Обрабатывает столкновение Units" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-123" vertex="1">
+          <mxGeometry y="26" width="180" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-125" value="Опрделяет победителя" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-123" vertex="1">
+          <mxGeometry y="60" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-126" value="Спавнит победившему юниту ячейку соответствующего уровня проигравшего юнита" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-123" vertex="1">
+          <mxGeometry y="86" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-129" value="Отключает проигравшего врага" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-123" vertex="1">
+          <mxGeometry y="140" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-135" value="Отправляет событие о победе кого-то" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-123" vertex="1">
+          <mxGeometry y="194" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-136" value="NavigatorEnemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="2680" y="-2748" width="180" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-137" value="Получает коллекции юнитов и секций" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-136" vertex="1">
+          <mxGeometry y="26" width="180" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-138" value="Преобразует из юнитов в секции" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-136" vertex="1">
+          <mxGeometry y="60" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-139" value="Персонально для каждого в зависимости от его уровня находит путь" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-136" vertex="1">
+          <mxGeometry y="100" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-142" value="SoundController" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2565" y="-2310" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-143" value="Собирает в себе все звуки игры и инициализирует их" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-142" vertex="1">
+          <mxGeometry y="26" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-146" value="SoundController" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2355" y="-2310" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-147" value="Собирает в себе все UI элементы игры и инициализирует их" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-146" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-148" value="Movement" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="-1840" width="180" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-149" value="Перемещает в перёд объект, который ему передают" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-148" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-151" value="Знает о секции, которой управляет" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-148" vertex="1">
+          <mxGeometry y="80" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-152" value="Rotation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="1910" y="-1840" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-153" value="Поворачивает переданный ему объект, в передаваемое направление" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-152" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-155" value="Section" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="3140" y="-2304" width="200" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-156" value="Знает о своём местоположении, свои физические характеристики" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-155" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-157" value="Знает, кто им управляет, явлеятся ли он секцией, которая (голова юнита)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-155" vertex="1">
+          <mxGeometry y="80" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-158" value="SphereSection" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="3360" y="-2304" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-159" value="Расчитывает свои физические данные в зависимости от своих особенностей" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-158" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-161" value="Sound и его производные классы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="2355" y="-2200" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-162" value="Много производных классов дублирующие у друг друга Функционал" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-161" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-163" value="Button и производные" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="2565" y="-2200" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-164" value="Много производных классов дублирующие у друг друга Функционал" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-163" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-165" value="KillField" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#D7F705;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="2775" y="-2310" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-166" value="Взаимодействует с пулом" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-165" vertex="1">
+          <mxGeometry y="26" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-169" value="Выводит кто кого победил, при помощи шины событий, хотя можно было и без этого обойтись" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-165" vertex="1">
+          <mxGeometry y="50" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-170" value="Leaderboard" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="2775" y="-2170" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-171" value="Получает изночально поля с лидерами" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-170" vertex="1">
+          <mxGeometry y="26" width="200" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-172" value="Получает данные с ControllerUnits, знает о Player" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-170" vertex="1">
+          <mxGeometry y="70" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-173" value="Ужасный алгоритм просчёта лидеров" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-170" vertex="1">
+          <mxGeometry y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-174" value="Unit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="2550" y="-1838" width="180" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-175" value="Знает о всех своих служебных классах" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-174" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-176" value="Проблемы с логикой инициализации и взаимодействия с другими объектами" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-174" vertex="1">
+          <mxGeometry y="80" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-179" value="Из любого места, можно изменить, что он с кем-то конфликтует, через него можно получить доступ к голове, к его нику, позиции" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-174" vertex="1">
+          <mxGeometry y="150" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-180" value="В некоторых местах, логику обрабатывает не он сам" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-174" vertex="1">
+          <mxGeometry y="230" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-181" value="Player" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#E59112;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="2760" y="-1838" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-182" value="Реализует свой доп функционал, логику взаимодействия с UI" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-181" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-183" value="На нём завязана некоторая логика, которую он не обрабатывает" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-181" vertex="1">
+          <mxGeometry y="80" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-186" value="ControlledElement" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#CFE509;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="1910" y="-1740" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-187" value="Обрабатывает логику ввода и передаёт некоторые данные для перемещения игроком" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-186" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-188" value="Костыльное ускорение" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-186" vertex="1">
+          <mxGeometry y="80" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-189" value="ControlledElementEnemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="-1686" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-190" value="Обрабатывает логику, поиска пути, вернее он контролирует, чтобы точка пути у него было" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-189" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-191" value="Переписать на логику с NavMeshAgent, чтобы он контроллировал, только установку цели пути, а не перемещения и вращения" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-189" vertex="1">
+          <mxGeometry y="80" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-192" value="CollisionHandler" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="2125" y="-1700" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-193" value="Обрабатывает логику столкновений с объектом" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-192" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-194" value="Присутствует логика, затыкание другого юнита и определения, типа объекта" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-192" vertex="1">
+          <mxGeometry y="80" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-195" value="ControllerSection" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#CDE307;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="2325" y="-1710" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-196" value="Контроллирует хранение, добавление, удаление, слиянеие&amp;nbsp; секций внутри змейки" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-195" vertex="1">
+          <mxGeometry y="26" width="180" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-198" value="Присутствет логика, дублирования кода, в добавлении элементов" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-195" vertex="1">
+          <mxGeometry y="100" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-199" value="FollowingElements" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2325" y="-1835" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-200" value="Управляет хвостом змеи" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-199" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-201" value="Получает данные о контроллере змеи и о параметрах змеи" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-199" vertex="1">
+          <mxGeometry y="50" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-202" value="NickUnit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2325" y="-1540" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-203" value="Хранит ник юнита" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-202" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-204" value="Смотрит в камеру" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-202" vertex="1">
+          <mxGeometry y="50" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-205" value="ParametrsSnake" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#B4EB00;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2125" y="-1835" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-206" value="Хранит данные о змее, такие как, её скорость, расстояние между секциями" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-205" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-207" value="костыльно, реализовано повышение скорости" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-205" vertex="1">
+          <mxGeometry y="80" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-210" value="&lt;font style=&quot;font-size: 28px;&quot;&gt;UI и звуки&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2615" y="-2390" width="144.67" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-212" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Контроллеры объектов на сцене и логики взаимодействия&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1750" y="-2420" width="480" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-214" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;Логика вращения и перемещения&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 22px;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1700" y="-1900" width="390" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-215" value="&lt;div&gt;&lt;span style=&quot;font-size: 22px;&quot;&gt;Доп классы для юнита&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2180" y="-1900" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-216" value="Enemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="2980" y="-1838" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-217" value="Реализует свой доп функционал,&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="eBAXqZQzckK9jQEUbmt5-216" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-219" value="&lt;span style=&quot;font-size: 22px;&quot;&gt;Юниты&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="2780" y="-1900" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eBAXqZQzckK9jQEUbmt5-220" value="&lt;span style=&quot;font-size: 28px;&quot;&gt;Секции&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="3270" y="-2400" width="144.67" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-1" target="1RjqgWXyVxkbBXCVlGGC-39" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-1" value="Bootstrap" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="30" y="-3020" width="140" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-2" value="+ Player" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-1" vertex="1">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-3" value="+ ControllerSections" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-1" vertex="1">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-4" value="+ ControllerUnits&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-1" vertex="1">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-5" value="+ SoundController" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-1" vertex="1">
+          <mxGeometry y="104" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-6" value="+ UIController&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-1" vertex="1">
+          <mxGeometry y="130" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-7" value="Zenject" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="30" y="-3300" width="140" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-8" value="ControllerSections" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-9" value="ControllerUnits" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="52" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-10" value="inputGame" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="78" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-11" value="Section" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="104" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-12" value="Camera" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="130" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-13" value="Player" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="156" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-14" value="Unit" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="182" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-99" value="KilledField&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="208" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-100" value="NavigatorEnemy&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-7" vertex="1">
+          <mxGeometry y="234" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-15" value="ControllerSections" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-405" y="-2805" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-16" value="+ SectionsPool" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-15" vertex="1">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-17" value="+ Sections" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-15" vertex="1">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-18" value="Хранит ссылки на Section" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-15" vertex="1">
+          <mxGeometry y="78" width="180" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-19" value="Просит заспавнить секции, если их становиться мало на сцене" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-15" vertex="1">
+          <mxGeometry y="110" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-20" value="Взаимодействет с пулом объектов Section" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-15" vertex="1">
+          <mxGeometry y="160" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-21" value="ControllerUnits" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-195" y="-2805" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-22" value="+ UnitsPool" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-21" vertex="1">
+          <mxGeometry y="26" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-23" value="+ Units" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="1RjqgWXyVxkbBXCVlGGC-21" vertex="1">
+          <mxGeometry y="52" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-24" value="Хранит ссылки на Units" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-21" vertex="1">
+          <mxGeometry y="78" width="180" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-25" value="Просит заспавнить юнита, если их становиться мало на сцене" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-21" vertex="1">
+          <mxGeometry y="110" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-26" value="Взаимодействет с пулом объектов" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-21" vertex="1">
+          <mxGeometry y="160" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-27" value="ConflictControllerUnit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-2760" y="-2120" width="180" height="248" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-28" value="Обрабатывает столкновение Units" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-27" vertex="1">
+          <mxGeometry y="26" width="180" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-29" value="Опрделяет победителя" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-27" vertex="1">
+          <mxGeometry y="60" width="180" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-30" value="Спавнит победившему юниту ячейку соответствующего уровня проигравшего юнита" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-27" vertex="1">
+          <mxGeometry y="86" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-31" value="Отключает проигравшего врага" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-27" vertex="1">
+          <mxGeometry y="140" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-32" value="Отправляет событие о победе кого-то" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-27" vertex="1">
+          <mxGeometry y="194" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-33" value="NavigatorEnemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-330" y="-2554" width="180" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-34" value="Получает коллекции юнитов и секций" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-33" vertex="1">
+          <mxGeometry y="26" width="180" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-35" value="Преобразует из юнитов в секции" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-33" vertex="1">
+          <mxGeometry y="60" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-36" value="Персонально для каждого в зависимости от его уровня находит путь" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-33" vertex="1">
+          <mxGeometry y="100" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-37" value="SoundController" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="590" y="-2830" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-38" value="Собирает в себе все звуки игры и инициализирует их" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-37" vertex="1">
+          <mxGeometry y="26" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-39" value="UIController" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="60" y="-2805" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-40" value="Собирает в себе все UI элементы игры и инициализирует их" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-39" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-41" value="Movement" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-2210" y="-2605" width="180" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-42" value="Перемещает в перёд объект, который ему передают" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-41" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-43" value="Знает о секции, которой управляет" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-41" vertex="1">
+          <mxGeometry y="80" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-44" value="Rotation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-2430" y="-2605" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-45" value="Поворачивает переданный ему объект, в передаваемое направление" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-44" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-46" value="Section" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-2920" y="-1480" width="200" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-47" value="Знает о своём местоположении, свои физические характеристики" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-46" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-48" value="Знает, кто им управляет, явлеятся ли он секцией, которая (голова юнита)" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-46" vertex="1">
+          <mxGeometry y="80" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-51" value="Sound и его производные классы" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="615" y="-2695" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-52" value="Много производных классов дублирующие у друг друга Функционал" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-51" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-53" value="Button и производные" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="60" y="-2660" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-54" value="Много производных классов дублирующие у друг друга Функционал" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-53" vertex="1">
+          <mxGeometry y="26" width="200" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-55" value="KillField" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#D7F705;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-3160" y="-2180" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-56" value="Взаимодействует с пулом" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-55" vertex="1">
+          <mxGeometry y="26" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-57" value="Выводит кто кого победил, при помощи шины событий, хотя можно было и без этого обойтись" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-55" vertex="1">
+          <mxGeometry y="50" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-58" value="Leaderboard" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-330" y="-2350" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-59" value="Получает изночально поля с лидерами" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-58" vertex="1">
+          <mxGeometry y="26" width="200" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-60" value="Получает данные с ControllerUnits, знает о Player" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-58" vertex="1">
+          <mxGeometry y="70" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-61" value="Ужасный алгоритм просчёта лидеров" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-58" vertex="1">
+          <mxGeometry y="110" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-67" value="Player" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#E59112;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-640" y="-2805" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-68" value="Реализует свой доп функционал, логику взаимодействия с UI" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-67" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-69" value="На нём завязана некоторая логика, которую он не обрабатывает" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-67" vertex="1">
+          <mxGeometry y="80" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-70" target="1RjqgWXyVxkbBXCVlGGC-89" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2140" y="-2768" />
+              <mxPoint x="-2020" y="-2768" />
+              <mxPoint x="-2020" y="-2507" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-70" target="1RjqgWXyVxkbBXCVlGGC-127" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-70" value="ControlledElement" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#CFE509;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-2320" y="-2748" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-71" value="Обрабатывает логику ввода и передаёт некоторые данные для перемещения игроком" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-70" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-72" value="Костыльное ускорение" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-70" vertex="1">
+          <mxGeometry y="80" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-76" target="1RjqgWXyVxkbBXCVlGGC-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-76" value="CollisionHandler" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-2010" y="-2750" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-77" value="Обрабатывает логику столкновений с объектом" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-76" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-78" value="Присутствует логика, затыкание другого юнита и определения, типа объекта" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-76" vertex="1">
+          <mxGeometry y="80" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-79" value="StorageSection" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#CDE307;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-1780" y="-2751" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-80" value="Контроллирует хранение, добавление, удаление, слиянеие&amp;nbsp; секций внутри змейки" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-79" vertex="1">
+          <mxGeometry y="26" width="180" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-81" value="Присутствет логика, дублирования кода, в добавлении элементов" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-79" vertex="1">
+          <mxGeometry y="100" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-82" target="1RjqgWXyVxkbBXCVlGGC-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-82" value="FollowingElements" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1520" y="-2740" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-83" value="Управляет хвостом змеи" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-82" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-84" value="Получает данные о контроллере змеи и о параметрах змеи" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-82" vertex="1">
+          <mxGeometry y="50" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-85" value="NickUnit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1110" y="-2748" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-86" value="Хранит ник юнита" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-85" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-87" value="Смотрит в камеру" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-85" vertex="1">
+          <mxGeometry y="50" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-88" value="ParametrsSnake" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#B4EB00;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1780" y="-2560" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-89" value="Хранит данные о змее, такие как, её скорость, расстояние между секциями" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-88" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-90" value="костыльно, реализовано повышение скорости" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-88" vertex="1">
+          <mxGeometry y="80" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-2" target="1RjqgWXyVxkbBXCVlGGC-67" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-3" target="1RjqgWXyVxkbBXCVlGGC-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-4" target="1RjqgWXyVxkbBXCVlGGC-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-5" target="1RjqgWXyVxkbBXCVlGGC-37" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-111" value="Player" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#E59112;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-1310" y="-2885" width="180" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-112" value="Реализует свой доп функционал, логику взаимодействия с UI" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-111" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-113" value="На нём завязана некоторая логика, которую он не обрабатывает" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-111" vertex="1">
+          <mxGeometry y="80" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-112" target="1RjqgWXyVxkbBXCVlGGC-76" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-112" target="1RjqgWXyVxkbBXCVlGGC-79" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-112" target="1RjqgWXyVxkbBXCVlGGC-70" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-72" target="1RjqgWXyVxkbBXCVlGGC-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-72" target="1RjqgWXyVxkbBXCVlGGC-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-112" target="1RjqgWXyVxkbBXCVlGGC-85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-112" target="1RjqgWXyVxkbBXCVlGGC-82" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-84" target="1RjqgWXyVxkbBXCVlGGC-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-127" value="InputGame" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-2590" y="-2725" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-128" value="Хранит ник юнита" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-127" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-129" value="Смотрит в камеру" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-127" vertex="1">
+          <mxGeometry y="50" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-34" target="1RjqgWXyVxkbBXCVlGGC-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-35" target="1RjqgWXyVxkbBXCVlGGC-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.761;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-35" target="1RjqgWXyVxkbBXCVlGGC-69" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-430" y="-2474" />
+              <mxPoint x="-430" y="-2672" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-59" target="1RjqgWXyVxkbBXCVlGGC-69" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-59" target="1RjqgWXyVxkbBXCVlGGC-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-40" target="1RjqgWXyVxkbBXCVlGGC-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-38" target="1RjqgWXyVxkbBXCVlGGC-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-145" target="1RjqgWXyVxkbBXCVlGGC-163" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2060" y="-2133" />
+              <mxPoint x="-1940" y="-2133" />
+              <mxPoint x="-1940" y="-1811" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-145" value="ControlledElementEnemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#CFE509;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-2240" y="-2113" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-146" value="Обрабатывает логику, поиска пути, вернее он контролирует, чтобы точка пути у него было" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-145" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-147" value="Переписать на логику с NavMeshAgent, чтобы он контроллировал, только установку цели пути, а не перемещения и вращения" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-145" vertex="1">
+          <mxGeometry y="80" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-148" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-149" target="1RjqgWXyVxkbBXCVlGGC-152" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-149" value="CollisionHandler" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e3c800;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-1930" y="-2115" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-150" value="Обрабатывает логику столкновений с объектом" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-149" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-151" value="Присутствует логика, затыкание другого юнита и определения, типа объекта" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-149" vertex="1">
+          <mxGeometry y="80" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-152" value="StorageSection" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#CDE307;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="-1690" y="-2115" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-153" value="Контроллирует хранение, добавление, удаление, слиянеие&amp;nbsp; секций внутри змейки" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-152" vertex="1">
+          <mxGeometry y="26" width="180" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-154" value="Присутствет логика, дублирования кода, в добавлении элементов" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-152" vertex="1">
+          <mxGeometry y="100" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-156" target="1RjqgWXyVxkbBXCVlGGC-152" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-156" value="FollowingElements" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1440" y="-2105" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-157" value="Управляет хвостом змеи" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-156" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-158" value="Получает данные о контроллере змеи и о параметрах змеи" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-156" vertex="1">
+          <mxGeometry y="50" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-159" value="NickUnit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1030" y="-2113" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-160" value="Хранит ник юнита" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-159" vertex="1">
+          <mxGeometry y="26" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-161" value="Смотрит в камеру" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-159" vertex="1">
+          <mxGeometry y="50" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-162" value="ParametrsSnake" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#B4EB00;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1720" y="-1864" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-163" value="Хранит данные о змее, такие как, её скорость, расстояние между секциями" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-162" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-164" value="костыльно, реализовано повышение скорости" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-162" vertex="1">
+          <mxGeometry y="80" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-165" value="Enemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="-1240" y="-2224" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-166" value="Реализует свой доп функционал,&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-165" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-168" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-166" target="1RjqgWXyVxkbBXCVlGGC-149" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-169" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-166" target="1RjqgWXyVxkbBXCVlGGC-152" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-166" target="1RjqgWXyVxkbBXCVlGGC-145" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-166" target="1RjqgWXyVxkbBXCVlGGC-159" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-166" target="1RjqgWXyVxkbBXCVlGGC-156" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-158" target="1RjqgWXyVxkbBXCVlGGC-162" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-183" value="KillField" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#D7F705;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#000000;strokeColor=#B09500;" parent="1" vertex="1">
+          <mxGeometry x="280" y="-2662" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-184" value="Взаимодействует с пулом" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-183" vertex="1">
+          <mxGeometry y="26" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-185" value="Выводит кто кого победил, при помощи шины событий, хотя можно было и без этого обойтись" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-183" vertex="1">
+          <mxGeometry y="50" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-186" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-40" target="1RjqgWXyVxkbBXCVlGGC-183" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-187" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-78" target="1RjqgWXyVxkbBXCVlGGC-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2010" y="-2370" />
+              <mxPoint x="-2670" y="-2370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.556;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-150" target="1RjqgWXyVxkbBXCVlGGC-27" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1930" y="-2240" />
+              <mxPoint x="-2670" y="-2240" />
+              <mxPoint x="-2670" y="-2117" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-190" value="Enemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+          <mxGeometry x="80" y="-2384" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-191" value="Реализует свой доп функционал,&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-190" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-192" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-22" target="1RjqgWXyVxkbBXCVlGGC-190" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="-2766" />
+              <mxPoint x="40" y="-2384" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-62" value="Unit" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="-2650" y="-1765" width="180" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-63" value="Знает о всех своих служебных классах" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-62" vertex="1">
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-64" value="Проблемы с логикой инициализации и взаимодействия с другими объектами" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-62" vertex="1">
+          <mxGeometry y="80" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-65" value="Из любого места, можно изменить, что он с кем-то конфликтует, через него можно получить доступ к голове, к его нику, позиции" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-62" vertex="1">
+          <mxGeometry y="150" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-66" value="В некоторых местах, логику обрабатывает не он сам" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-62" vertex="1">
+          <mxGeometry y="230" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-193" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-56" target="1RjqgWXyVxkbBXCVlGGC-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-194" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-32" target="1RjqgWXyVxkbBXCVlGGC-62" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-196" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-66" target="1RjqgWXyVxkbBXCVlGGC-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-197" value="Что нам нужно переделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="70" y="-1980" width="320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-199" value="+ Выносим инициализацию имени игрока отдельно, чтобы самому не прокидывать имя" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
+          <mxGeometry y="26" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-201" value="+ Создать класс прослойку, для взаимодействия с хранилищем секций" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
+          <mxGeometry y="66" width="320" height="54" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

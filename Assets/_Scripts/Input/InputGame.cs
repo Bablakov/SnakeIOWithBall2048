@@ -1,19 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class InputGame : MonoBehaviour {
-    public event Action SpeededUp;
-    public event Action SpeededDown;
-    
-    protected Vector3 DirectionMovement;
+public interface InputGame {
+    public abstract event Action SpeededUp;
+    public abstract event Action SpeededDown;
 
     public abstract Vector3 GetDirectionMovememt();
-
-    protected void SpeedUp() {
-        SpeededUp?.Invoke();
-    }
-
-    protected void SpeedDown() { 
-        SpeededDown?.Invoke();
-    }
 }

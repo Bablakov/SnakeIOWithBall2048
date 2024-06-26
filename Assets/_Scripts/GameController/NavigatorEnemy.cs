@@ -19,6 +19,10 @@ public class NavigatorEnemy {
             general.Add(_player.Head);
         }
 
+        if (general.Contains(sectionStart)) {
+            general.Remove(sectionStart);
+        }
+
         var beetwenCollection = general
             .OrderBy(section => (section.transform.position - sectionStart.transform.position).magnitude)
             .Where(section => {

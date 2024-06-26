@@ -1,19 +1,18 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.AI;
 using Zenject;
 
 public class ControlledElementEnemy : MonoBehaviour {
-    private const int SPEED_MULTIPLIER = 2;
-
     private ParametrsSnake _parametrsSnake;
-    private ControllerSection _controllerSectioin;
+    private CollisionHandler _collisionHandler;
+    
     private Section _target;
-    private Movement _movement;
-    private Rotation _rotation;
     private bool _initialized = false;
-    private NavigatorEnemy _navigatorEnemy;
-    private float _time = 3f;
+    private float _time = 1f;
     private float _currentTime = 0f;
+   
+    private NavMeshAgent _navMeshAgent;
+    private NavigatorEnemy _navigatorEnemy;
 
 
     [Inject]
@@ -21,65 +20,48 @@ public class ControlledElementEnemy : MonoBehaviour {
         _navigatorEnemy = navigatorEnemy;
     }
 
-    public void Initialize(ParametrsSnake parametrsSnake, ControllerSection controllerSection) {
+    public void Initialize(ParametrsSnake parametrsSnake, CollisionHandler collisionHandler) {
         if (!_initialized) {
             _parametrsSnake = parametrsSnake;
-            _controllerSectioin = controllerSection;
+            _collisionHandler = collisionHandler;
             _initialized = true;
-            _movement = new Movement(transform, parametrsSnake.Head);
-            _rotation = new Rotation(transform);
+            _navMeshAgent = GetComponent<NavMeshAgent>();
+            _navMeshAgent.speed = parametrsSnake.Speed;
+            SetTarget();
             Subscribe();
         }
     }
 
-    public void SetTarget(Section target) { 
-        _target = target;
+    public void SetTarget() {
+        _target = _navigatorEnemy.FindTarget(_parametrsSnake.Head);
         _currentTime = 0;
     }
 
     private void Update() {
         if (_currentTime > _time) {
-            SetTarget(_navigatorEnemy.FindTarget(_parametrsSnake.Head));
+            SetTarget();
         } else {
             _currentTime += Time.deltaTime;
         }
-        Move();
-        Rotate();
+        if (_target != null) {
+            _navMeshAgent.SetDestination(_target.transform.position);
+        }
+        else {
+            SetTarget();
+        }
     }
 
     private void Subscribe() {
-        _controllerSectioin.AddedSection += OnAddedSection;
+        _collisionHandler.TouchedSection += OnTouchedSection;
     }
 
     private void Unsubscribe() {
-        _controllerSectioin.AddedSection -= OnAddedSection;
-    }
-     
-    private void Rotate() {
-        if (_target != null) { 
-            Vector3 directionMovement = _target.Position - transform.position;
-            _rotation.Rotate(directionMovement);
-        }
-        else {
-            _target = _navigatorEnemy.FindTarget(_parametrsSnake.Head);
-        }
+        _collisionHandler.TouchedSection -= OnTouchedSection;
     }
 
-    private void Move() {
-        _movement.Move(_parametrsSnake.Speed);
-    }
-
-    private void OnAddedSection(Section section) {
+    private void OnTouchedSection(Section section) {
         if (section == _target) {
-            _target = _navigatorEnemy.FindTarget(_parametrsSnake.Head);
+            SetTarget();
         }
-    }
-
-    private void OnSpededUp() {
-        _parametrsSnake.SetNewSpeed(_parametrsSnake.Speed * SPEED_MULTIPLIER);
-    }
-
-    private void OnSpeededDown() {
-        _parametrsSnake.SetNewSpeed(_parametrsSnake.Speed / SPEED_MULTIPLIER);
     }
 }

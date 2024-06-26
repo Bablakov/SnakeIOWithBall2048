@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using Zenject;
 
 public class ControllerSections : ControllerObject<Section> {
@@ -29,11 +30,6 @@ public class ControllerSections : ControllerObject<Section> {
         SignalBus.Unsubscribe<AddedSectionSignal>(OnAddedSection);
     }
 
-    private void OnAddedSection(AddedSectionSignal signal) {
-        RemoveFromCollection(signal.SectionAdded);
-        SpawnObject();
-    }
-
     protected override void RemoveFromCollection(Section removedObject) {
         _sections.Remove(removedObject);
     }
@@ -44,11 +40,18 @@ public class ControllerSections : ControllerObject<Section> {
 
     protected override void OnReleasedObject(ReleasedObjectSignal<Section> signal) {
         if(signal.NeedSpawnRepeat) {
+            Debug.Log("ReleasedObjectSignalWithRepeatSpawn");
             MemoryPool.Despawn(signal.ReleasedObject);
             SpawnObject();
         }
         else {
+            Debug.Log("ReleasedObjectSignalWithoutRepeatSpawn");
             AddInCollection(signal.ReleasedObject);
         }
+    }
+
+    private void OnAddedSection(AddedSectionSignal signal) {
+        RemoveFromCollection(signal.SectionAdded);
+        SpawnObject();
     }
 }

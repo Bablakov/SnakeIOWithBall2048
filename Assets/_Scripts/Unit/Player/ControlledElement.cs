@@ -18,7 +18,7 @@ public class ControlledElement : MonoBehaviour {
     }
 
     [Inject]
-    public void Construct(InputGame inputGame) {
+    private void Construct(InputGame inputGame) {
         _inputGame = inputGame;
     }
 

@@ -1,33 +1,44 @@
-﻿using UnityEngine;
+﻿using System;
+using Zenject;
+using UnityEngine;
 
 public class InputDesktop : InputGame {
-    private int HEIGHT_POINT = 0;
+    public event Action SpeededUp;
+    public event Action SpeededDown;
 
-    private Vector3 _mousePosition;
+    private const int HEIGHT_POINT = 0;
+
     private int ScreenWidth => Screen.width;
     private int ScreenHeight => Screen.height;
+    
+    private Vector3 DirectionMovement;
+    private GameInputAction _gameInput;
+    private Vector2 _mousePosition;
 
-    private bool _speededUp = false;
-
-    private void Update() {
-        if (Input.GetMouseButtonDown(0) && !_speededUp) {
-            SpeedUp();
-            _speededUp = true;
-        }
-        else if (Input.GetMouseButtonUp(0) && _speededUp) {
-            SpeedDown();
-            _speededUp = false;
-        }
+    [Inject]
+    public InputDesktop() {
+        _gameInput = new GameInputAction();
+        _gameInput.Player.Enable();
+        _gameInput.Player.BoostSpeed.started += SpeedUp;
+        _gameInput.Player.BoostSpeed.canceled += SpeedDown;
     }
 
-    public override Vector3 GetDirectionMovememt() {
+    public Vector3 GetDirectionMovememt() {
         GetDataInput();
         ProcessData();
         return DirectionMovement;
     }
 
+    private void SpeedUp(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        SpeededUp?.Invoke();
+    }
+
+    private void SpeedDown(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        SpeededDown?.Invoke();
+    }
+
     private void GetDataInput() {
-        _mousePosition = Input.mousePosition;
+        _mousePosition = _gameInput.Player.PositionMouse.ReadValue<Vector2>();
     }
 
     private void ProcessData() {

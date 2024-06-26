@@ -2,7 +2,7 @@
 using Zenject;
 
 public class KillField : MonoBehaviour {
-    private SignalBus _signalBus;
+    private ConflictController _conflictControllerUnit;
     private LineKillFieldPool _memoryPool;
 
     public void Initialize() {
@@ -14,23 +14,23 @@ public class KillField : MonoBehaviour {
     }
 
     [Inject]
-    private void Contstruct(SignalBus signalBus, LineKillFieldPool memoryPool) {
-        _signalBus = signalBus;
+    private void Contstruct(ConflictController conflictControllerUnit, LineKillFieldPool memoryPool) {
+        _conflictControllerUnit = conflictControllerUnit;
         _memoryPool = memoryPool;
     }
 
     private void Subscribe() {
-        _signalBus.Subscribe<CompletedMurderSignal>(OnCompletedMurder);
+        _conflictControllerUnit.CompletedMurder += OnCompletedMurder;
     }
 
     private void Unsubscribe() {
-        _signalBus.Unsubscribe<CompletedMurderSignal>(OnCompletedMurder);
+        _conflictControllerUnit.CompletedMurder -= OnCompletedMurder;
     }
 
-    private void OnCompletedMurder(CompletedMurderSignal signal) {
+    private void OnCompletedMurder(string killer, string killed) {
         var line = _memoryPool.Spawn();
         line.transform.SetParent(transform);
         line.transform.localScale = Vector3.one;
-        line.Initialize(signal.NameKiller, signal.NameKilled, this);
+        line.Initialize(killer, killed, this);
     }
 }

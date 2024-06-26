@@ -3,19 +3,17 @@ using TMPro;
 using Zenject;
 
 public abstract class Section : MonoBehaviour {
+    public bool IsUnit;
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
     public Vector3 Position => transform.position;
-    
     public float Width { get; protected set; }
     public int Level { get; protected set; }
-
-    public bool IsUnit => _controllerSection != null;
 
     protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;
 
-    private ControllerSection _controllerSection;
+    private StorageSection _controllerSection;
 
     public virtual void Upgrade() {
         UpdateLevel();
@@ -27,8 +25,8 @@ public abstract class Section : MonoBehaviour {
         UpdateSection();
     }
 
-    public void SetNewControllerSection(ControllerSection controllerSection) {
-        _controllerSection?.DeleteElementFromCollection(this);
+    public void SetNewControllerSection(StorageSection controllerSection) {
+        _controllerSection?.Delete(this);
         _controllerSection = controllerSection;
     }
 

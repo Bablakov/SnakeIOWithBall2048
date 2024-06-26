@@ -5,7 +5,7 @@ using Zenject;
 public class ViewNumberKilledEnemy : MonoBehaviour { 
     private TextMeshProUGUI _textMeshPro;
     private string _startText;
-    private Player _player;
+    private CounterKilles _counterKilles;
 
     public void Initialize() {
         _textMeshPro = GetComponent<TextMeshProUGUI>();
@@ -15,16 +15,16 @@ public class ViewNumberKilledEnemy : MonoBehaviour {
     }
 
     [Inject]
-    private void Construct(Player player) {
-        _player = player;
+    private void Construct(CounterKilles counterKilles) {
+        _counterKilles = counterKilles;
     }
 
     private void Subscribe() {
-        _player.ChangedNumberEnemiesKilled += OnChangedNubmerEnemiesKilled;
+        _counterKilles.ChangedNumberEnemiesKilled += OnChangedNubmerEnemiesKilled;
     }
 
     private void Unsubscribe() {
-        _player.ChangedNumberEnemiesKilled -= OnChangedNubmerEnemiesKilled;
+        _counterKilles.ChangedNumberEnemiesKilled -= OnChangedNubmerEnemiesKilled;
     }
 
     private void OnChangedNubmerEnemiesKilled(int numberKilled) {

@@ -1,16 +1,21 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using Zenject;
 
-public class SoundController : MonoBehaviour, IDisposable{
+public class SoundController : MonoBehaviour {
     private SoundPickUpSection _soundPickUpSection;
     private SoundBackground _soundBackground;
     private SoundDeathPlayer _deathPlayer;
     private SoundDeathEnemy _deathEnemy;
-    //private SoundButton _soundButton;
+    private SoundConfig _soundConfig;
 
     public void Initialize() {
         GetComponents();
         InitializeComponents();
+    }
+
+    [Inject]
+    private void Construct(SoundConfig soundConfig) {
+        _soundConfig = soundConfig;
     }
 
     private void GetComponents() {
@@ -18,18 +23,12 @@ public class SoundController : MonoBehaviour, IDisposable{
         _soundBackground = GetComponentInChildren<SoundBackground>();
         _deathPlayer = GetComponentInChildren<SoundDeathPlayer>();
         _deathEnemy = GetComponentInChildren<SoundDeathEnemy>();
-        //_soundButton = GetComponentInChildren<SoundButton>();
     }
 
     private void InitializeComponents() {
-        _soundPickUpSection.Initialize();
-        _soundBackground.Initialize();
-        _deathPlayer.Initialize();
-        _deathEnemy.Initialize();
-        //_soundButton.Initialize();
-    }
-
-    public void Dispose() {
-        //_soundButton.Dispose();
+        _soundPickUpSection.Initialize(_soundConfig.PickUpSection);
+        _soundBackground.Initialize(_soundConfig.Background);
+        _deathPlayer.Initialize(_soundConfig.DeathPlayer);
+        _deathEnemy.Initialize(_soundConfig.DeathEnemy);
     }
 }

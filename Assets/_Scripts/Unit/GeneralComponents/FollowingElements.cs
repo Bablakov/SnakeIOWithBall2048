@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FollowingElements {
     private ParametrsSnake _parametrsPlayer;
-    private ControllerSection _controllerSection;
-    private IReadOnlyCollection<Section> bodyElements => _controllerSection.Sections;
+    private StorageSection _storageSection;
+    private IReadOnlyCollection<Section> bodyElements => _storageSection.Sections;
 
-    public FollowingElements(ParametrsSnake parametrsPlayer, ControllerSection controllerSection) {
+    public FollowingElements(ParametrsSnake parametrsPlayer, StorageSection storageSection) {
         _parametrsPlayer = parametrsPlayer;
-        _controllerSection = controllerSection;
+        _storageSection = storageSection;
     }
 
     public void Update() {

@@ -4,13 +4,12 @@ using Zenject;
 public class GameInstaller : MonoInstaller {
     [SerializeField] private ControllerSections controllerSections;
     [SerializeField] private ControllerUnits controllerUnits;
-    [SerializeField] private InputGame _inputGame;
+    [SerializeField] private ViewLineKilledField killedField;
     [SerializeField] private Section section;
     [SerializeField] private Camera _camera;
     [SerializeField] private Player player;
     [SerializeField] private Unit unit;
-    [SerializeField] private ViewLineKilledField killedField;
-
+    
     private NavigatorEnemy _navigatorEnemy;
 
     public override void InstallBindings() {
@@ -24,9 +23,12 @@ public class GameInstaller : MonoInstaller {
 
         Container.Bind<ControllerUnits>().FromInstance(controllerUnits);
         Container.Bind<NavigatorEnemy>().FromInstance(_navigatorEnemy);
-        Container.Bind<InputGame>().FromInstance(_inputGame);
         Container.Bind<Camera>().FromInstance(_camera);
         Container.Bind<Player>().FromInstance(player);
+
+        Container.Bind<ConflictController>().AsSingle();
+        Container.Bind<CounterKilles>().AsSingle();
+        Container.Bind<InputGame>().To<InputDesktop>().AsSingle();
     }
 
     private void BindMemoryPool() {
@@ -41,10 +43,6 @@ public class GameInstaller : MonoInstaller {
         Container.DeclareSignal<AddedSectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedObjectSignal<Section>>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedObjectSignal<Unit>>().OptionalSubscriber();
-        Container.DeclareSignal<ConflictedUnitsSignal>().OptionalSubscriber();
-        Container.DeclareSignal<PutOnSectionSignal>().OptionalSubscriber();
-        Container.DeclareSignal<DiedPlayerSignal>().OptionalSubscriber();
-        Container.DeclareSignal<DiedEnemySignal>().OptionalSubscriber();
-        Container.DeclareSignal<CompletedMurderSignal>().OptionalSubscriber();
+        Container.DeclareSignal<ConflictedSignal>().OptionalSubscriber();
     }
 }   

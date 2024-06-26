@@ -32,6 +32,5 @@ public class LeaderBoard : MonoBehaviour {
         for (int i = 0; i < _linesLeaderBoard.Length; i++) {
             _linesLeaderBoard[i].SetValue((i+1).ToString(), beetwen[i].Nickname, _sectionConfig.Sections[beetwen[i].Level].Text);
         }
-
     }
 }

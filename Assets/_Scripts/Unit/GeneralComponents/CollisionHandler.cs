@@ -3,58 +3,76 @@ using System;
 using Zenject;
 
 public class CollisionHandler : MonoBehaviour {
-    public event Action<Section> AddedSection;
+    public event Action<Section> TouchedSection;
+    public event Action DiedEnemy;
+    public event Action DiedMe;
 
+    public int Level => _mineSectioin.Level;
+    public string Nickname { get; private set; }
+
+    private bool _isCollisionProcessed;
     private SignalBus _signalBus;
-    private Unit _mineUnit;
+    private Section _mineSectioin;
 
-    public void Initialize(SignalBus signalBus, Unit unit) {
+    public void Initialize(string nickname) {
+        Nickname = nickname;
+        _mineSectioin = GetComponentInChildren<Section>();
+    }
+
+    [Inject]
+    private void Construct(SignalBus signalBus) {
         _signalBus = signalBus;
-        _mineUnit = unit;
+    }
+
+    public void SetCollisionProcessed() {
+        _isCollisionProcessed = true;
+    }
+
+    public void AddSection(Section section) {
+        TouchedSection?.Invoke(section);
+        DiedEnemy?.Invoke();
+    }
+
+    public void SetOff() {
+        DiedMe?.Invoke();
+    }
+
+    private void RemoveCollisionProcessed() {
+        _isCollisionProcessed = false; 
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (TryGetComponentSection(other, out Section section)) {
-            if (TryGetComponentUnit(other, out Unit unit)) {
-                if (_mineUnit.ConflictUnit == unit && _mineUnit.IsConflict) {
-                    _mineUnit.ConflictUnit = null;
-                    _mineUnit.IsConflict = false;
-                }
-                else {
-                    unit.IsConflict = true;
-                    unit.ConflictUnit = _mineUnit;
-                    _signalBus.Fire(new ConflictedUnitsSignal(_mineUnit, unit));
-                }
-            } 
-            else {
-                AddedSection?.Invoke(section);
-            }
+        if (!_isCollisionProcessed) {
+            HandleCollision(other);
         }
-    }
-    private void OnTriggerExit(Collider other) {
-        if (TryGetComponentSection(other, out Section section)) {
-            if (TryGetComponentUnit(other, out Unit unit)) {
-                if (_mineUnit.ConflictUnit == unit && _mineUnit.IsConflict) {
-                    _mineUnit.ConflictUnit = null;
-                    _mineUnit.IsConflict = false;
-                } else {
-                    unit.IsConflict = true;
-                    unit.ConflictUnit = _mineUnit;
-                    _signalBus.Fire(new ConflictedUnitsSignal(_mineUnit, unit));
-                }
-            } else {
-                AddedSection?.Invoke(section);
-            }
+        else {
+            RemoveCollisionProcessed();
         }
     }
 
-    private bool TryGetComponentUnit(Collider other, out Unit unit) {
-        unit = other.GetComponentInParent<Unit>();
-        return unit != null;
+    private void HandleCollision(Collider other) {
+        if (TryGetComponentSection(other, out Section section)) {
+            HandleSection(other, section);
+        }
     }
 
-    private static bool TryGetComponentSection(Collider other, out Section section) {
+    private void HandleSection(Collider other, Section section) {
+        if (TryGetComponentUnit(other, out CollisionHandler collisionHandler)) {
+            collisionHandler.SetCollisionProcessed();
+            _signalBus.Fire(new ConflictedSignal(this, collisionHandler));
+        } 
+        else {
+            TouchedSection?.Invoke(section);
+        }
+    }
+
+    private bool TryGetComponentSection(Collider other, out Section section) {
         section = other.GetComponentInParent<Section>();
         return section != null;
+    }
+
+    private bool TryGetComponentUnit(Collider other, out CollisionHandler unit) {
+        unit = other.GetComponentInParent<CollisionHandler>();
+        return unit != null;
     }
 }

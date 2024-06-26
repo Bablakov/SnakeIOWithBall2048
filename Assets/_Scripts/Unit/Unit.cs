@@ -2,46 +2,50 @@ using UnityEngine;
 using Zenject;
 
 public abstract class Unit : MonoBehaviour {
-    [SerializeField] public Section Head;
-
-    public Transform transformParent => Head.transform;
+    public Section Head { get; protected set; }
     public string Nickname { get; private set; }
     public int Level => Head.Level;
-    public Vector3 Position => Head.Position;
-    public Unit ConflictUnit;
-    public bool IsConflict;
 
     protected CollisionHandler CollisionHandler;
     protected FollowingElements FollowingElements;
-    protected ControllerSection ControllerSection;
+    protected ControllerStorageSection ControllerStorageSection;
+    protected StorageSection StorageSection;
     protected ParametrsSnake ParametrsSnake;
     protected NickUnit NickUnit;
-    protected SignalBus SignalBus;
 
-    public void SetOff() {
-        ControllerSection.FreeCollection();
-    }
+    private SignalBus _signalBus;
+    private SnakeConfig _snakeConfig;
 
-    public virtual void AddSeciton(Section section) {
-        ControllerSection.AddElement(section);
-    }
-
-    public void Initialize(string nickname) {
+    public virtual void Initialize(string nickname) {
         SetNewNickName(nickname);
+        CreateComponents();
         InitializeComponents();
     }
 
     [Inject]
-    public void Construct(SnakeConfig snake, SignalBus signalBus) {
+    private void Construct(SnakeConfig snakeConfig, SignalBus signalBus) {
         GetComponents();
-        SignalBus = signalBus;
-        ParametrsSnake = new ParametrsSnake(snake, Head);
-        ControllerSection = new (CollisionHandler, signalBus, Head, this);
-        CollisionHandler.Initialize(signalBus, this);
+        _snakeConfig = snakeConfig;
+        _signalBus = signalBus;
     }
 
     protected virtual void Update() {
         FollowingElements.Update();
+    }
+
+    protected virtual void OnDiedMe() {
+        StorageSection.FreeCollection();
+    }
+
+    protected virtual void GetComponents() {
+        CollisionHandler = GetComponentInChildren<CollisionHandler>();
+        NickUnit = GetComponentInChildren<NickUnit>();
+        Head = GetComponentInChildren<Section>();
+    }
+
+    protected virtual void InitializeComponents() {
+        CollisionHandler.Initialize(Nickname);
+        ControllerStorageSection = new(_signalBus, Head, StorageSection, CollisionHandler);
     }
 
     protected void SetNewNickName(string nickName) {
@@ -49,12 +53,9 @@ public abstract class Unit : MonoBehaviour {
         Nickname = nickName;
     }
 
-    protected virtual void GetComponents() {
-        CollisionHandler = GetComponentInChildren<CollisionHandler>();
-        NickUnit = GetComponentInChildren<NickUnit>();
-    }
-
-    protected virtual void InitializeComponents() {
-        FollowingElements = new FollowingElements(ParametrsSnake, ControllerSection);
+    private void CreateComponents() {
+        StorageSection = new(Head);
+        ParametrsSnake = new ParametrsSnake(_snakeConfig, Head);
+        FollowingElements = new FollowingElements(ParametrsSnake, StorageSection);
     }
 }
