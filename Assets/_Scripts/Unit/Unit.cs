@@ -17,6 +17,7 @@ public abstract class Unit : MonoBehaviour {
     private SnakeConfig _snakeConfig;
 
     public virtual void Initialize(string nickname) {
+        GetComponents();
         SetNewNickName(nickname);
         CreateComponents();
         InitializeComponents();
@@ -24,7 +25,6 @@ public abstract class Unit : MonoBehaviour {
 
     [Inject]
     private void Construct(SnakeConfig snakeConfig, SignalBus signalBus) {
-        GetComponents();
         _snakeConfig = snakeConfig;
         _signalBus = signalBus;
     }
@@ -57,5 +57,9 @@ public abstract class Unit : MonoBehaviour {
         StorageSection = new(Head);
         ParametrsSnake = new ParametrsSnake(_snakeConfig, Head);
         FollowingElements = new FollowingElements(ParametrsSnake, StorageSection);
+    }
+
+    protected virtual void OnDestroy() {
+        ControllerStorageSection.Dispose();
     }
 }

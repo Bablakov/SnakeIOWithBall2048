@@ -2,7 +2,7 @@
 using Zenject;
 using UnityEngine;
 
-public class InputDesktop : InputGame {
+public class InputDesktop : InputGame, IDisposable {
     public event Action SpeededUp;
     public event Action SpeededDown;
 
@@ -17,8 +17,21 @@ public class InputDesktop : InputGame {
 
     [Inject]
     public InputDesktop() {
+        CreateComponent();
+        Subscribe();
+    }
+
+    private void CreateComponent() {
         _gameInput = new GameInputAction();
         _gameInput.Player.Enable();
+    }
+
+    private void Subscribe() {
+        _gameInput.Player.BoostSpeed.started += SpeedUp;
+        _gameInput.Player.BoostSpeed.canceled += SpeedDown;
+    }
+
+    private void Unsubscribe() {
         _gameInput.Player.BoostSpeed.started += SpeedUp;
         _gameInput.Player.BoostSpeed.canceled += SpeedDown;
     }
@@ -51,5 +64,9 @@ public class InputDesktop : InputGame {
 
     private float CalculatePositionByY() {
         return _mousePosition.y - ScreenHeight / 2;
+    }
+
+    public void Dispose() {
+        Unsubscribe();
     }
 }

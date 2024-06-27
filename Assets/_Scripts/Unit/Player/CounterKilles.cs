@@ -1,7 +1,7 @@
 ﻿using System;
 using Zenject;
 
-public class CounterKilles {
+public class CounterKilles : IDisposable {
     public event Action<int> ChangedNumberEnemiesKilled;
 
     private Player _player;
@@ -27,4 +27,7 @@ public class CounterKilles {
         ChangedNumberEnemiesKilled?.Invoke(_numberEnemiesKilled);
     }
 
+    public void Dispose() {
+        Unsubscribe();
+    }
 }

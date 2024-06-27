@@ -13,7 +13,4 @@ public abstract class SoundPlayByEventPlayer : SoundPlayByEvent {
     private void Construct(Player player) {
         Player = player;
     }
-
-    protected abstract void Subscribe();
-    protected abstract void Unsubscribe();
 }

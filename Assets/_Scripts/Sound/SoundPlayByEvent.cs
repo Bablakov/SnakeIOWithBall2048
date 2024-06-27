@@ -5,4 +5,11 @@ public abstract class SoundPlayByEvent : Sound {
         AudioSource.pitch = Random.Range(0.90f, 1.10f);
         AudioSource.Play();
     }
+
+    private void OnDestroy() {
+        Unsubscribe();
+    }
+
+    protected abstract void Subscribe();
+    protected abstract void Unsubscribe();
 }

@@ -33,4 +33,8 @@ public class KillField : MonoBehaviour {
         line.transform.localScale = Vector3.one;
         line.Initialize(killer, killed, this);
     }
+
+    private void OnDestroy() {
+        Unsubscribe();
+    }
 }

@@ -57,4 +57,8 @@ public class ControlledElement : MonoBehaviour {
     private void OnSpeededDown() {
         _parametrsSnake.SetNewSpeed(_parametrsSnake.Speed / SPEED_MULTIPLIER);
     }
+
+    private void OnDestroy() {
+        Unsubscribe();
+    }
 }

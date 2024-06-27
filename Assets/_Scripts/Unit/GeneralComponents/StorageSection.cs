@@ -9,7 +9,7 @@ public class StorageSection {
     private LinkedList<Section> _sections;
 
     public StorageSection(Section firstSection) {
-        _sections = new LinkedList<Section>();
+        CreateComponent();
         _sections.AddFirst(firstSection);
     }
 
@@ -36,6 +36,10 @@ public class StorageSection {
         } else {
             _sections.AddAfter(previousElment, element);
         }
+    }
+
+    private void CreateComponent() {
+        _sections = new LinkedList<Section>();
     }
 
     private void DeleteElementFromCollection(LinkedListNode<Section> node) {

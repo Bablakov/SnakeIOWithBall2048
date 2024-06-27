@@ -1,7 +1,6 @@
 ﻿using System;
 using Zenject;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class ControllerStorageSection {
     public IReadOnlyCollection<Section> _sections => _storageSection.Sections;
@@ -48,5 +47,9 @@ public class ControllerStorageSection {
 
     private bool IsLevelSitualbe(Section section) {
         return _head.Level >= section.Level;
+    }
+
+    public void Dispose(){
+        Unsubscribe();
     }
 }

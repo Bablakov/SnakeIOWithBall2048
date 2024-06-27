@@ -47,4 +47,8 @@ public class Player : Unit {
         CollisionHandler.DiedMe -= OnDiedMe;
         ControllerStorageSection.AddedSection -= OnAddedSection;
     }
+
+    protected override void OnDestroy() {
+        Unsubscribe();
+    }
 }

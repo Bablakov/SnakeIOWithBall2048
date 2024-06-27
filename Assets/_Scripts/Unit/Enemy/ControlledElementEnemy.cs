@@ -63,4 +63,8 @@ public class ControlledElementEnemy : MonoBehaviour {
     private void SetTarget(Transform target) {
         _target = target;
     }
+
+    private void OnDestroy() {
+        Unsubscribe();
+    }
 }

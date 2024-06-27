@@ -12,7 +12,7 @@ public class LeaderBoard : MonoBehaviour {
     private float _timeUpdate = 5f;
 
     public void Initailize() {
-        _linesLeaderBoard = GetComponentsInChildren<ViewLineLeaderBoard>();
+        GetComponent();
     }
 
     [Inject]
@@ -22,12 +22,16 @@ public class LeaderBoard : MonoBehaviour {
         _controllerUnits = controllerUnits;
     }
 
+    private void GetComponent() {
+        _linesLeaderBoard = GetComponentsInChildren<ViewLineLeaderBoard>();
+    }
+
     private void Update() {
         if (_currentTime > _timeUpdate) {
             var list = _controllerUnits.Objects.ToList();
             list.Add(_player);
 
-            var beetwen = list
+            var beetwen = list  
                 .OrderByDescending(unit => unit.Level)
                 .ThenByDescending(unit => unit.Nickname)
                 .Take(_linesLeaderBoard.Length)

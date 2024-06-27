@@ -8,15 +8,23 @@ public class ViewNumberKilledEnemy : MonoBehaviour {
     private CounterKilles _counterKilles;
 
     public void Initialize() {
-        _textMeshPro = GetComponent<TextMeshProUGUI>();
-        _startText = _textMeshPro.text;
-        _textMeshPro.text = _startText + " " + 0;
+        GetComponent();
+        GetAndSetStartValue();
         Subscribe();
     }
 
     [Inject]
     private void Construct(CounterKilles counterKilles) {
         _counterKilles = counterKilles;
+    }
+
+    private void GetComponent() {
+        _textMeshPro = GetComponent<TextMeshProUGUI>();
+    }
+
+    private void GetAndSetStartValue() {
+        _startText = _textMeshPro.text;
+        _textMeshPro.text = _startText + " " + 0;
     }
 
     private void Subscribe() {
@@ -29,5 +37,9 @@ public class ViewNumberKilledEnemy : MonoBehaviour {
 
     private void OnChangedNubmerEnemiesKilled(int numberKilled) {
         _textMeshPro.text = _startText + " " + numberKilled;
+    }
+
+    private void OnDestroy() {
+        Unsubscribe();
     }
 }

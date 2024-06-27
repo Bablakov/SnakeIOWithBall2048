@@ -16,7 +16,7 @@ public class CollisionHandler : MonoBehaviour {
 
     public void Initialize(string nickname) {
         Nickname = nickname;
-        _mineSectioin = GetComponentInChildren<Section>();
+        GetComponent();
     }
 
     [Inject]
@@ -37,15 +37,18 @@ public class CollisionHandler : MonoBehaviour {
         DiedMe?.Invoke();
     }
 
+    private void GetComponent() {
+        _mineSectioin = GetComponentInChildren<Section>();
+    }
+
     private void RemoveCollisionProcessed() {
-        _isCollisionProcessed = false; 
+        _isCollisionProcessed = false;
     }
 
     private void OnTriggerEnter(Collider other) {
         if (!_isCollisionProcessed) {
             HandleCollision(other);
-        }
-        else {
+        } else {
             RemoveCollisionProcessed();
         }
     }
@@ -60,8 +63,7 @@ public class CollisionHandler : MonoBehaviour {
         if (TryGetComponentUnit(other, out CollisionHandler collisionHandler)) {
             collisionHandler.SetCollisionProcessed();
             _signalBus.Fire(new ConflictedSignal(this, collisionHandler));
-        } 
-        else {
+        } else {
             TouchedSection?.Invoke(section);
         }
     }

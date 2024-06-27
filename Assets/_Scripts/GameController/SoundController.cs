@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-public class SoundController : MonoBehaviour {
+public class SoundController : MonoBehaviour, IInitializable {
     private SoundPickUpSection _soundPickUpSection;
     private SoundBackground _soundBackground;
     private SoundDeathPlayer _deathPlayer;

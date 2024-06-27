@@ -1,7 +1,7 @@
 ﻿using System;
 using Zenject;
 
-public class ConflictController {
+public class ConflictController : IDisposable {
     public event Action<string, string> CompletedMurder;
 
     private SignalBus _signalBus;
@@ -60,5 +60,9 @@ public class ConflictController {
 
     private void GiveSection(CollisionHandler winner, Section section) {
         winner.AddSection(section);
+    }
+
+    public void Dispose() {
+        Unsubscribe();
     }
 }

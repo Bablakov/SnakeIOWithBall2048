@@ -1,5 +1,4 @@
 using Zenject;
-using UnityEngine;
 
 public class Enemy : Unit {
     private SignalBus _signalBus;
@@ -43,5 +42,9 @@ public class Enemy : Unit {
 
     private void Unsubscribe() {
         CollisionHandler.DiedMe -= OnDiedMe;
+    }
+
+    protected override void OnDestroy() {
+        Unsubscribe();
     }
 }

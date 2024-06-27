@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-public abstract class ControllerObject<TypeObject> : MonoBehaviour where TypeObject : MonoBehaviour {
+public abstract class ControllerObject<TypeObject> : MonoBehaviour, IInitializable where TypeObject : MonoBehaviour {
     public abstract IReadOnlyList<TypeObject> Objects { get; }
 
     protected abstract bool CanSpawn { get; }
