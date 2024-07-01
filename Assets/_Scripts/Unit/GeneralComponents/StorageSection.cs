@@ -54,6 +54,7 @@ public class StorageSection {
         var currentElement = _sections.First;
         combine = false;
         while (true) {
+            currentElement.Value.PlayAnimation();
             if (currentElement.Value.Level == element.Level) {
                 combine = true;
                 break;

@@ -14,6 +14,8 @@ public abstract class Section : MonoBehaviour {
 
     private StorageSection _controllerSection;
 
+    private AnimationSection _animationSection;
+
     public virtual void Upgrade() {
         UpdateLevel();
         UpdateSection();
@@ -29,6 +31,10 @@ public abstract class Section : MonoBehaviour {
         _controllerSection = controllerSection;
     }
 
+    public void PlayAnimation() {
+        _animationSection.PlayAnimation(Width * 2 * Vector3.one);
+    }
+
     [Inject]
     protected virtual void Construct(SectionConfig sectionConfig) {
         SectionConfig = sectionConfig;
@@ -38,6 +44,7 @@ public abstract class Section : MonoBehaviour {
 
     protected virtual void GetComponents() {
         Text = GetComponentInChildren<TextMeshProUGUI>();
+        _animationSection = GetComponent<AnimationSection>();
     }
 
     private void UpdateLevel() {

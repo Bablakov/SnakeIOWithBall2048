@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-06-27T04:08:35.261Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="ew2F_Pdj64l5WdWGbj6V" version="24.4.0" type="device">
+<mxfile host="Electron" modified="2024-06-27T07:09:28.353Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="xqAq2SrFK2dWZ4UGHAoF" version="24.4.0" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
     <mxGraphModel dx="4834" dy="4144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1109,6 +1109,15 @@
           <mxGeometry y="30" width="350" height="50" as="geometry" />
         </mxCell>
         <mxCell id="A03UyEGMLMdwhms2nCIO-6" value="+ Проигрываю анимацию до того момента, пока добавляемый шарик идёт по коллекции шариков, чтобы найти своё место, то есть проверяем, что этот шарик больше или равен нам, значит мы становимся за ним и проигрываем у него анимацию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-4">
+          <mxGeometry y="80" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="A03UyEGMLMdwhms2nCIO-8" value="Проблема анимации подбора шариков" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="-1980" width="350" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="A03UyEGMLMdwhms2nCIO-9" value="+ Вся змея проигрывается одновременно, то есть не от головы к хвосту, а просто сразу и голова и хвост" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-8">
+          <mxGeometry y="30" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="A03UyEGMLMdwhms2nCIO-10" value="+ При добавлении какого-то шарика, он становиться иногда непонятным образом большого размера" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-8">
           <mxGeometry y="80" width="350" height="80" as="geometry" />
         </mxCell>
       </root>

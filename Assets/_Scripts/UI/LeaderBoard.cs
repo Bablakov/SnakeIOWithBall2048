@@ -27,7 +27,7 @@ public class LeaderBoard : MonoBehaviour {
     }
 
     private void Update() {
-        if (_currentTime > _timeUpdate) {
+        /*if (_currentTime > _timeUpdate) {
             var list = _controllerUnits.Objects.ToList();
             list.Add(_player);
 
@@ -45,6 +45,6 @@ public class LeaderBoard : MonoBehaviour {
         }
         else {
             _currentTime += Time.deltaTime;
-        }
+        }*/
     }
 }

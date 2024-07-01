@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameplayConfig
   m_EditorClassIdentifier: 
   <PointSpawn>k__BackingField: {x: 0, y: 0, z: 0}
-  <NumberSpawnedEnemy>k__BackingField: 50
+  <NumberSpawnedEnemy>k__BackingField: 1
   <NumberSpawnedSection>k__BackingField: 150
   nicknames: Shadow_92, Firestorm-777, IceQueen43, Thunderbolt_88, Nightshade_66,
     Phoenix_101, Cyclone-123, Crystal_55, Mystic_79, Blaze_17, Frostbite-44, Stormy_22,
