@@ -44,12 +44,14 @@ public class TestDoTweenOnCubeOnScene : MonoBehaviour {
     private void CreateNewAnimation() {
         sequence = DOTween.Sequence();
 
-        sequence.Append(transform.DOScale(endScale, duration).SetEase(typeEase));
+        sequence.Append(transform.DOScale(endScale, duration).SetEase(typeEase)).SetDelay(delay);
         
         sequence.AppendCallback(_callback);
 
         sequence.Append(transform.DOScale(startScale, duration).SetEase(typeEase).SetDelay(delay));
-
-       /* sequence.Play();*/
+       
+        
+        
+        /* sequence.Play();*/
     }
 }

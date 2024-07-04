@@ -11,6 +11,7 @@ public class StorageSection {
     public StorageSection(Section firstSection) {
         CreateComponent();
         _sections.AddFirst(firstSection);
+        SetController(firstSection);
     }
 
     public void FreeCollection() {
@@ -53,8 +54,12 @@ public class StorageSection {
     private LinkedListNode<Section> FindPrecedingElement(Section element, out bool combine) {
         var currentElement = _sections.First;
         combine = false;
+       
+        foreach (var section in _sections) {
+            section.SetSequence(null);
+        }
+
         while (true) {
-            currentElement.Value.PlayAnimation();
             if (currentElement.Value.Level == element.Level) {
                 combine = true;
                 break;
@@ -66,11 +71,14 @@ public class StorageSection {
             }
 
             if (currentElement.Next.Value.Level >= element.Level) {
+                currentElement.Value.SetSequence(currentElement.Next.Value.PlayAnimation);
                 currentElement = currentElement.Next;
             } else {
                 break;
             }
         }
+
+        _sections.First.Value.PlayAnimation();
 
         return currentElement;
     }

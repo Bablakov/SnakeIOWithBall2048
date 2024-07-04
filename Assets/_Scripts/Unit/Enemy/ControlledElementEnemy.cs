@@ -21,6 +21,7 @@ public class ControlledElementEnemy : MonoBehaviour {
     }
 
     private void Update() {
+        _navMeshAgent.speed = _parametrsSnake.Speed;
         if (_target != null)
             _navMeshAgent.SetDestination(_target.position);
         else 

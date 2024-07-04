@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-06-27T07:09:28.353Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="xqAq2SrFK2dWZ4UGHAoF" version="24.4.0" type="device">
+<mxfile host="Electron" modified="2024-07-04T06:01:54.653Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="DkQSC07FuFgfnGfErcU5" version="24.0.4" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="4834" dy="4144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4750" dy="4089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -967,10 +967,10 @@
         <mxCell id="1RjqgWXyVxkbBXCVlGGC-199" value="+ Когда мы подбираем шарик, у нас секции змеи начиная с головы чуть-чуть увеличиываются и становятся того же размера, что и раньше" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
           <mxGeometry y="26" width="330" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-1" value="+&amp;nbsp; Когда сливаются два шарика, для увеличения одного из них, то один, который с зади он сначала становиться на место шарика перед ним, потом происходит увеличение шарика" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1RjqgWXyVxkbBXCVlGGC-197">
+        <mxCell id="A03UyEGMLMdwhms2nCIO-1" value="+&amp;nbsp; Когда сливаются два шарика, для увеличения одного из них, то один, который с зади он сначала становиться на место шарика перед ним, потом происходит увеличение шарика" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
           <mxGeometry y="80" width="330" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-2" value="+ Анимация ускорения, шарики немного начинают отстовать от головы и от головы отходят линии ускорения" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1RjqgWXyVxkbBXCVlGGC-197">
+        <mxCell id="A03UyEGMLMdwhms2nCIO-2" value="+ Анимация ускорения, шарики немного начинают отстовать от головы и от головы отходят линии ускорения" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1RjqgWXyVxkbBXCVlGGC-197" vertex="1">
           <mxGeometry y="150" width="330" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nuIALPx5yWqciM5iSzQI-1" value="NavigatorEnemy" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#e51400;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
@@ -1102,23 +1102,65 @@
         <mxCell id="nuIALPx5yWqciM5iSzQI-50" value="+ Если в радиусе нет никаких целей, то тогда мы выбираем рандомную точку на карте, но ровно то того случая пока кто-то не попадёт в коллайдер" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="nuIALPx5yWqciM5iSzQI-41" vertex="1">
           <mxGeometry y="520" width="190" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-4" value="Как будет воспроизводиться анимация подбора шариков" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="A03UyEGMLMdwhms2nCIO-4" value="Как будет воспроизводиться анимация подбора шариков" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="445" y="-1980" width="350" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-5" value="+Мы также подбираем шарик, но теперь только в storageSection мы вызываем события где нужно проиграть анимацию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-4">
+        <mxCell id="A03UyEGMLMdwhms2nCIO-5" value="+Мы также подбираем шарик, но теперь только в storageSection мы вызываем события где нужно проиграть анимацию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="A03UyEGMLMdwhms2nCIO-4" vertex="1">
           <mxGeometry y="30" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-6" value="+ Проигрываю анимацию до того момента, пока добавляемый шарик идёт по коллекции шариков, чтобы найти своё место, то есть проверяем, что этот шарик больше или равен нам, значит мы становимся за ним и проигрываем у него анимацию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-4">
+        <mxCell id="A03UyEGMLMdwhms2nCIO-6" value="+ Проигрываю анимацию до того момента, пока добавляемый шарик идёт по коллекции шариков, чтобы найти своё место, то есть проверяем, что этот шарик больше или равен нам, значит мы становимся за ним и проигрываем у него анимацию" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="A03UyEGMLMdwhms2nCIO-4" vertex="1">
           <mxGeometry y="80" width="350" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-8" value="Проблема анимации подбора шариков" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="840" y="-1980" width="350" height="160" as="geometry" />
+        <mxCell id="A03UyEGMLMdwhms2nCIO-8" value="Проблема анимации подбора шариков" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="830" y="-1980" width="350" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-9" value="+ Вся змея проигрывается одновременно, то есть не от головы к хвосту, а просто сразу и голова и хвост" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-8">
-          <mxGeometry y="30" width="350" height="50" as="geometry" />
+        <mxCell id="gSRrjhFCt_GbE1_YpBd8-2" value="+ Нужно связать анимации ускорения, изменения скорости ускорения, и нажатия кнопки в одно место" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="A03UyEGMLMdwhms2nCIO-8" vertex="1">
+          <mxGeometry y="30" width="350" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="A03UyEGMLMdwhms2nCIO-10" value="+ При добавлении какого-то шарика, он становиться иногда непонятным образом большого размера" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="A03UyEGMLMdwhms2nCIO-8">
-          <mxGeometry y="80" width="350" height="80" as="geometry" />
+        <mxCell id="9mueCdBUng5P838QmtPs-6" value="В какой промежуток времени должны проигрываться шары" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="-1980" width="350" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="9mueCdBUng5P838QmtPs-7" value="+ В момент когда мы точно знаем, что данный шарик скипается" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="9mueCdBUng5P838QmtPs-6" vertex="1">
+          <mxGeometry y="30" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9mueCdBUng5P838QmtPs-8" value="+ Когда мы знаем, что шарик скипается, то мы передаём функцию проигрывания анимации следующего шарика текущему" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="9mueCdBUng5P838QmtPs-6" vertex="1">
+          <mxGeometry y="70" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9mueCdBUng5P838QmtPs-9" value="+ Некоторые шары не анимируются, которые стоят перед добавленым шаром" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="9mueCdBUng5P838QmtPs-6" vertex="1">
+          <mxGeometry y="120" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gSRrjhFCt_GbE1_YpBd8-3" value="Момент прогирывания добавления шаров" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="790" y="-1740" width="360" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="gSRrjhFCt_GbE1_YpBd8-7" value="+ Начинаем проигрывать анимации с головы, идём до момента:&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Когда упираемся в конец змеи&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Когда упираемся в шарик меньше нас&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="gSRrjhFCt_GbE1_YpBd8-3" vertex="1">
+          <mxGeometry y="30" width="360" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gSRrjhFCt_GbE1_YpBd8-10" value="+ Змеи проигрываем обязательно постепенно, то есть сначала проигрался один шарик, а только потом другой, а не всё одновременно" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="gSRrjhFCt_GbE1_YpBd8-3" vertex="1">
+          <mxGeometry y="100" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-1" value="Как должна обрабатываться логика ускорения" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-350" y="-1980" width="350" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-2" value="+ Есть отдельный класс отвечающий за это:&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Следит за временем прошедшим с момента начала ускорения&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Ограничывает время ускорения&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Он связан с анимацией ускорения&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="NLAiIlZGiceJIPV7ZaQV-1">
+          <mxGeometry y="30" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-3" value="Как должна работать логика ускорения у врага" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-750" y="-1980" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-4" value="&lt;div&gt;+ Всё тоже самое, что и у игрока&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="NLAiIlZGiceJIPV7ZaQV-3">
+          <mxGeometry y="30" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-5" value="&lt;div&gt;+ По определённому времени на сцене каждый бот ускоряется сам&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="NLAiIlZGiceJIPV7ZaQV-3">
+          <mxGeometry y="60" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-6" value="Проблемы логики ускорения врага" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-740" y="-1788" width="340" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-7" value="&lt;div&gt;+ При изменении параметра скорости змеи, она не принимается, так как нужно в контроллере самому обновлять скорость у агента&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="NLAiIlZGiceJIPV7ZaQV-6">
+          <mxGeometry y="30" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NLAiIlZGiceJIPV7ZaQV-8" value="&lt;div&gt;+ Нужно сделать прослойку&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="NLAiIlZGiceJIPV7ZaQV-6">
+          <mxGeometry y="80" width="340" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

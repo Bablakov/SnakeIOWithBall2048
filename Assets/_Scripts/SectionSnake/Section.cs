@@ -12,7 +12,7 @@ public abstract class Section : MonoBehaviour {
     protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;
 
-    private StorageSection _controllerSection;
+    private StorageSection _storageSection;
 
     private AnimationSection _animationSection;
 
@@ -26,13 +26,23 @@ public abstract class Section : MonoBehaviour {
         UpdateSection();
     }
 
-    public void SetNewControllerSection(StorageSection controllerSection) {
-        _controllerSection?.Delete(this);
-        _controllerSection = controllerSection;
-    }
+    public void SetNewControllerSection(StorageSection storageSection) {
+        CalculateValues();
+        _storageSection?.Delete(this);
+        if (storageSection == null)
+            _animationSection.StopAnimation(Width * 2 * Vector3.one);
+        _storageSection = storageSection;
+    } 
 
     public void PlayAnimation() {
-        _animationSection.PlayAnimation(Width * 2 * Vector3.one);
+        CalculateValues();
+        if (_storageSection != null)
+            _animationSection.PlayAnimation(Width * 2 * Vector3.one);
+    }
+
+    public void SetSequence(DG.Tweening.TweenCallback callback) {
+        CalculateValues();
+        _animationSection.SetSequence(callback);
     }
 
     [Inject]

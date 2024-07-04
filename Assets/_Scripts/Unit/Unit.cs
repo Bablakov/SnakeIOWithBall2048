@@ -6,8 +6,10 @@ public abstract class Unit : MonoBehaviour {
     public string Nickname { get; private set; }
     public int Level => Head.Level;
 
+    protected ControllerSpeedUpSnake ControllerSpeedUp;
     protected ControllerStorageSection ControllerStorageSection;
     protected FollowingElements FollowingElements;
+    protected AnimationSpeedUp AnimationSpeedUp;
     protected CollisionHandler CollisionHandler;
     protected StorageSection StorageSection;
     protected ParametrsSnake ParametrsSnake;
@@ -31,6 +33,7 @@ public abstract class Unit : MonoBehaviour {
 
     protected virtual void Update() {
         FollowingElements.Update();
+        ControllerSpeedUp.Update();
     }
 
     protected virtual void OnDiedMe() {
@@ -38,6 +41,7 @@ public abstract class Unit : MonoBehaviour {
     }
 
     protected virtual void GetComponents() {
+        AnimationSpeedUp = GetComponentInChildren<AnimationSpeedUp>();
         CollisionHandler = GetComponent<CollisionHandler>();
         NickUnit = GetComponentInChildren<NickUnit>();
         Head = GetComponentInChildren<Section>();
@@ -46,6 +50,7 @@ public abstract class Unit : MonoBehaviour {
     protected virtual void InitializeComponents() {
         CollisionHandler.Initialize(Nickname);
         ControllerStorageSection = new(_signalBus, Head, StorageSection, CollisionHandler);
+        AnimationSpeedUp.TurnOff();
     }
 
     protected void SetNewNickName(string nickName) {
@@ -57,6 +62,7 @@ public abstract class Unit : MonoBehaviour {
         StorageSection = new(Head);
         ParametrsSnake = new ParametrsSnake(_snakeConfig, Head);
         FollowingElements = new FollowingElements(ParametrsSnake, StorageSection);
+        ControllerSpeedUp = new ControllerSpeedUpSnake(ParametrsSnake, AnimationSpeedUp);
     }
 
     protected virtual void OnDestroy() {

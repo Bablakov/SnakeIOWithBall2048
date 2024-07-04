@@ -2,16 +2,17 @@
 using Zenject;
 
 public class ControlledElement : MonoBehaviour {
-    private const int SPEED_MULTIPLIER = 2;
-
     public Vector3 DirectionMovement => _inputGame.GetDirectionMovememt();
 
     public ParametrsSnake _parametrsSnake;
+
+    private ControllerSpeedUpSnake _controllerSpeedUpSnake;
     private InputGame _inputGame;
     private Rotation _rotation;
     private Movement _movement;
 
-    public void Initialize(ParametrsSnake parametrsSnake) {
+    public void Initialize(ParametrsSnake parametrsSnake, ControllerSpeedUpSnake controllerSpeedUpSnake) {
+        _controllerSpeedUpSnake = controllerSpeedUpSnake;
         _parametrsSnake = parametrsSnake;
         Subscribe();
         CreateComponents();
@@ -51,11 +52,11 @@ public class ControlledElement : MonoBehaviour {
     }
 
     private void OnSpededUp() {
-        _parametrsSnake.SetNewSpeed(_parametrsSnake.Speed * SPEED_MULTIPLIER);
+        _controllerSpeedUpSnake.SpeedUp();
     }
 
     private void OnSpeededDown() {
-        _parametrsSnake.SetNewSpeed(_parametrsSnake.Speed / SPEED_MULTIPLIER);
+        _controllerSpeedUpSnake.SpeedLow();
     }
 
     private void OnDestroy() {

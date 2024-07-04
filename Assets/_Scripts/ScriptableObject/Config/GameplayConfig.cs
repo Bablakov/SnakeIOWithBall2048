@@ -3,7 +3,7 @@
 [CreateAssetMenu(fileName = "GameplayConfig", menuName = "Configs/GameplayConfig")]
 public class GameplayConfig : ScriptableObject {
     [field: SerializeField] public Vector3 PointSpawn {  get; private set; }
-    [field: SerializeField, Range(1, 50)] public int NumberSpawnedEnemy { get; private set; }
+    [field: SerializeField, Range(0, 50)] public int NumberSpawnedEnemy { get; private set; }
     [field: SerializeField, Range(1, 150)] public int NumberSpawnedSection { get; private set; }
     [SerializeField] private string nicknames;
 

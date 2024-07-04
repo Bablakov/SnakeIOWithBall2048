@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d75954c7093000c4cb63e43a520a9716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coefficientScalling: 2
+  coefficientScalling: 1.15
   duration: 0.05
-  delay: 0.02
+  delay: 0.1
   typeEase: 13

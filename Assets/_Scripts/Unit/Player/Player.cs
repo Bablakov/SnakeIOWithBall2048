@@ -19,7 +19,7 @@ public class Player : Unit {
 
     protected override void InitializeComponents() {
         base.InitializeComponents();
-        _controlledElement.Initialize(ParametrsSnake);
+        _controlledElement.Initialize(ParametrsSnake, ControllerSpeedUp);
     }
 
     protected override void OnDiedMe() {

@@ -13,7 +13,6 @@ public class AnimationSection : MonoBehaviour {
     private Vector3 endScale;
     private Sequence sequence;
     private TweenCallback _callback;
-    private bool _isPlaying;
 
     public void SetSequence(TweenCallback callback) {
         if (callback != null) {
@@ -27,10 +26,18 @@ public class AnimationSection : MonoBehaviour {
         CreateNewAnimation();
     }
 
+    public void StopAnimation(Vector3 localScale) {
+        sequence.Kill();
+        transform.localScale = localScale;
+    }
+
     private void CreateNewAnimation() {
+
         sequence = DOTween.Sequence();
-        sequence.Append(transform.DOScale(endScale, duration).SetEase(typeEase));
-        sequence.AppendCallback(_callback);
+        sequence.Append(transform.DOScale(endScale, duration).SetEase(typeEase)).SetDelay(delay);
+        if (_callback != null) {
+            sequence.AppendCallback(_callback);
+        }
         sequence.Append(transform.DOScale(startScale, duration).SetEase(typeEase).SetDelay(delay));
     }
 }
