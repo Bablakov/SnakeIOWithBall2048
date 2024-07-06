@@ -3,6 +3,7 @@ using UnityEngine.AI;
 using Zenject;
 
 public class ControlledElementEnemy : MonoBehaviour {
+    private ControllerSpeedUpEnemy _controllerSpeedUpEnemy;
     private CollisionHandler _collisionHandler;
     private ParametrsSnake _parametrsSnake;
     private NavigatorEnemy _navigatorEnemy;
@@ -17,11 +18,11 @@ public class ControlledElementEnemy : MonoBehaviour {
             SetValue(parametrsSnake, collisionHandler, unit);
             FindNewTarget();
             Subscribe();
+            _controllerSpeedUpEnemy = new ControllerSpeedUpEnemy(parametrsSnake, _navMeshAgent);
         }
     }
 
     private void Update() {
-        _navMeshAgent.speed = _parametrsSnake.Speed;
         if (_target != null)
             _navMeshAgent.SetDestination(_target.position);
         else 

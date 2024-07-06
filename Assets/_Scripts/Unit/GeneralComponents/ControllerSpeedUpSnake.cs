@@ -1,6 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ControllerSpeedUpSnake {
+    public float PercentageFreeSpeedUp => _currentTimeFreeSpeedUp / _parametrsSnake.MaxTimeSpeedUp;
+    public event Action SpeededUp;
+    public event Action SlowedDown;
+
     private AnimationSpeedUp _animationSpeedUp;
     private float _currentTimeFreeSpeedUp = 0f;
     private ParametrsSnake _parametrsSnake;
@@ -29,12 +34,14 @@ public class ControllerSpeedUpSnake {
         SpeedUpValue();
         _animationSpeedUp.TurnOn();
         _isSpeedUp = true;
+        SpeededUp?.Invoke();
     }
 
     public void SpeedLow() {
         SpeedLowValue();
         _animationSpeedUp.TurnOff();
         _isSpeedUp = false;
+        SlowedDown?.Invoke();
     }
 
     private void SpeedUpValue() {

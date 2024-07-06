@@ -35,7 +35,6 @@ public class Enemy : Unit {
         else {
             _currentTimeUpdateSpeedUp = _timeUpdateSpeedUp;
             ControllerSpeedUp.SpeedUp();
-            Debug.Log("SpeedUp");
         }
     }
 

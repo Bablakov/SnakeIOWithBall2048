@@ -6,6 +6,7 @@ public class Player : Unit {
     public event Action PutOnSection;
 
     private ControlledElement _controlledElement;
+    private ViewFreeSpeedUpOnPlayer _viewFreeSpeedUpOnPlayer;
 
     public override void Initialize(string nickname) {
         base.Initialize(nickname);
@@ -15,11 +16,14 @@ public class Player : Unit {
     protected override void GetComponents() {
         base.GetComponents();
         _controlledElement = GetComponent<ControlledElement>();
+        _viewFreeSpeedUpOnPlayer = GetComponentInChildren<ViewFreeSpeedUpOnPlayer>();
     }
 
     protected override void InitializeComponents() {
         base.InitializeComponents();
         _controlledElement.Initialize(ParametrsSnake, ControllerSpeedUp);
+        _viewFreeSpeedUpOnPlayer.Initialize(ControllerSpeedUp);
+        _viewFreeSpeedUpOnPlayer.Disable();
     }
 
     protected override void OnDiedMe() {
@@ -40,12 +44,24 @@ public class Player : Unit {
         CollisionHandler.DiedEnemy += OnDiedEnemy;
         CollisionHandler.DiedMe += OnDiedMe;
         ControllerStorageSection.AddedSection += OnAddedSection;
+        ControllerSpeedUp.SpeededUp += OnSpeededUp;
+        ControllerSpeedUp.SlowedDown += OnSlowedDown;        
     }
 
     private void Unsubscribe() {
         CollisionHandler.DiedEnemy -= OnDiedEnemy;
         CollisionHandler.DiedMe -= OnDiedMe;
         ControllerStorageSection.AddedSection -= OnAddedSection;
+        ControllerSpeedUp.SpeededUp -= OnSpeededUp;
+        ControllerSpeedUp.SlowedDown  -= OnSlowedDown;
+    }
+
+    private void OnSpeededUp() {
+        _viewFreeSpeedUpOnPlayer.Enable();
+    }
+
+    private void OnSlowedDown() {
+        _viewFreeSpeedUpOnPlayer.Disable();
     }
 
     protected override void OnDestroy() {
