@@ -8,9 +8,10 @@ internal class GameSignalInstaller : MonoInstaller {
     private void BindSignal() {
         SignalBusInstaller.Install(Container);
 
-        Container.DeclareSignal<AddedSectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedObjectSignal<Section>>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedObjectSignal<Unit>>().OptionalSubscriber();
+        Container.DeclareSignal<MergedSectionSignal>().OptionalSubscriber();
+        Container.DeclareSignal<AddedSectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<ConflictedSignal>().OptionalSubscriber();
     }
 }

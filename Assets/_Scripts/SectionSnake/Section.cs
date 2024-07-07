@@ -8,6 +8,7 @@ public abstract class Section : MonoBehaviour {
     public Vector3 Position => transform.position;
     public float Width { get; protected set; }
     public int Level { get; protected set; }
+    public bool IsPool;
 
     protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;

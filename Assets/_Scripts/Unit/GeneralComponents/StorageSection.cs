@@ -1,9 +1,11 @@
 ﻿using System;
+using UnityEngine;
+using System.Linq;
 using System.Collections.Generic;
 
 public class StorageSection {
-    public event Action<Section, bool> DeletedSection;
-    
+    public event Action<Section, Section> MergedSection;
+
     public IReadOnlyCollection<Section> Sections => _sections;
 
     private LinkedList<Section> _sections;
@@ -36,6 +38,25 @@ public class StorageSection {
             MergeElement(previousElment, element);
         } else {
             _sections.AddAfter(previousElment, element);
+        }
+    }
+
+    public void CheckCombineElement(Section section) {
+        var sect = _sections.Find(section);
+        while (true) {
+            if (sect == null) {
+                break;
+            }
+
+            if (sect.Previous == null) {
+                break;
+            }
+            else if (sect.Previous.Value.Level == sect.Value.Level) {
+                AnimationMerge(sect.Previous.Value, section);
+                break;
+            }
+
+            sect = sect.Previous;
         }
     }
 
@@ -84,10 +105,8 @@ public class StorageSection {
     }
 
     private void MergeElement(LinkedListNode<Section> elementCombine, Section section) {
-        DeleteElement(section, true);
         DeleteController(section);
-
-        elementCombine.Value.Upgrade();
+        AnimationMerge(elementCombine.Value, section);
 
         if (elementCombine != _sections.First && elementCombine.Previous.Value.Level == elementCombine.Value.Level) {
             MergeElement(elementCombine.Previous);
@@ -97,24 +116,17 @@ public class StorageSection {
     private void MergeElement(LinkedListNode<Section> elementCombine) {
         var beetwen = elementCombine.Next;
         var beetwenSignal = elementCombine.Next.Value;
-        DeleteElement(beetwen, true);
         DeleteController(beetwenSignal);
-        
-        elementCombine.Value.Upgrade();
+        AnimationMerge(elementCombine.Value, beetwen.Value);
 
         if (elementCombine != _sections.First && elementCombine.Previous.Value.Level == elementCombine.Value.Level) {
             MergeElement(elementCombine.Previous);
         }
     }
 
-    private void DeleteElement(Section element, bool needSpawnRepeat) {
-        _sections.Remove(element);
-        DeletedSection?.Invoke(element, needSpawnRepeat);
-    }
-
-    private void DeleteElement(LinkedListNode<Section> element, bool needSpawnRepeat) {
-        _sections.Remove(element);
-        DeletedSection?.Invoke(element.Value, needSpawnRepeat);
+    private void AnimationMerge(Section upgradeElement, Section deleteElement) {
+        _sections.Remove(deleteElement);
+        MergedSection?.Invoke(upgradeElement, deleteElement);
     }
 
     private void SetController(Section element) {

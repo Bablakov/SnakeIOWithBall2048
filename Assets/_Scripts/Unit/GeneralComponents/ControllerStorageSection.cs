@@ -21,12 +21,12 @@ public class ControllerStorageSection {
 
     private void Subscribe() {
         _collisionHandler.TouchedSection += OnTouckedSection;
-        _storageSection.DeletedSection += OnDeletedSection;
+        _storageSection.MergedSection += OnMergedSection;
     }
 
     private void Unsubscribe() {
         _collisionHandler.TouchedSection -= OnTouckedSection;
-        _storageSection.DeletedSection -= OnDeletedSection;
+        _storageSection.MergedSection -= OnMergedSection;
     }
 
     private void OnTouckedSection(Section section) {
@@ -37,8 +37,8 @@ public class ControllerStorageSection {
         }
     }
 
-    private void OnDeletedSection(Section section, bool needSpawn) {
-        _signalBus.Fire(new ReleasedObjectSignal<Section>(section, needSpawn));
+    private void OnMergedSection(Section upgradeSection, Section deleteSection) {
+        _signalBus.Fire(new MergedSectionSignal(_storageSection, upgradeSection, deleteSection));
     }
 
     private bool IsNotItemInCollection(Section section) {

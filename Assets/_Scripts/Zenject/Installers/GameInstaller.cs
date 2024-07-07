@@ -2,6 +2,7 @@
 using Zenject;
 
 public class GameInstaller : MonoInstaller {
+    [SerializeField] private ControllerMergeSection controllerMergeSection;
     [SerializeField] private ControllerSections controllerSections;
     [SerializeField] private ControllerUnits controllerUnits;
     [SerializeField] private SoundController soundController;
@@ -31,6 +32,7 @@ public class GameInstaller : MonoInstaller {
         Container.BindInterfacesAndSelfTo<ConflictController>().AsSingle();
         Container.BindInterfacesAndSelfTo<CounterKilles>().AsSingle();
         Container.BindInterfacesAndSelfTo<InputDesktop>().AsSingle();
+        Container.BindInterfacesAndSelfTo<ControllerMergeSection>().AsSingle();
         Container.Bind<NavigatorEnemy>().AsSingle();
     }
 }   

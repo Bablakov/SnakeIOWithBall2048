@@ -1,8 +1,12 @@
 ﻿public class MergedSectionSignal {
+    public readonly StorageSection StorageSection;
     public readonly Section UpgradeSection;
     public readonly Section DeleteSection;
 
-    public MergedSectionSignal(Section upgradeSection, Section deleteSection) {
+    public float Time = 1f;
+
+    public MergedSectionSignal(StorageSection storageSection, Section upgradeSection, Section deleteSection) {
+        StorageSection = storageSection;
         UpgradeSection = upgradeSection;
         DeleteSection = deleteSection;
     }
