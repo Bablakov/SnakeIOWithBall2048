@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-07-08T07:14:24.437Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="OX3sunZWFn2Ql4RVL-l4" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-07-08T14:06:34.613Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="q9DnT-nV4eIXeUUdbpND" version="24.0.4" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="3716" dy="3863" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3874" dy="4128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1219,7 +1219,7 @@
         <mxCell id="OVTITHB-5OJyGTLECnf2-11" value="+ Когда быстро собираешь шары, появляется ошибка, связанная с некорректным удалением и появлением шаров на поле, что приводить к их телепортации с ботами и постепенному уменьшеннию кол-ва на карте" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;container=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="CNNvsNWEoA8BiH0J_8Bd-1" vertex="1">
           <mxGeometry y="80" width="340" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-1" value="&amp;nbsp;+ Возникает проблема, при игре с ботами, когда они хавают твой шарик, который под анимацией соединения, то тогда этот шар как бы становится под их управленнием, но у тебя всё равно анимация проигрывается до конца" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;container=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="CNNvsNWEoA8BiH0J_8Bd-1">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-1" value="&amp;nbsp;+ Возникает проблема, при игре с ботами, когда они хавают твой шарик, который под анимацией соединения, то тогда этот шар как бы становится под их управленнием, но у тебя всё равно анимация проигрывается до конца" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;container=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="CNNvsNWEoA8BiH0J_8Bd-1" vertex="1">
           <mxGeometry y="150" width="340" height="80" as="geometry" />
         </mxCell>
         <mxCell id="OVTITHB-5OJyGTLECnf2-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -1252,23 +1252,41 @@
         <mxCell id="OVTITHB-5OJyGTLECnf2-9" value="+ Логика всего перемещения будет такой же, кака и в скрипте followingElements, то есть будет рассчитываться направление движения, естественно скорость и присваиваться данные значения" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="OVTITHB-5OJyGTLECnf2-6" vertex="1">
           <mxGeometry y="140" width="340" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-4" value="Как должно выглядеть главное меню" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-4" value="Как должно выглядеть главное меню" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-260" y="-1980" width="300" height="250" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-5" value="+ Название игры сверху по центру" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-4">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-5" value="+ Название игры сверху по центру" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-4" vertex="1">
           <mxGeometry y="26" width="300" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-6" value="+ По серидине шарик, которым мы будем управлять" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-4">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-6" value="+ По серидине шарик, которым мы будем управлять" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-4" vertex="1">
           <mxGeometry y="52" width="300" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-7" value="+ Справа или Слева в углу у нас будет отключение звука" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-4">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-7" value="+ Справа или Слева в углу у нас будет отключение звука" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-4" vertex="1">
           <mxGeometry y="90" width="300" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-8" value="+ Две кноки снизу по центру, под шаром (Стратра игры и увеличение нашего шарика), при нажатии на которые нас перекидывает на игровую сцену, с увеличенным или без шариком" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-4">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-8" value="+ Две кноки снизу по центру, под шаром (Стратра игры и увеличение нашего шарика), при нажатии на которые нас перекидывает на игровую сцену, с увеличенным или без шариком" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-4" vertex="1">
           <mxGeometry y="130" width="300" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-9" value="+ При нажатии на кнопку она становиться серой,&lt;div&gt;при отпускании становиться первоночального цвета&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-4">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-9" value="+ При нажатии на кнопку она становиться серой,&lt;div&gt;при отпускании становиться первоночального цвета&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-4" vertex="1">
           <mxGeometry y="200" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-10" value="Что нужно сделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-260" y="-1725" width="310" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-11" value="+ Доделать панель возрождения, с ревардед кнопкой и отменой, тоесть возможностью скипнуть панель до её автоматического исчезновения" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
+          <mxGeometry y="26" width="310" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-12" value="+ Отрефакторить код" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
+          <mxGeometry y="90" width="310" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-13" value="+ Добавить аналитику в игру, рассписать где и когда она должна вызываться" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
+          <mxGeometry y="128" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EjiNkwcJgIDmq7_WQOKN-1" value="+ Хорошо подумать на счёт неуязвимости после спавна юнитов" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-10">
+          <mxGeometry y="168" width="310" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EjiNkwcJgIDmq7_WQOKN-2" value="+ Всё остальное по задачам с WEEK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="-lsXJk_f0JYDKBXWkUzk-10">
+          <mxGeometry y="208" width="310" height="22" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

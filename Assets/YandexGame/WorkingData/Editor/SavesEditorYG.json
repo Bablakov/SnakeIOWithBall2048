@@ -1,0 +1,15 @@
+{
+    "idSave": 5,
+    "isFirstSession": false,
+    "language": "en",
+    "promptDone": false,
+    "money": 1,
+    "newPlayerName": "Hello!",
+    "openLevels": [
+        false,
+        true,
+        false
+    ],
+    "bestLevelSection": 12,
+    "bestNumberKilled": 42
+}

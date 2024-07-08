@@ -1,4 +1,5 @@
 using System;
+using YG;
 
 public class Player : Unit {
     public event Action KilledEnemy;
@@ -11,6 +12,7 @@ public class Player : Unit {
     public override void Initialize(string nickname) {
         base.Initialize(nickname);
         Subscribe();
+        Head.SetLevel(YandexGame.savesData.startLevelPlayer);
     }
 
     protected override void GetComponents() {

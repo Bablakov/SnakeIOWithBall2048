@@ -3,9 +3,9 @@ using Zenject;
 
 public class CounterKilles : IDisposable {
     public event Action<int> ChangedNumberEnemiesKilled;
+    public int _numberEnemiesKilled { get; private set; }
 
     private Player _player;
-    private int _numberEnemiesKilled;
 
     [Inject]
     public CounterKilles(Player player) { 

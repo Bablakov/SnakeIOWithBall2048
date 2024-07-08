@@ -4,7 +4,7 @@ using Zenject;
 public abstract class UIController : MonoBehaviour, IInitializable {
     private ButtonSoundControl _buttonSoundControl;
 
-    public void Initialize() {
+    public virtual void Initialize() {
         GetComponents();
         InitializeComponents();
     }

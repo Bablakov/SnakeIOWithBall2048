@@ -39,9 +39,7 @@ public class ControllerSections : ControllerObject<Section> {
     }
 
     protected override void OnReleasedObject(ReleasedObjectSignal<Section> signal) {
-        //if (!signal.ReleasedObject.IsPool) {
-            MemoryPool.Despawn(signal.ReleasedObject);
-        /*}*/
+        MemoryPool.Despawn(signal.ReleasedObject);
         SpawnObject();
     }
 

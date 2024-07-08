@@ -53,7 +53,6 @@ public class ControllerMergeSection : IDisposable, ITickable {
     private void OnCopletedMethod(MergedSectionSignal signal) {
         DeleteElementFromCollection(signal);
         signal.UpgradeSection.Upgrade();
-        Debug.Log($"- {signal.DeleteSection.Level}");
         ReleasedSection(signal.DeleteSection);
         signal.StorageSection.DeleteSectionFromCollection(signal.DeleteSection);
     }
