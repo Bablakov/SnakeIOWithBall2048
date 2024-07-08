@@ -5,22 +5,22 @@ public class GameInstaller : MonoInstaller {
     [SerializeField] private ControllerMergeSection controllerMergeSection;
     [SerializeField] private ControllerSections controllerSections;
     [SerializeField] private ControllerUnits controllerUnits;
-    [SerializeField] private SoundController soundController;
-    [SerializeField] private UIController uiController;
+    [SerializeField] private SoundControllerGame soundController;
+    [SerializeField] private UIControllerGame uiController;
     [SerializeField] private Camera _camera;
     [SerializeField] private Player player;
     
     public override void InstallBindings() {
-        BindMonoBegaviourObject();
+        BindMonoBehaviourObject();
         BindWithLinkOnObjectScene();
         BindDefaultClass();
     }
 
-    private void BindMonoBegaviourObject() {
+    private void BindMonoBehaviourObject() {
         Container.BindInterfacesAndSelfTo<ControllerSections>().FromInstance(controllerSections);
         Container.BindInterfacesAndSelfTo<ControllerUnits>().FromInstance(controllerUnits);
-        Container.BindInterfacesAndSelfTo<SoundController>().FromInstance(soundController);
-        Container.BindInterfacesAndSelfTo<UIController>().FromInstance(uiController);
+        Container.BindInterfacesAndSelfTo<SoundControllerGame>().FromInstance(soundController);
+        Container.BindInterfacesAndSelfTo<UIControllerGame>().FromInstance(uiController);
     }
 
     private void BindWithLinkOnObjectScene() {

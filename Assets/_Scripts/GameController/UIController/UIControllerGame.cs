@@ -1,27 +1,18 @@
-﻿using UnityEngine;
-using Zenject;
-
-public class UIController : MonoBehaviour, IInitializable {
+﻿public class UIControllerGame : UIController {
     private ViewNumberKilledEnemy _viewNumberKilledEnemy;
     private KillField _killField;
-    private ButtonSoundControl _buttonSoundControl;
     private LeaderBoard _leaderBoard;
 
-    public void Initialize() {
-        GetComponents();
-        InitializeComponents();
-    }
-
-    private void GetComponents() {
+    protected override void GetComponents() {
+        base.GetComponents();
         _viewNumberKilledEnemy = GetComponentInChildren<ViewNumberKilledEnemy>();
-        _buttonSoundControl = GetComponentInChildren<ButtonSoundControl>();
         _leaderBoard = GetComponentInChildren<LeaderBoard>();
         _killField = GetComponentInChildren<KillField>();
     }
 
-    private void InitializeComponents() {
+    protected override void InitializeComponents() {
+        base.InitializeComponents();
         _viewNumberKilledEnemy.Initialize();
-        _buttonSoundControl.Initialize();
         _leaderBoard.Initailize();
         _killField.Initialize();
     }

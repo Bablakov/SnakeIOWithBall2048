@@ -2,11 +2,11 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SoundButton : Sound /*IDisposable*/ {
-    /*private AudioClip _soundClickButton;
+public class SoundButton : Sound, IDisposable {
+    private AudioClip _soundClickButton;
 
-    public override void Initialize() {
-        base.Initialize();
+    public override void Initialize(AudioClip clip) {
+        base.Initialize(clip);
         Subscribe();
     }
 
@@ -24,5 +24,5 @@ public class SoundButton : Sound /*IDisposable*/ {
 
     public void Dispose() {
         Unsubscribe();
-    }*/
+    }
 }
