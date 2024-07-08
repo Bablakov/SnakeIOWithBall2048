@@ -1283,25 +1283,6 @@ Transform:
   - {fileID: 263582329}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &904658559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2005590842337374135, guid: eaa92676377092e469ec4f75881f814e,
-    type: 3}
-  m_PrefabInstance: {fileID: 6819276061505747285}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &904658562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904658559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdeb4fbcab88d2d4bbdcc51b985b376b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  durationAnimation: 0.3
 --- !u!114 &1111860134 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1780074872201244267, guid: 11bb6509fa300534f968cf782cd9606e,
@@ -1902,15 +1883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: controllerMergeSection
       value: 
-      objectReference: {fileID: 904658562}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2005590842337374135, guid: eaa92676377092e469ec4f75881f814e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 904658562}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa92676377092e469ec4f75881f814e, type: 3}
 --- !u!1001 &6963321322345970701
 PrefabInstance:

@@ -1,6 +1,7 @@
 ﻿using System;
 using Zenject;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ControllerStorageSection {
     public IReadOnlyCollection<Section> _sections => _storageSection.Sections;
@@ -31,9 +32,10 @@ public class ControllerStorageSection {
 
     private void OnTouckedSection(Section section) {
         if (IsLevelSitualbe(section) && IsNotItemInCollection(section)) {
+            Debug.Log($"+ {section.Level}");
+            _signalBus.Fire(new AddedSectionSignal(section));
             _storageSection.Add(section);
             AddedSection?.Invoke();
-            _signalBus.Fire(new AddedSectionSignal(section));
         }
     }
 

@@ -3,19 +3,18 @@ using TMPro;
 using Zenject;
 
 public abstract class Section : MonoBehaviour {
+    [SerializeField] protected TextMeshProUGUI Text;
+    
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
     public Vector3 Position => transform.position;
     public float Width { get; protected set; }
     public int Level { get; protected set; }
-    public bool IsPool;
 
-    protected TextMeshProUGUI Text;
     protected SectionConfig SectionConfig;
 
-    private StorageSection _storageSection;
-
     private AnimationSection _animationSection;
+    private StorageSection _storageSection;
 
     public virtual void Upgrade() {
         UpdateLevel();
@@ -46,6 +45,14 @@ public abstract class Section : MonoBehaviour {
         _animationSection.SetSequence(callback);
     }
 
+    public bool CheckOwnerSection(StorageSection storageSection) {
+        return _storageSection == storageSection;
+    }
+
+    public void OnEnable() {
+        SetValueAppropriateLevel();
+    }
+
     [Inject]
     protected virtual void Construct(SectionConfig sectionConfig) {
         SectionConfig = sectionConfig;
@@ -54,7 +61,6 @@ public abstract class Section : MonoBehaviour {
     }
 
     protected virtual void GetComponents() {
-        Text = GetComponentInChildren<TextMeshProUGUI>();
         _animationSection = GetComponent<AnimationSection>();
     }
 

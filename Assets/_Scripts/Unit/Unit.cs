@@ -34,6 +34,7 @@ public abstract class Unit : MonoBehaviour {
     protected virtual void Update() {
         FollowingElements.Update();
         ControllerSpeedUp.Update();
+        StorageSection.Update();
     }
 
     protected virtual void OnDiedMe() {

@@ -6,4 +6,10 @@ public class BootstrapGame : MonoBehaviour{
     private void Awake() {
         player.Initialize("Вы");
     }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            Debug.Log("------------------------------------------");
+        }
+    }
 }

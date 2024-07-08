@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 using Zenject;
 
 public class ControllerSections : ControllerObject<Section> {
@@ -38,15 +39,10 @@ public class ControllerSections : ControllerObject<Section> {
     }
 
     protected override void OnReleasedObject(ReleasedObjectSignal<Section> signal) {
-        if(signal.NeedSpawnRepeat) {
-            if (!signal.ReleasedObject.IsPool) {
-                MemoryPool.Despawn(signal.ReleasedObject);
-            }
-            SpawnObject();
-        }
-        else {
-            AddInCollection(signal.ReleasedObject);
-        }
+        //if (!signal.ReleasedObject.IsPool) {
+            MemoryPool.Despawn(signal.ReleasedObject);
+        /*}*/
+        SpawnObject();
     }
 
     private void OnAddedSection(AddedSectionSignal signal) {

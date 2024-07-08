@@ -35,19 +35,27 @@ public class ControllerMergeSection : IDisposable, ITickable {
     }
 
     private void ProcessMergeSection(MergedSectionSignal signal) {
-        RotateBody(signal);
-        MoveBody(signal);
-        signal.Time -= Time.deltaTime;
-        if (GetLengthBeetwenSection(signal) < 1f && signal.Time <= 0.1f) {
-            OnCopletedMethod(signal);
+        if (signal.DeleteSection.CheckOwnerSection(signal.StorageSection) 
+            && signal.UpgradeSection.CheckOwnerSection(signal.StorageSection)) {
+            
+            RotateBody(signal);
+            MoveBody(signal);
+            signal.Time -= Time.deltaTime;
+            if (GetLengthBeetwenSection(signal) < 1f && signal.Time <= 0.1f) {
+                OnCopletedMethod(signal);
+            }
+        }
+        else {
+            DeleteElementFromCollection(signal);
         }
     }
 
     private void OnCopletedMethod(MergedSectionSignal signal) {
-        signal.UpgradeSection.Upgrade();
         DeleteElementFromCollection(signal);
-        _signalBus.Fire(new ReleasedObjectSignal<Section>(signal.DeleteSection, true));
-        signal.StorageSection.CheckCombineElement(signal.UpgradeSection);
+        signal.UpgradeSection.Upgrade();
+        Debug.Log($"- {signal.DeleteSection.Level}");
+        ReleasedSection(signal.DeleteSection);
+        signal.StorageSection.DeleteSectionFromCollection(signal.DeleteSection);
     }
 
     public void Dispose() {
@@ -80,5 +88,9 @@ public class ControllerMergeSection : IDisposable, ITickable {
 
     private Vector3 GetDirectionMove(MergedSectionSignal signal) {
         return (signal.UpgradeSection.Position - signal.DeleteSection.Position).normalized;
+    }
+
+    private void ReleasedSection(Section section) {
+        _signalBus.Fire(new ReleasedObjectSignal<Section>(section, true));
     }
 }
