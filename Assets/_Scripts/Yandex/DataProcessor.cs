@@ -1,5 +1,4 @@
 ﻿using YG;
-using UnityEngine;
 
 public static class DataProcessor {
     private const string LIDERBOARD_WITH_MAX_SECTION = "LBLevelSection";
@@ -19,7 +18,6 @@ public static class DataProcessor {
     }
 
     private static bool SaveLevel(int level) {
-        Debug.Log("I'm chechLevel");
         if (level > YandexGame.savesData.bestLevelSection) {
             YandexGame.savesData.bestLevelSection = level;
             var value = CalculateValueForLiderboardByLevel(level);
@@ -30,7 +28,6 @@ public static class DataProcessor {
     }
 
     private static bool SaveNumberKilled(int numberKilled) {
-        Debug.Log("I'm chechNumberKilled");
         if (numberKilled > YandexGame.savesData.bestNumberKilled) {
             YandexGame.savesData.bestNumberKilled = numberKilled;
             return true;

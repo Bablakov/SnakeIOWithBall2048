@@ -29,10 +29,13 @@ public class GameInstaller : MonoInstaller {
     }
 
     private void BindDefaultClass() {
+        Container.BindInterfacesAndSelfTo<ExecutionMethodController>().AsSingle();
+        Container.BindInterfacesAndSelfTo<ProcessorPlayerRevival>().AsSingle();
+        Container.BindInterfacesAndSelfTo<ControllerMergeSection>().AsSingle();
+        Container.BindInterfacesAndSelfTo<ProcessorPlayerDeath>().AsSingle();
         Container.BindInterfacesAndSelfTo<ConflictController>().AsSingle();
         Container.BindInterfacesAndSelfTo<CounterKilles>().AsSingle();
         Container.BindInterfacesAndSelfTo<InputDesktop>().AsSingle();
-        Container.BindInterfacesAndSelfTo<ControllerMergeSection>().AsSingle();
         Container.Bind<NavigatorEnemy>().AsSingle();
     }
 }   

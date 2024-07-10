@@ -7,10 +7,15 @@ public class MenuInstaller : MonoInstaller {
 
     public override void InstallBindings() {
         BindMonoBehaviourObject();
+        BindDefaultClass();
     }
 
     private void BindMonoBehaviourObject() {
         Container.BindInterfacesAndSelfTo<SoundController>().FromInstance(soundController);
         Container.BindInterfacesAndSelfTo<UIController>().FromInstance(uiController);
+    }
+
+    private void BindDefaultClass() {
+        Container.BindInterfacesAndSelfTo<ProcessorRewardedStartGame>().AsSingle();
     }
 }

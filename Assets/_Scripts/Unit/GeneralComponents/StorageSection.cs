@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
+using static UnityEngine.Rendering.CoreUtils;
 
 public class StorageSection {
     public event Action<Section, Section> MergedSection;
@@ -52,6 +53,10 @@ public class StorageSection {
         } else {
             _currentTime -= Time.deltaTime;
         }
+    }
+
+    public void MakeSectionsInvulnerable() {
+
     }
 
     private void CheckMergeElements() {

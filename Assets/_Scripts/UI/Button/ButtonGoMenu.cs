@@ -1,8 +1,8 @@
 ﻿using DG.Tweening;
 using UnityEngine.SceneManagement;
 
-public class ButtonGoMenu : HidingButton {
-    private const string NAME_Menu_SCENE = "Main";
+public class ButtonGoMenu : ButtonStandart {
+    private const string NAME_MENU_SCENE = "Main";
 
     public override void Initialize() {
         base.Initialize();
@@ -12,6 +12,6 @@ public class ButtonGoMenu : HidingButton {
 
     private void GoMenu() {
         DOTween.KillAll();
-        SceneManager.LoadScene(NAME_Menu_SCENE);
+        GameLoadScenteContorller.LoadScene(NAME_MENU_SCENE);
     }
 }

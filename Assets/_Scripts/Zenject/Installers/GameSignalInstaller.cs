@@ -10,6 +10,7 @@ internal class GameSignalInstaller : MonoInstaller {
 
         Container.DeclareSignal<ReleasedObjectSignal<Section>>().OptionalSubscriber();
         Container.DeclareSignal<ReleasedObjectSignal<Unit>>().OptionalSubscriber();
+        Container.DeclareSignal<CalledDelayedMethodSignal>().OptionalSubscriber();
         Container.DeclareSignal<MergedSectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<AddedSectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<ConflictedSignal>().OptionalSubscriber();

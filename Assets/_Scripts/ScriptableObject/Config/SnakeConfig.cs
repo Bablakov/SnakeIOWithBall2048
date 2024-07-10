@@ -4,5 +4,6 @@
 public class SnakeConfig : ScriptableObject {
     [field: SerializeField, Range(0.1f, 100f)] public float Speed { get; private set; }
     [field: SerializeField, Range(0.1f, 10f)] public float TimeSpeedUp { get; private set; }
+    [field: SerializeField, Range(0.1f, 10f)] public float TimeInvulnerability { get; private set; }
     [field: SerializeField, Range(0.1f, 2f)] public float DistanceBeetwen { get; private set; }
 }

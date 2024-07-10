@@ -17,6 +17,7 @@ public abstract class Unit : MonoBehaviour {
 
     private SignalBus _signalBus;
     private SnakeConfig _snakeConfig;
+    private float _timeInvulnerability;
 
     public virtual void Initialize(string nickname) {
         GetComponents();
@@ -27,6 +28,7 @@ public abstract class Unit : MonoBehaviour {
 
     [Inject]
     private void Construct(SnakeConfig snakeConfig, SignalBus signalBus) {
+        _timeInvulnerability = snakeConfig.TimeInvulnerability;
         _snakeConfig = snakeConfig;
         _signalBus = signalBus;
     }
@@ -66,7 +68,15 @@ public abstract class Unit : MonoBehaviour {
         ControllerSpeedUp = new ControllerSpeedUpSnake(ParametrsSnake, AnimationSpeedUp);
     }
 
+    private void OnEnable() {
+        _signalBus.Fire(new CalledDelayedMethodSignal(_timeInvulnerability, It));
+    }
+
     protected virtual void OnDestroy() {
         ControllerStorageSection.Dispose();
+    }
+
+    private void It() {
+        Debug.Log("EndInvise");
     }
 }

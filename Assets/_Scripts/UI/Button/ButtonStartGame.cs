@@ -1,6 +1,7 @@
 using UnityEngine.SceneManagement;
+using YG;
 
-public class ButtonStartGame : StandartButton {
+public class ButtonStartGame : ButtonStandart {
     private const string NAME_GAME_SCENE = "Game";
 
     public override void Initialize() {
@@ -11,6 +12,7 @@ public class ButtonStartGame : StandartButton {
     }
 
     private void LoadGameScene() {
-        SceneManager.LoadScene(NAME_GAME_SCENE);
+        YandexGame.savesData.startLevelPlayer = 0;
+        GameLoadScenteContorller.LoadScene(NAME_GAME_SCENE);
     }
 }

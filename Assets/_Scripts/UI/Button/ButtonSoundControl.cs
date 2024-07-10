@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ButtonSoundControl : StandartButton {
+public class ButtonSoundControl : ButtonStandart {
     [SerializeField] private Sprite _soundOn;
     [SerializeField] private Sprite _soundOff;
 
