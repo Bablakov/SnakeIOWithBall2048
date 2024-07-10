@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using TMPro;
 using Zenject;
+using System;
 
 public abstract class Section : MonoBehaviour {
     [SerializeField] protected TextMeshProUGUI Text;
     
+    public bool Invulnerability { get; protected set; }
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
     public Vector3 Position => transform.position;
@@ -13,7 +15,8 @@ public abstract class Section : MonoBehaviour {
 
     protected SectionConfig SectionConfig;
 
-    private AnimationSection _animationSection;
+    private AnimationFlickeringSection _animationFlickeringSection;
+    private AnimationIncreaseSection _animationSection;
     private StorageSection _storageSection;
 
     public virtual void Upgrade() {
@@ -51,6 +54,19 @@ public abstract class Section : MonoBehaviour {
 
     public void OnEnable() {
         SetValueAppropriateLevel();
+        if (Invulnerability) {
+            SetVulnerability();
+        }
+    }
+
+    public void SetInvulnerability() {
+        Invulnerability = true;
+        _animationFlickeringSection.StartAnimation();
+    }
+
+    public void SetVulnerability() {
+        Invulnerability = false;
+        _animationFlickeringSection.StopAnimation();
     }
 
     [Inject]
@@ -58,13 +74,22 @@ public abstract class Section : MonoBehaviour {
         SectionConfig = sectionConfig;
         GetComponents();
         UpdateSection();
+        InitializeComponents();
     }
 
     protected virtual void GetComponents() {
-        _animationSection = GetComponent<AnimationSection>();
+        _animationSection = GetComponent<AnimationIncreaseSection>();
+        _animationFlickeringSection = GetComponentInChildren<AnimationFlickeringSection>();
+    }
+
+    private void InitializeComponents() {
+        _animationFlickeringSection.Initialize(SectionConfig, this);
     }
 
     private void UpdateLevel() {
+        if (Invulnerability) {
+            _animationFlickeringSection.StartAnimation();
+        }
         Level++;
     }
 

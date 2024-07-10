@@ -9,10 +9,10 @@ public class TestAnimationMerge : MonoBehaviour {
     private Sequence sequence;
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        /*if (Input.GetKeyDown(KeyCode.Space)) {
             MergeSection();
             Debug.Log("PressSpace");
-        }
+        }*/
     }
 
     private void MergeSection() {

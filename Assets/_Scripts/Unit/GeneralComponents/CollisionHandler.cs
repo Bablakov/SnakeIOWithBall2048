@@ -61,8 +61,10 @@ public class CollisionHandler : MonoBehaviour {
 
     private void HandleSection(Collider other, Section section) {
         if (TryGetComponentUnit(other, out CollisionHandler collisionHandler)) {
-            collisionHandler.SetCollisionProcessed();
-            _signalBus.Fire(new ConflictedSignal(this, collisionHandler));
+            if (!_mineSectioin.Invulnerability) {
+                collisionHandler.SetCollisionProcessed();
+                _signalBus.Fire(new ConflictedSignal(this, collisionHandler));
+            }
         } else {
             TouchedSection?.Invoke(section);
         }
@@ -70,6 +72,8 @@ public class CollisionHandler : MonoBehaviour {
 
     private bool TryGetComponentSection(Collider other, out Section section) {
         section = other.GetComponentInParent<Section>();
+        if (section.Invulnerability)
+            return false;
         return section != null;
     }
 

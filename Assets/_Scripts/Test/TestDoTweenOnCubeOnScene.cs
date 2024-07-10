@@ -1,57 +1,33 @@
-using DG.Tweening;
-using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class TestDoTweenOnCubeOnScene : MonoBehaviour {
-    [SerializeField, Range(0.01f, 2f)] private float coefficientScalling;
-    [SerializeField, Range(0.01f, 2f)] private float duration;
-    [SerializeField, Range(0.01f, 2f)] private float delay;
-    [SerializeField] private Ease typeEase;
-
-    private Vector3 startScale;
-    private Vector3 endScale;
+    public float duration = 1f;
+    private Material material;
     private Sequence sequence;
-    private TweenCallback _callback;
-    private bool _isPlaying;
 
-    private void Awake() {
-        startScale = transform.localScale;
-        endScale = startScale * coefficientScalling;
-    }
+    void Start() {
+        material = GetComponent<Renderer>().material;
 
-    public void SetSequence(TweenCallback callback) {
-        if (callback != null) {
-            _callback = callback;
-        }
-    }
-
-    public void PlayAnimation() {
-        if (_isPlaying) {
-            Debug.Log("KillSequence");
-            sequence.Kill();
-            _isPlaying = true;
-            CreateNewAnimation();
-        }
-        else {
-            _isPlaying = true;
-            CreateNewAnimation();
-        }
-
-        Debug.Log($"{_isPlaying} - isPlaying");
-        _isPlaying = false;
-    }
-
-    private void CreateNewAnimation() {
         sequence = DOTween.Sequence();
 
-        sequence.Append(transform.DOScale(endScale, duration).SetEase(typeEase)).SetDelay(delay);
-        
-        sequence.AppendCallback(_callback);
+        sequence.Append(DOTween.To(() => material.color, color => material.color = color, new Color(material.color.r, material.color.g, material.color.b, 0), duration).SetLoops(-1, LoopType.Yoyo));
+    }
+/*
 
-        sequence.Append(transform.DOScale(startScale, duration).SetEase(typeEase).SetDelay(delay));
-       
-        
-        
-        /* sequence.Play();*/
+
+    void Start() {
+        Material material = GetComponent<MeshRenderer>().material;
+
+        material.DOColor(new Color(material.color.r, material.color.g, material.color.b, 0), "_Color", duration)
+            .SetLoops(-1, LoopType.Yoyo);
+    }*/
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            material.color = new Color(material.color.r, material.color.g, material.color.b, 1);
+            sequence.Kill();
+        }
+            
     }
 }

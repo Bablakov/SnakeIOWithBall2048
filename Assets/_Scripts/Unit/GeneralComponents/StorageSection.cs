@@ -2,7 +2,6 @@
 using UnityEngine;
 using System.Linq;
 using System.Collections.Generic;
-using static UnityEngine.Rendering.CoreUtils;
 
 public class StorageSection {
     public event Action<Section, Section> MergedSection;
@@ -10,13 +9,16 @@ public class StorageSection {
     public IReadOnlyCollection<Section> Sections => _sections;
 
     private LinkedList<Section> _sections;
+    private Section _head;
 
     private float _currentTime = 1f;
     private float _timeUpdate = 1f;
+    private bool _invulnerability = false;
 
     public StorageSection(Section firstSection) {
         CreateComponent();
         _sections.AddFirst(firstSection);
+        _head = firstSection;
         SetController(firstSection);
     }
 
@@ -31,6 +33,7 @@ public class StorageSection {
     }
 
     public void DeleteSectionFromCollection(Section section) {
+        section.SetVulnerability();
         DeleteController(section);
         _sections.Remove(section);
     }
@@ -40,6 +43,10 @@ public class StorageSection {
     }
 
     public void Add(Section element) {
+        if (_invulnerability) {
+            element.SetInvulnerability();
+        }
+
         var previousElment = FindPrecedingElement(element);
 
         SetController(element);
@@ -56,7 +63,19 @@ public class StorageSection {
     }
 
     public void MakeSectionsInvulnerable() {
+        _invulnerability = true;
+        var sections = new List<Section>(_sections);
+        foreach (var section in sections) {
+            section.SetInvulnerability();
+        }
+    }
 
+    public void MakeSectionsVulnerable() {
+        _invulnerability = false;
+        var sections = new List<Section>(_sections);
+        foreach (var section in sections) {
+            section.SetVulnerability();
+        }
     }
 
     private void CheckMergeElements() {

@@ -18,7 +18,7 @@ public class NavigatorEnemy {
     }
 
     public Transform FindTarget(Unit searcher) {
-        var units = _controllerUnits.Objects.ToList();
+        var units = _controllerUnits.Objects.Where(unit => !unit.Head.Invulnerability).ToList();
         var sections = _controllerSection.Objects;
         return FindTarget(units, sections, searcher);
     }
@@ -38,7 +38,7 @@ public class NavigatorEnemy {
     }
 
     private Unit SearchBestTargetUnit(List<Unit> units, Unit searcher) {
-        if (_player.gameObject.activeSelf) {
+        if (_player.gameObject.activeSelf && !_player.Head.Invulnerability) {
             units.Add(_player);
         }
 

@@ -3,7 +3,7 @@ using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 
-public class AnimationSection : MonoBehaviour {
+public class AnimationIncreaseSection : MonoBehaviour {
     [SerializeField, Range(0.01f, 2f)] private float coefficientScalling;
     [SerializeField, Range(0.01f, 2f)] private float duration;
     [SerializeField, Range(0.01f, 2f)] private float delay;

@@ -69,14 +69,17 @@ public abstract class Unit : MonoBehaviour {
     }
 
     private void OnEnable() {
-        _signalBus.Fire(new CalledDelayedMethodSignal(_timeInvulnerability, It));
+        TurnOnInvulnerable();
+    }
+
+    private void TurnOnInvulnerable() {
+        if (StorageSection != null) {
+            StorageSection.MakeSectionsInvulnerable();
+            _signalBus.Fire(new CalledDelayedMethodSignal(_timeInvulnerability, StorageSection.MakeSectionsVulnerable));
+        }
     }
 
     protected virtual void OnDestroy() {
         ControllerStorageSection.Dispose();
-    }
-
-    private void It() {
-        Debug.Log("EndInvise");
     }
 }
