@@ -11,8 +11,14 @@ public class Player : Unit {
 
     public override void Initialize(string nickname) {
         base.Initialize(nickname);
-        Subscribe();
         Head.SetLevel(YandexGame.savesData.startLevelPlayer);
+        Subscribe();
+        TurnOnInvulnerable();   
+    }
+
+    public void Enable() {
+        gameObject.SetActive(true);
+        TurnOnInvulnerable();
     }
 
     protected override void GetComponents() {

@@ -20,6 +20,7 @@ public class Enemy : Unit {
         }
         _currentTimeUpdateSpeedUp = Random.Range(0f, 20f);
         _timeUpdateSpeedUp = Random.Range(5f, 15f);
+        TurnOnInvulnerable();
     }
 
     [Inject]

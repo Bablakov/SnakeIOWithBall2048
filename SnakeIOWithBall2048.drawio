@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-07-10T10:53:18.025Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="mESivd3BQNeRbblqV07x" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-07-11T07:48:38.879Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Sh04uPd_vhI7GlT_fXeq" version="24.0.4" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="4834" dy="4144" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4818" dy="4128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1271,36 +1271,33 @@
           <mxGeometry y="200" width="300" height="50" as="geometry" />
         </mxCell>
         <mxCell id="-lsXJk_f0JYDKBXWkUzk-10" value="Что нужно сделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-260" y="-1725" width="310" height="144" as="geometry" />
+          <mxGeometry x="-260" y="-1725" width="310" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-12" value="+ Отрефакторить код" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-12" value="+ На яндекс играх не работает тема с временем сессии, вырезать" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
           <mxGeometry y="26" width="310" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="-lsXJk_f0JYDKBXWkUzk-13" value="+ Добавить аналитику в игру, рассписать где и когда она должна вызываться" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
+        <mxCell id="-lsXJk_f0JYDKBXWkUzk-13" value="+ Решить проблему с большими шарами, при анимации увеличения, то есть при подборе шара" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
           <mxGeometry y="64" width="310" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="EjiNkwcJgIDmq7_WQOKN-1" value="+ Хорошо подумать на счёт неуязвимости после спавна юнитов" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="-lsXJk_f0JYDKBXWkUzk-10" vertex="1">
-          <mxGeometry y="104" width="310" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-1" value="Как сделать неуязвимость юнитам" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-1" value="Как сделать неуязвимость юнитам" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="70" y="-1820" width="310" height="296" as="geometry" />
         </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-2" value="+ Есть определённое время в Unit, который он неуязвим" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hC0KRBmRQIrMNvQKg1um-1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-2" value="+ Есть определённое время в Unit, который он неуязвим" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hC0KRBmRQIrMNvQKg1um-1" vertex="1">
           <mxGeometry y="26" width="310" height="38" as="geometry" />
         </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-3" value="+ При включении юнита у нас отправляется событие в storageSection о том, что нужно все свои секции сделать неуязвимыми" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hC0KRBmRQIrMNvQKg1um-1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-3" value="+ При включении юнита у нас отправляется событие в storageSection о том, что нужно все свои секции сделать неуязвимыми" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hC0KRBmRQIrMNvQKg1um-1" vertex="1">
           <mxGeometry y="64" width="310" height="56" as="geometry" />
         </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-12" value="+ Во время неуязвимости проигрывается анимацию неуязвимости, либо просто ставим материал прозрачнее" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hC0KRBmRQIrMNvQKg1um-1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-12" value="+ Во время неуязвимости проигрывается анимацию неуязвимости, либо просто ставим материал прозрачнее" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hC0KRBmRQIrMNvQKg1um-1" vertex="1">
           <mxGeometry y="120" width="310" height="56" as="geometry" />
         </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-11" value="+ По истечению времени отдаём сигнал, чтобы все секции стали уязвимыми" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hC0KRBmRQIrMNvQKg1um-1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-11" value="+ По истечению времени отдаём сигнал, чтобы все секции стали уязвимыми" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hC0KRBmRQIrMNvQKg1um-1" vertex="1">
           <mxGeometry y="176" width="310" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-4" value="+ У секций будет отдельная переменная, которая отвечает за то, что она не уязвима" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hC0KRBmRQIrMNvQKg1um-1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-4" value="+ У секций будет отдельная переменная, которая отвечает за то, что она не уязвима" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hC0KRBmRQIrMNvQKg1um-1" vertex="1">
           <mxGeometry y="216" width="310" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="hC0KRBmRQIrMNvQKg1um-10" value="+ CollisionHandler мы при столкновении проверяем у секции неуязвимость" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="hC0KRBmRQIrMNvQKg1um-1">
+        <mxCell id="hC0KRBmRQIrMNvQKg1um-10" value="+ CollisionHandler мы при столкновении проверяем у секции неуязвимость" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hC0KRBmRQIrMNvQKg1um-1" vertex="1">
           <mxGeometry y="256" width="310" height="40" as="geometry" />
         </mxCell>
       </root>

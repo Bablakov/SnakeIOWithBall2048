@@ -7,7 +7,7 @@ public class GameplayConfig : ScriptableObject {
     [field: SerializeField, Range(1, 150)] public int NumberSpawnedSection { get; private set; }
     [SerializeField] private string nicknames;
 
-    [SerializeField, Range(0, 100f)] private float radiusSpawn;
+    [SerializeField, Range(0, 49.5f)] private float radiusSpawn;
 
     public string Nicknames => nicknames;
     public float MinimalPositionSpawnObject => -radiusSpawn;

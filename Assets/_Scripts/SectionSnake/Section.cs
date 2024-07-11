@@ -5,8 +5,8 @@ using System;
 
 public abstract class Section : MonoBehaviour {
     [SerializeField] protected TextMeshProUGUI Text;
-    
-    public bool Invulnerability { get; protected set; }
+
+    public bool Invulnerability;
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
     public Vector3 Position => transform.position;

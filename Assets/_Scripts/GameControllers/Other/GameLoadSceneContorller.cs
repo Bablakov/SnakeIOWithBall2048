@@ -1,6 +1,6 @@
 ﻿using UnityEngine.SceneManagement;
 
-public static class GameLoadScenteContorller {
+public static class GameLoadSceneContorller {
     public static void LoadScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
     }

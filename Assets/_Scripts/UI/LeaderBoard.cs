@@ -8,9 +8,6 @@ public class LeaderBoard : MonoBehaviour {
     private SectionConfig _sectionConfig;
     private ControllerUnits _controllerUnits;
 
-    private float _currentTime = 5f;
-    private float _timeUpdate = 5f;
-
     public void Initailize() {
         GetComponent();
     }
@@ -27,22 +24,16 @@ public class LeaderBoard : MonoBehaviour {
     }
 
     private void Update() {
-        if (_currentTime >= _timeUpdate) {
-            var list = _controllerUnits.Objects.ToList();
-            list.Add(_player);
+        var list = _controllerUnits.Objects.ToList();
+        list.Add(_player);
 
-            var beetwen = list
-                .OrderByDescending(unit => unit.Level)
-                .Take(_linesLeaderBoard.Length)
-                .ToArray();
+        var beetwen = list
+            .OrderByDescending(unit => unit.Level)
+            .Take(_linesLeaderBoard.Length)
+            .ToArray();
 
-            for (int i = 0; i < _linesLeaderBoard.Length; i++) {
-                _linesLeaderBoard[i].SetValue((i + 1).ToString(), beetwen[i].Nickname, _sectionConfig.Sections[beetwen[i].Level].Text);
-            }
-
-            _currentTime = 0f;
-        } else {
-            _currentTime += Time.deltaTime;
+        for (int i = 0; i < _linesLeaderBoard.Length; i++) {
+            _linesLeaderBoard[i].SetValue((i + 1).ToString(), beetwen[i].Nickname, _sectionConfig.Sections[beetwen[i].Level].Text);
         }
     }
 }

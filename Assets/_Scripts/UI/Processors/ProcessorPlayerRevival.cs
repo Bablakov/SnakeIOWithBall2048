@@ -32,7 +32,8 @@ public class ProcessorPlayerRevival : IDisposable {
 
     private void RevivalPlayer(int id) {
         if (id == ID_REVIVAL_PLAYER) {
-            _player.gameObject.SetActive(true);
+            GameAnalyticsController.SendEvent("PlayerRevived");
+            _player.Enable();
             _deathPlayerPanel.Disable();
         }
     }

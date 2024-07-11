@@ -23,6 +23,9 @@ public class AnimationIncreaseSection : MonoBehaviour {
     public void PlayAnimation(Vector3 currentScale) {
         startScale = currentScale;
         endScale = currentScale * coefficientScalling;
+        if (sequence != null) {
+            sequence.Kill();
+        }
         CreateNewAnimation();
     }
 
@@ -32,7 +35,6 @@ public class AnimationIncreaseSection : MonoBehaviour {
     }
 
     private void CreateNewAnimation() {
-
         sequence = DOTween.Sequence();
         sequence.Append(transform.DOScale(endScale, duration).SetEase(typeEase)).SetDelay(delay);
         if (_callback != null) {

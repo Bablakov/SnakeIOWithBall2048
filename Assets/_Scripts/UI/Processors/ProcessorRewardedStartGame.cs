@@ -18,8 +18,9 @@ public class ProcessorRewardedStartGame : IDisposable {
 
     private void LoadRewardedGameScene(int id) {
         if (id == StorageIDRewardedAds.LOAD_SCENE) {
+            GameAnalyticsController.SendEvent("GameStartedWithRewarded");
             YandexGame.savesData.startLevelPlayer = 6;
-            GameLoadScenteContorller.LoadScene(NAME_GAME_SCENE);
+            GameLoadSceneContorller.LoadScene(NAME_GAME_SCENE);
         }
     }
 

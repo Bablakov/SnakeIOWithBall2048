@@ -47,8 +47,10 @@ public class ProcessorPlayerDeath : IDisposable {
         if (_canRevive) {
             _deathPlayerPanel.Enable();
             _canRevive = false;
+            GameAnalyticsController.SendEvent("FirstDiedPlayer");
         } else {
             ViewResultPanel();
+            GameAnalyticsController.SendEvent("SecondDiedPlayer");
         }
     }
 

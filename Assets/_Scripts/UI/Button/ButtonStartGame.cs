@@ -12,7 +12,8 @@ public class ButtonStartGame : ButtonStandart {
     }
 
     private void LoadGameScene() {
+        GameAnalyticsController.SendEvent("GameStarterWithoutRewarded");
         YandexGame.savesData.startLevelPlayer = 0;
-        GameLoadScenteContorller.LoadScene(NAME_GAME_SCENE);
+        GameLoadSceneContorller.LoadScene(NAME_GAME_SCENE);
     }
 }

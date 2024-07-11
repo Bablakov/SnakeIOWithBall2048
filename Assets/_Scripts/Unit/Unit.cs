@@ -14,6 +14,7 @@ public abstract class Unit : MonoBehaviour {
     protected StorageSection StorageSection;
     protected ParametrsSnake ParametrsSnake;
     protected NickUnit NickUnit;
+    protected bool Initialized;
 
     private SignalBus _signalBus;
     private SnakeConfig _snakeConfig;
@@ -68,11 +69,7 @@ public abstract class Unit : MonoBehaviour {
         ControllerSpeedUp = new ControllerSpeedUpSnake(ParametrsSnake, AnimationSpeedUp);
     }
 
-    private void OnEnable() {
-        TurnOnInvulnerable();
-    }
-
-    private void TurnOnInvulnerable() {
+    protected void TurnOnInvulnerable() {
         if (StorageSection != null) {
             StorageSection.MakeSectionsInvulnerable();
             _signalBus.Fire(new CalledDelayedMethodSignal(_timeInvulnerability, StorageSection.MakeSectionsVulnerable));

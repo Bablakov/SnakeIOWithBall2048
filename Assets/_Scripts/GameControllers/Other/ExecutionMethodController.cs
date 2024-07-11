@@ -20,7 +20,6 @@ public class ExecutionMethodController : ITickable, IDisposable {
             if (method.Time < 0) {
                 method.Action();
                 RemoveCalledMethod(method);
-
             }
             else {
                 method.Time -= Time.deltaTime;
