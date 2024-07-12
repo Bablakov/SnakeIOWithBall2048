@@ -10,6 +10,7 @@ public class AnimationFlickeringSection : MonoBehaviour {
     private Material _material;
     private Sequence _sequence;
     private Section _section;
+    private Shader _materialShader;
 
     public void Initialize(SectionConfig sectionConfig, Section section) {
         _material = GetComponent<Renderer>().material;

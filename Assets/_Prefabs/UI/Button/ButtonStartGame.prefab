@@ -108,12 +108,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2801039973381333285, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801039973381333285, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f638f6057d65714f8635f44a33bf818,
+        type: 3}
+    - target: {fileID: 2801039973381333285, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801039973381333285, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801039973381333285, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
         type: 3}
       propertyPath: m_text
-      value: 'Start
-
-'
+      value: "\u0421\u0442\u0430\u0440\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8196780130788801763, guid: 2f14755120e1755499e56a4abf56ce8f,
         type: 3}

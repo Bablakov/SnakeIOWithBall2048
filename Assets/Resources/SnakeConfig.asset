@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 5
   <TimeSpeedUp>k__BackingField: 3
-  <TimeInvulnerability>k__BackingField: 3
+  <TimeInvulnerability>k__BackingField: 10
   <DistanceBeetwen>k__BackingField: 0.2

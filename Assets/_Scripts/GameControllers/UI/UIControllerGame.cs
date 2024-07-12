@@ -5,7 +5,6 @@ public class UIControllerGame : UIController {
     private ViewNumberKilledEnemy _viewNumberKilledEnemy;
     private ProcessorPlayerDeath _processorPlayerDeath;
     private DeathPlayerPanel _deathPlayerPanel;
-    private LeaderBoard _leaderBoard;
     private ResultPanel _resultPanel;
     private KillField _killField;
 
@@ -25,7 +24,6 @@ public class UIControllerGame : UIController {
         base.GetComponents();
         _viewNumberKilledEnemy = GetComponentInChildren<ViewNumberKilledEnemy>();
         _deathPlayerPanel = GetComponentInChildren<DeathPlayerPanel>();
-        _leaderBoard = GetComponentInChildren<LeaderBoard>();
         _resultPanel = GetComponentInChildren<ResultPanel>();
         _killField = GetComponentInChildren<KillField>();
     }
@@ -34,10 +32,8 @@ public class UIControllerGame : UIController {
         base.InitializeComponents();
         _deathPlayerPanel.Initialize(_processorPlayerDeath);
         _viewNumberKilledEnemy.Initialize();
-        _leaderBoard.Initailize();
         _resultPanel.Initialize();
         _killField.Initialize();
-
     }
 
     private void SetValues() {

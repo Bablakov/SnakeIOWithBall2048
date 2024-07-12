@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonSoundControl : ButtonStandart {
-    [SerializeField] private Sprite _soundOn;
-    [SerializeField] private Sprite _soundOff;
+    [SerializeField] private Image imageForChange;
+    [SerializeField] private Sprite soundOff;
+    [SerializeField] private Sprite soundOn;
 
     private bool _isSoundOn = true;
 
@@ -17,7 +19,7 @@ public class ButtonSoundControl : ButtonStandart {
 
     private void SetInitialValue() {
         _isSoundOn = true;
-        Image.sprite = _soundOn;
+        imageForChange.sprite = soundOn;
     }
 
     private void TurnSound() {
@@ -40,11 +42,11 @@ public class ButtonSoundControl : ButtonStandart {
 
     private void TurnOff() {
         GameSoundController.TurnOffSound();
-        Image.sprite = _soundOff;
+        imageForChange.sprite = soundOff;
     }
 
     private void TurnOn() {
         GameSoundController.TurnOnSound();
-        Image.sprite = _soundOn;
+        imageForChange.sprite = soundOn;
     }
 }

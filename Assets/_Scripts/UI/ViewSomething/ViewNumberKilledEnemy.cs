@@ -4,7 +4,6 @@ using Zenject;
 
 public class ViewNumberKilledEnemy : MonoBehaviour { 
     private TextMeshProUGUI _textMeshPro;
-    private string _startText;
     private CounterKilles _counterKilles;
 
     public void Initialize() {
@@ -19,12 +18,11 @@ public class ViewNumberKilledEnemy : MonoBehaviour {
     }
 
     private void GetComponent() {
-        _textMeshPro = GetComponent<TextMeshProUGUI>();
+        _textMeshPro = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void GetAndSetStartValue() {
-        _startText = _textMeshPro.text + " ";
-        _textMeshPro.text = _startText + 0;
+        _textMeshPro.text = "0";
     }
 
     private void Subscribe() {
@@ -36,7 +34,7 @@ public class ViewNumberKilledEnemy : MonoBehaviour {
     }
 
     private void OnChangedNubmerEnemiesKilled(int numberKilled) {
-        _textMeshPro.text = _startText + numberKilled;
+        _textMeshPro.text = numberKilled.ToString();
     }
 
     private void OnDestroy() {

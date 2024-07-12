@@ -3,24 +3,16 @@ using UnityEngine;
 using Zenject;
 
 public class LeaderBoard : MonoBehaviour {
-    private ViewLineLeaderBoard[] _linesLeaderBoard;
-    private Player _player;
-    private SectionConfig _sectionConfig;
+    [SerializeField] private ViewLineLeaderBoard[] _linesLeaderBoard;
     private ControllerUnits _controllerUnits;
-
-    public void Initailize() {
-        GetComponent();
-    }
+    private SectionConfig _sectionConfig;
+    private Player _player;
 
     [Inject]
     private void Construct(Player player, ControllerUnits controllerUnits, SectionConfig sectionConfig) {
         _player = player;
         _sectionConfig = sectionConfig;
         _controllerUnits = controllerUnits;
-    }
-
-    private void GetComponent() {
-        _linesLeaderBoard = GetComponentsInChildren<ViewLineLeaderBoard>();
     }
 
     private void Update() {

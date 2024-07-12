@@ -4,9 +4,8 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class ControllerMergeSection : IDisposable, ITickable {
-    [SerializeField, Range(0.1f, 10f)] private float durationAnimation = 0.3f;
-    private SignalBus _signalBus;
     private List<MergedSectionSignal> _mergedSectionSignals;
+    private SignalBus _signalBus;
 
     [Inject]
     public void Construct(SignalBus signalBus) {
