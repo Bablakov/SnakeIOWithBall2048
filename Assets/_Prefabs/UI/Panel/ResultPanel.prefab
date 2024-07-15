@@ -880,6 +880,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8058302354846629109}
     m_Modifications:
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: en
+      value: Last
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: ru
+      value: "\u041F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 2087549899746377013, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Pivot.x
@@ -983,7 +1008,7 @@ PrefabInstance:
     - target: {fileID: 2313603178518368603, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Name
-      value: BaseText (2)
+      value: CurrentText
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
@@ -1044,6 +1069,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6002543544033520448}
     m_Modifications:
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: en
+      value: Game over
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: ru
+      value: "\u0418\u0433\u0440\u0430 \u043E\u043A\u043E\u043D\u0447\u0435\u043D\u0430"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: textHeight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 2087549899746377013, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1203,6 +1258,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7912041816376434293}
     m_Modifications:
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: en
+      value: Results
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: ru
+      value: "\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 2087549899746377013, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1391,6 +1471,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ButtonGoMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177343127252532919, guid: 14775f4d71cf6464f8879de9f3aebdcd,
+        type: 3}
+      propertyPath: en
+      value: Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177343127252532919, guid: 14775f4d71cf6464f8879de9f3aebdcd,
+        type: 3}
+      propertyPath: ru
+      value: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177343127252532919, guid: 14775f4d71cf6464f8879de9f3aebdcd,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177343127252532919, guid: 14775f4d71cf6464f8879de9f3aebdcd,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177343127252532919, guid: 14775f4d71cf6464f8879de9f3aebdcd,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
       objectReference: {fileID: 0}
     - target: {fileID: 4746705907096756147, guid: 14775f4d71cf6464f8879de9f3aebdcd,
         type: 3}
@@ -1707,6 +1812,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2755673076632918698}
     m_Modifications:
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: en
+      value: Best
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: ru
+      value: "\u041B\u0443\u0447\u0448\u0438\u0439"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 2087549899746377013, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1810,7 +1940,7 @@ PrefabInstance:
     - target: {fileID: 2313603178518368603, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Name
-      value: BaseText (1)
+      value: BestText
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}

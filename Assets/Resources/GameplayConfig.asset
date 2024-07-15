@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameplayConfig
   m_EditorClassIdentifier: 
   <PointSpawn>k__BackingField: {x: 0, y: 0, z: 0}
-  <NumberSpawnedEnemy>k__BackingField: 25
+  <NumberSpawnedEnemy>k__BackingField: 20
   <NumberSpawnedSection>k__BackingField: 100
   nicknames: shadow97, redfox21, sunnygirl, bluedog5, lightning, moonlight, starry,
     puppy123, 1sunshine, butterfly, rainbow6, coolguy, ocean88, wildcat, firefly,
@@ -28,4 +28,4 @@ MonoBehaviour:
     whirlwind, swift42, stealth42, sunny88, shady23, heavenly, fiery33, dreamon7,
     cherub12, soulful, juicy22, hushed33, mystery7, glacial9, giggly22, chatter22,
     lovely33, daring33, smitten55, sparkly7, rubix22, grinner7, pulse88
-  radiusSpawn: 29
+  radiusSpawn: 24

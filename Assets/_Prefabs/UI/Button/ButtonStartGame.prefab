@@ -169,6 +169,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonStartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 8980387416544819529, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: en
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980387416544819529, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: ru
+      value: "\u041D\u0430\u0447\u0438\u043D\u0430\u0442\u044C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980387416544819529, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980387416544819529, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8980387416544819529, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

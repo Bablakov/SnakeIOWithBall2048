@@ -23,6 +23,6 @@ public class SphereSection : Section {
 
     protected override void SetValueAppropriateLevel() {
         _meshRenderer.material.color = SectionConfig.Sections[Level].ColorSection;
-        Text.text = SectionConfig.Sections[Level].Text;
+        text.text = SectionConfig.Sections[Level].Text;
     }
 }

@@ -7,5 +7,4 @@ public abstract class BaseButton : MonoBehaviour {
     protected abstract void AddMethodInEventClick(UnityAction action);
 
     protected abstract void AddEventOnButton();
-    protected abstract void ClickOnButton();
 }

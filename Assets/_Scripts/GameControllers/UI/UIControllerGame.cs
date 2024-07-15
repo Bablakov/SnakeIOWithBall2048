@@ -21,7 +21,6 @@ public class UIControllerGame : UIController {
     }
 
     protected override void GetComponents() {
-        base.GetComponents();
         _viewNumberKilledEnemy = GetComponentInChildren<ViewNumberKilledEnemy>();
         _deathPlayerPanel = GetComponentInChildren<DeathPlayerPanel>();
         _resultPanel = GetComponentInChildren<ResultPanel>();
@@ -29,7 +28,6 @@ public class UIControllerGame : UIController {
     }
 
     protected override void InitializeComponents() {
-        base.InitializeComponents();
         _deathPlayerPanel.Initialize(_processorPlayerDeath);
         _viewNumberKilledEnemy.Initialize();
         _resultPanel.Initialize();

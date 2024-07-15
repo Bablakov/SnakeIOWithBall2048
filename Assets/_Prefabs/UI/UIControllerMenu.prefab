@@ -393,6 +393,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8308100419942876122, guid: 57401d071e2b972478423c271db6c028,
+        type: 3}
+      propertyPath: en
+      value: Start
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308100419942876122, guid: 57401d071e2b972478423c271db6c028,
+        type: 3}
+      propertyPath: ru
+      value: "\u0421\u0442\u0430\u0440\u0442"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308100419942876122, guid: 57401d071e2b972478423c271db6c028,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308100419942876122, guid: 57401d071e2b972478423c271db6c028,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308100419942876122, guid: 57401d071e2b972478423c271db6c028,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 9091680847422539376, guid: 57401d071e2b972478423c271db6c028,
         type: 3}
       propertyPath: m_Name
@@ -427,6 +452,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2496581425003440880}
     m_Modifications:
+    - target: {fileID: 3980875440372937044, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: en
+      value: 64 times more
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980875440372937044, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: ru
+      value: "\u0412 64 \u0440\u0430\u0437\u0430 \u0431\u043E\u043B\u044C\u0448\u0435"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980875440372937044, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980875440372937044, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980875440372937044, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 4205948364466861310, guid: 616e83cadd2097541a9ad227ccbe5213,
         type: 3}
       propertyPath: m_Name
@@ -441,6 +491,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256052030762794292, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 43.238632
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256052030762794292, guid: 616e83cadd2097541a9ad227ccbe5213,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 25.22203
       objectReference: {fileID: 0}
     - target: {fileID: 4256052030762794292, guid: 616e83cadd2097541a9ad227ccbe5213,
         type: 3}

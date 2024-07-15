@@ -4,7 +4,8 @@ using Zenject;
 using System;
 
 public abstract class Section : MonoBehaviour {
-    [SerializeField] protected TextMeshProUGUI Text;
+    [SerializeField] protected TextMeshProUGUI text;
+    [SerializeField] private SectionShader sectionShader;
 
     public bool Invulnerability;
     public abstract Vector3 PositionFront { get; }
@@ -83,7 +84,7 @@ public abstract class Section : MonoBehaviour {
     }
 
     private void InitializeComponents() {
-        _animationFlickeringSection.Initialize(SectionConfig, this);
+        _animationFlickeringSection.Initialize(sectionShader);
     }
 
     private void UpdateLevel() {

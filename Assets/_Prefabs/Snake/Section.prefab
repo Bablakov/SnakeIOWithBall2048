@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 6400686349103183623}
   - component: {fileID: 2372579838492932461}
   - component: {fileID: 2402381233685937595}
+  - component: {fileID: 2825300629033441851}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -221,6 +222,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
+--- !u!114 &2825300629033441851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303944634579880421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5313a14d2b7d8c4f86f51d3f182b83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 1b891e3e2af317841bba40dcc87aec3a, type: 2}
 --- !u!1 &5097966922024117711
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69daae0d60244134a8a494560625764e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 7375386327125609737}
+  text: {fileID: 7375386327125609737}
+  sectionShader: {fileID: 2825300629033441851}
   Invulnerability: 0
 --- !u!114 &5349474299335711962
 MonoBehaviour:

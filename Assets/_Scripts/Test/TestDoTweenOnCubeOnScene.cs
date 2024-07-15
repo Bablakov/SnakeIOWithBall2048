@@ -2,32 +2,34 @@ using UnityEngine;
 using DG.Tweening;
 
 public class TestDoTweenOnCubeOnScene : MonoBehaviour {
-    public float duration = 1f;
-    private Material material;
-    private Sequence sequence;
+    [SerializeField, Range(0.1f, 2f)] private float duration = 1f;
+    [SerializeField, Range(0, 100)] private int loop;
+    [SerializeField] private SectionShader _sectionShader;
 
-    void Start() {
-        material = GetComponent<Renderer>().material;
+    private Sequence _sequence;
 
-        sequence = DOTween.Sequence();
+    public void StartAnimation() {
+        if (_sequence != null) {
+            _sequence.Kill();
+        }
 
-        sequence.Append(DOTween.To(() => material.color, color => material.color = color, new Color(material.color.r, material.color.g, material.color.b, 0), duration).SetLoops(-1, LoopType.Yoyo));
+        _sequence = DOTween.Sequence();
+
+        //_sequence.Append(DOTween.To(() => _material.color, color => _material.color = color, new Color(_color.r, _color.g, _color.b, 0), duration).SetLoops(_loop, LoopType.Yoyo));
+        _sequence.Append(DOTween.To(() => _sectionShader.Alpha, alpha => _sectionShader.Alpha = alpha, 0, duration / 2));
+        _sequence.Append(DOTween.To(() => _sectionShader.Alpha, alpha => _sectionShader.Alpha = alpha, 1, duration / 2));
+        _sequence.SetLoops(loop, LoopType.Yoyo);
+        _sequence.Play();
     }
-/*
 
-
-    void Start() {
-        Material material = GetComponent<MeshRenderer>().material;
-
-        material.DOColor(new Color(material.color.r, material.color.g, material.color.b, 0), "_Color", duration)
-            .SetLoops(-1, LoopType.Yoyo);
-    }*/
+    public void StopAnimation() {
+        _sectionShader.Alpha = 1f;
+        _sequence.Kill();
+    }
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            material.color = new Color(material.color.r, material.color.g, material.color.b, 1);
-            sequence.Kill();
+            StartAnimation();
         }
-            
     }
 }
