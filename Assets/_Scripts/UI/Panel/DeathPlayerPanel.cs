@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 using YG;
 
-public class DeathPlayerPanel : MonoBehaviour {
-    [SerializeField, Range(0.1f, 3f)] private float timeViewPanel;
+public class DeathPlayerPanel : AnimatedPanel {
+    [SerializeField, Range(0.1f, 10f)] private float timeViewPanel;
     [SerializeField] private ButtonWithExternalAction _buttonCancelPanel;
     [SerializeField] private ButtonWithExternalAction _buttonRevivalPlayer;
     [SerializeField] private Slider _slider;
@@ -29,10 +29,12 @@ public class DeathPlayerPanel : MonoBehaviour {
     public void Enable() {
         _currentTime = timeViewPanel;
         gameObject.SetActive(true);
+        EnableAnimation();
     }
 
     public void Disable() {
         gameObject.SetActive(false);
+        DisableAnimation();
     }
 
     private void InitializeComponents() {

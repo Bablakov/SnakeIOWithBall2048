@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine.SceneManagement;
 using YG;
 
@@ -12,6 +13,7 @@ public class ButtonStartGame : ButtonStandart {
     }
 
     private void LoadGameScene() {
+        DOTween.KillAll();
         GameAnalyticsController.SendEvent("GameStarterWithoutRewarded");
         YandexGame.savesData.startLevelPlayer = 0;
         GameLoadSceneContorller.LoadScene(NAME_GAME_SCENE);

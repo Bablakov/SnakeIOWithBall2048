@@ -125,13 +125,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 0.78128433
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
@@ -150,18 +156,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4351148256491955475, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278190080
+      value: 4294952704
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -339,13 +356,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 0.78128433
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
@@ -359,13 +382,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4351148256491955475, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
       propertyPath: m_enableAutoSizing
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278190080
+      value: 4294952704
       objectReference: {fileID: 0}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
@@ -376,6 +405,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HorizontalAlignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

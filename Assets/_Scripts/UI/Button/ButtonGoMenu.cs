@@ -1,5 +1,4 @@
 ﻿using DG.Tweening;
-using System.Collections.Generic;
 
 public class ButtonGoMenu : ButtonStandart {
     private const string NAME_MENU_SCENE = "Main";

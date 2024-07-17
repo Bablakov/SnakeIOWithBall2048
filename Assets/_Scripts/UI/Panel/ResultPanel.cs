@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class ResultPanel : MonoBehaviour {
+public class ResultPanel : AnimatedPanel {
     [SerializeField] private TextMeshProUGUI viewBestPointSection;
     [SerializeField] private TextMeshProUGUI viewBestNumberKilled;
     [SerializeField] private TextMeshProUGUI viewCurrentPointSection;
@@ -18,9 +18,11 @@ public class ResultPanel : MonoBehaviour {
         viewBestNumberKilled.text = bestNumberKilled;
         viewCurrentPointSection.text = currentPointSection;
         viewCurrentNumberKilled.text = currentNumberKilled;
+        EnableAnimation();
     }
 
     public void Disable() {
         gameObject.SetActive(false);
+        DisableAnimation();
     }
 }

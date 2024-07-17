@@ -108,11 +108,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4351148256491955475, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 8110665294004483369, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8196780130788801763, guid: 2f14755120e1755499e56a4abf56ce8f,
         type: 3}
       propertyPath: m_Name
       value: ButtonGoMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8980387416544819529, guid: 2f14755120e1755499e56a4abf56ce8f,
+        type: 3}
+      propertyPath: uniqueFontTMP
+      value: 
+      objectReference: {fileID: 11400000, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

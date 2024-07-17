@@ -8,6 +8,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: en
+      value: SnakeBall2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: ru
+      value: SnakeBall2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: countLang
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: uniqueFontTMP
+      value: 
+      objectReference: {fileID: 11400000, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: componentTextField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451197679087957786, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
     - target: {fileID: 2087549899746377013, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_Pivot.x
@@ -116,10 +147,22 @@ PrefabInstance:
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_text
-      value: 'NameGame
+      value: 'SnakeBall2048
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4351148256491955475, guid: ee1d6bf89954d96418914fab682182e2,
+        type: 2}
     - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
         type: 3}
       propertyPath: m_VerticalAlignment
@@ -134,6 +177,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360017186500824160, guid: 98377aa866934ab45bf0906bbac012ff,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

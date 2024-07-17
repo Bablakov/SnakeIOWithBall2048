@@ -1,6 +1,9 @@
 ﻿using Zenject;
+using UnityEngine;
 
 public class UIControllerGame : UIController {
+    [SerializeField] private AnimationObject _scaleObject;
+
     private ProcessorPlayerRevival _processorPlayerRevival;
     private ViewNumberKilledEnemy _viewNumberKilledEnemy;
     private ProcessorPlayerDeath _processorPlayerDeath;
@@ -12,6 +15,7 @@ public class UIControllerGame : UIController {
         base.Initialize();
         SetValues();
         DisableComponents();
+        _scaleObject.AnimationAppearance();
     }
 
     [Inject]

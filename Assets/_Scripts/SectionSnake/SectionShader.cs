@@ -7,7 +7,10 @@ public class SectionShader : MonoBehaviour {
     private Material material;
 
     public void Initialize() {
-        material = GetComponent<MeshRenderer>().material;
+        var meshRenderer = GetComponent<MeshRenderer>();
+        material = meshRenderer.material;
+        MaterialPropertyBlock materialPropertyBlock = new MaterialPropertyBlock();
+        meshRenderer.SetPropertyBlock(materialPropertyBlock);
     }
 
     public float Alpha {

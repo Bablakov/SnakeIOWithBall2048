@@ -329,7 +329,7 @@ namespace ModestTree
         {
             if (!condition)
             {
-                throw CreateException("Assert hit! " + message);    
+                throw CreateException("Assert hit! " + message);
             }
         }
 
