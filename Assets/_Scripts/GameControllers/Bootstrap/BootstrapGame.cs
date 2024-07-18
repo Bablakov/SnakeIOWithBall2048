@@ -1,10 +1,18 @@
 ﻿using UnityEngine;
-using Zenject;
+using YG;
 
 public class BootstrapGame : MonoBehaviour{
     [SerializeField] private Player player;
 
     private void Awake() {
-        player.Initialize("Вы");
+        if (YandexGame.EnvironmentData.language == "en") {
+            player.Initialize("You");
+        }
+        else if (YandexGame.EnvironmentData.language == "ru") {
+            player.Initialize("Вы");
+        }
+        else {
+            player.Initialize("You");
+        }
     }
 }

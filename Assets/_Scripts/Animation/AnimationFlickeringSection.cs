@@ -6,9 +6,7 @@ public class AnimationFlickeringSection : MonoBehaviour {
     [SerializeField, Range(0.1f, 2f)] private float duration = 1f;
     
     private SectionShader _sectionShader;
-    private SnakeConfig _shakeConfig;
     private Sequence _sequence;
-    private int _loop;
 
     public void Initialize(SectionShader sectionShader) {
         _sectionShader = sectionShader;
@@ -20,8 +18,6 @@ public class AnimationFlickeringSection : MonoBehaviour {
             _sequence.Kill();
         }
 
-        _loop = (int)(_shakeConfig.TimeInvulnerability / duration);
-         
         _sequence = DOTween.Sequence();
 
         _sequence.Append(DOTween.To(() => _sectionShader.Alpha, alpha => _sectionShader.Alpha = alpha, 0, duration / 2));
@@ -33,10 +29,5 @@ public class AnimationFlickeringSection : MonoBehaviour {
     public void StopAnimation() {
         _sequence.Kill();
         _sectionShader.SetFullVisual();
-    }
-
-    [Inject]
-    private void Construct(SnakeConfig snakeConfig) {
-        _shakeConfig = snakeConfig;
     }
 }

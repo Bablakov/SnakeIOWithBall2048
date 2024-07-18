@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-07-17T08:24:24.879Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="E_BWVeW_eARm1HPqarBE" version="24.0.4" type="device">
+<mxfile host="Electron" modified="2024-07-18T05:22:43.918Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="DRk9piwPmgeGXCbJOFnA" version="24.0.4" type="device">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
     <mxGraphModel dx="3872" dy="4128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1324,23 +1324,11 @@
         <mxCell id="6alGYgzJ7Rs1CI3ZwOfx-8" value="+ Золотая кнопка, для просмотра рекламы" style="text;strokeColor=#001DBC;fillColor=#0050ef;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#ffffff;" parent="6alGYgzJ7Rs1CI3ZwOfx-1" vertex="1">
           <mxGeometry y="180" width="300" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZhISShldY4U9bCmY4Wd9-2" value="Что нужно сделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-3400" y="-3300" width="310" height="124" as="geometry" />
+        <mxCell id="ZhISShldY4U9bCmY4Wd9-2" value="Что нужно сделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-3400" y="-3300" width="310" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZhISShldY4U9bCmY4Wd9-6" value="+ Добавить более подходящие звуки в игру" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ZhISShldY4U9bCmY4Wd9-2">
-          <mxGeometry y="26" width="310" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="ZhISShldY4U9bCmY4Wd9-5" value="+ Добавить в SectionConfig больше значения ячейкам" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ZhISShldY4U9bCmY4Wd9-2">
-          <mxGeometry y="56" width="310" height="34" as="geometry" />
-        </mxCell>
-        <mxCell id="ZhISShldY4U9bCmY4Wd9-15" value="+ Подобрать лучшие сочитающиеся цвета" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ZhISShldY4U9bCmY4Wd9-2">
-          <mxGeometry y="90" width="310" height="34" as="geometry" />
-        </mxCell>
-        <mxCell id="ZhISShldY4U9bCmY4Wd9-9" value="Косяки по проекту" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ZhISShldY4U9bCmY4Wd9-9" value="Косяки по проекту" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-3070" y="-3300" width="310" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="ZhISShldY4U9bCmY4Wd9-10" value="+ При добавленой анимации при помощи dotween, появилась проблема с вылетание проекта, когда включается одна из анимированных панелей" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ZhISShldY4U9bCmY4Wd9-9">
-          <mxGeometry y="26" width="310" height="84" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

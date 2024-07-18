@@ -13,6 +13,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundDiedPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 2481785147912728206, guid: 3b2b4ae05c9bbd947acdbea146f8061c,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -1708632656054416118, guid: f0cc47dc1e9108941afdf2ec12f3cd00,
+        type: 2}
     - target: {fileID: 3891505592236714429, guid: 3b2b4ae05c9bbd947acdbea146f8061c,
         type: 3}
       propertyPath: m_LocalPosition.x

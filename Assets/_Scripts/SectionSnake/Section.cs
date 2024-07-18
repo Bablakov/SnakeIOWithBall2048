@@ -7,17 +7,17 @@ public abstract class Section : MonoBehaviour {
     [SerializeField] protected TextMeshProUGUI text;
     [SerializeField] private SectionShader sectionShader;
 
-    public bool Invulnerability;
     public abstract Vector3 PositionFront { get; }
     public abstract Vector3 PositionBack { get; }
     public Vector3 Position => transform.position;
+    public bool Invulnerability { get; private set; }
     public float Width { get; protected set; }
     public int Level { get; protected set; }
 
     protected SectionConfig SectionConfig;
 
     private AnimationFlickeringSection _animationFlickeringSection;
-    private AnimationIncreaseSection _animationSection;
+    private AnimationIncreaseSection _animationIncreaseSection;
     private StorageSection _storageSection;
 
     public virtual void Upgrade() {
@@ -26,6 +26,7 @@ public abstract class Section : MonoBehaviour {
     }
 
     public void SetLevel(int level) {
+        _animationIncreaseSection.StopAnimation(Width * 2 * Vector3.one);
         Level = level;
         UpdateSection();
     }
@@ -34,19 +35,19 @@ public abstract class Section : MonoBehaviour {
         CalculateValues();
         _storageSection?.Delete(this);
         if (storageSection == null)
-            _animationSection.StopAnimation(Width * 2 * Vector3.one);
+            _animationIncreaseSection.StopAnimation(Width * 2 * Vector3.one);
         _storageSection = storageSection;
     } 
 
     public void PlayAnimation() {
         CalculateValues();
         if (_storageSection != null)
-            _animationSection.PlayAnimation(Width * 2 * Vector3.one);
+            _animationIncreaseSection.PlayAnimation(Width * 2 * Vector3.one);
     }
 
     public void SetSequence(DG.Tweening.TweenCallback callback) {
         CalculateValues();
-        _animationSection.SetSequence(callback);
+        _animationIncreaseSection.SetSequence(callback);
     }
 
     public bool CheckOwnerSection(StorageSection storageSection) {
@@ -79,7 +80,7 @@ public abstract class Section : MonoBehaviour {
     }
 
     protected virtual void GetComponents() {
-        _animationSection = GetComponent<AnimationIncreaseSection>();
+        _animationIncreaseSection = GetComponent<AnimationIncreaseSection>();
         _animationFlickeringSection = GetComponentInChildren<AnimationFlickeringSection>();
     }
 

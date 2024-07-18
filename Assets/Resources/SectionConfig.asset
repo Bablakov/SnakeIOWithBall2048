@@ -72,4 +72,4 @@ MonoBehaviour:
   - color: {r: 1, g: 0, b: 0, a: 1}
     text: 512m
   - color: {r: 0.99215686, g: 0.42352942, b: 0.61960787, a: 1}
-    text: 1md
+    text: 1b

@@ -25,6 +25,7 @@ public class AnimationIncreaseSection : MonoBehaviour {
         endScale = currentScale * coefficientScalling;
         if (sequence != null) {
             sequence.Kill();
+            transform.localScale = startScale;
         }
         CreateNewAnimation();
     }
@@ -40,6 +41,6 @@ public class AnimationIncreaseSection : MonoBehaviour {
         if (_callback != null) {
             sequence.AppendCallback(_callback);
         }
-        sequence.Append(transform.DOScale(startScale, duration).SetEase(typeEase).SetDelay(delay));
+        sequence.Append(transform.DOScale(startScale, duration).SetEase(typeEase));
     }
 }

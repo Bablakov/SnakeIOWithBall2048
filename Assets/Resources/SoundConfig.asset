@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <PickUpSection>k__BackingField: {fileID: 8300000, guid: 2ca354d0bf20543409769bbdd1eacee8,
     type: 3}
-  <DeathPlayer>k__BackingField: {fileID: 8300000, guid: 69d2ca86a5601ea479e15c2a0db717dd,
+  <DeathPlayer>k__BackingField: {fileID: 8300000, guid: 07ec8f9e608a5594d81484442f3063f3,
     type: 3}
   <DeathEnemy>k__BackingField: {fileID: 8300000, guid: 8779e30a9dfc3ef439b9d886ace68473,
     type: 3}

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Zenject;
+using System;
+using Random = UnityEngine.Random;
 
 public class ControllerSections : ControllerObject<Section> {
     public override IReadOnlyList<Section> Objects => _sections;
@@ -8,6 +10,7 @@ public class ControllerSections : ControllerObject<Section> {
     protected override int CountSpawn => GameplayConfig.NumberSpawnedSection - _sections.Count;
 
     private List<Section> _sections;
+    private Player _player;
 
     public override void Initialize() {
         _sections = new List<Section>();
@@ -15,8 +18,9 @@ public class ControllerSections : ControllerObject<Section> {
     }
 
     [Inject]
-    private void Construct(SectionPool memoryPool) {
+    private void Construct(SectionPool memoryPool, Player player) {
         MemoryPool = memoryPool;
+        _player = player;
     }
 
     protected override void Subscribe() {
@@ -40,6 +44,13 @@ public class ControllerSections : ControllerObject<Section> {
     protected override void OnReleasedObject(ReleasedObjectSignal<Section> signal) {
         MemoryPool.Despawn(signal.ReleasedObject);
         SpawnObject();
+    }
+
+    protected override void InitializeComponent(Section gameObject) {
+        base.InitializeComponent(gameObject);
+        int level = Random.Range(0, Math.Max(0, _player.Level - 3));
+
+        gameObject.SetLevel(level);
     }
 
     private void OnAddedSection(AddedSectionSignal signal) {
