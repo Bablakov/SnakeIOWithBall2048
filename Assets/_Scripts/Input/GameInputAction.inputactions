@@ -1,5 +1,5 @@
 {
-    "name": "GameInput",
+    "name": "GameInputAction",
     "maps": [
         {
             "name": "Player",
@@ -18,6 +18,15 @@
                     "name": "BoostSpeed",
                     "type": "Button",
                     "id": "6704e0cd-0367-4ecf-b32c-f12c2c4670cf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BoostSpeedMobile",
+                    "type": "Button",
+                    "id": "68317f88-ffd6-4107-9d27-568a06e014f8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -44,6 +53,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "BoostSpeed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "44aadd6a-f74c-4a0e-86a7-ddbd2801f921",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BoostSpeedMobile",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

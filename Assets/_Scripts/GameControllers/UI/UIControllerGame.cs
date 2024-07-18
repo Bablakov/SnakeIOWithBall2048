@@ -2,7 +2,9 @@
 using UnityEngine;
 
 public class UIControllerGame : UIController {
-    [SerializeField] private AnimationObject _scaleObject;
+    [SerializeField] private AnimationObject _desktopAnimation;
+    [SerializeField] private AnimationObject _mobileAnimation;
+    [SerializeField] private Transform _buttonSpeedUp;
 
     private ProcessorPlayerRevival _processorPlayerRevival;
     private ViewNumberKilledEnemy _viewNumberKilledEnemy;
@@ -11,17 +13,28 @@ public class UIControllerGame : UIController {
     private ResultPanel _resultPanel;
     private KillField _killField;
 
+    private bool _isMobile;
+
     public override void Initialize() {
         base.Initialize();
         SetValues();
         DisableComponents();
-        _scaleObject.AnimationAppearance();
+        if (_isMobile) {
+            _desktopAnimation.gameObject.SetActive(false);
+            _mobileAnimation.AnimationAppearance();
+        }
+        else {
+            _mobileAnimation.gameObject.SetActive(false);
+            _buttonSpeedUp.gameObject.SetActive(false);
+            _desktopAnimation.AnimationAppearance();
+        }
     }
 
     [Inject]
-    private void Construct(ProcessorPlayerDeath processorPlayerDeath, ProcessorPlayerRevival processorPlayerRevival) {
+    private void Construct(ProcessorPlayerDeath processorPlayerDeath, ProcessorPlayerRevival processorPlayerRevival, InputGame inputGame) {
         _processorPlayerRevival = processorPlayerRevival;
         _processorPlayerDeath = processorPlayerDeath;
+        _isMobile = inputGame is InputMobile;
     }
 
     protected override void GetComponents() {

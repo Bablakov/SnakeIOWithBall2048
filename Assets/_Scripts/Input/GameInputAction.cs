@@ -44,6 +44,15 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BoostSpeedMobile"",
+                    ""type"": ""Button"",
+                    ""id"": ""68317f88-ffd6-4107-9d27-568a06e014f8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -68,6 +77,17 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
                     ""action"": ""BoostSpeed"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44aadd6a-f74c-4a0e-86a7-ddbd2801f921"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BoostSpeedMobile"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -78,6 +98,7 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_PositionMouse = m_Player.FindAction("PositionMouse", throwIfNotFound: true);
         m_Player_BoostSpeed = m_Player.FindAction("BoostSpeed", throwIfNotFound: true);
+        m_Player_BoostSpeedMobile = m_Player.FindAction("BoostSpeedMobile", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -141,12 +162,14 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_PositionMouse;
     private readonly InputAction m_Player_BoostSpeed;
+    private readonly InputAction m_Player_BoostSpeedMobile;
     public struct PlayerActions
     {
         private @GameInputAction m_Wrapper;
         public PlayerActions(@GameInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @PositionMouse => m_Wrapper.m_Player_PositionMouse;
         public InputAction @BoostSpeed => m_Wrapper.m_Player_BoostSpeed;
+        public InputAction @BoostSpeedMobile => m_Wrapper.m_Player_BoostSpeedMobile;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -162,6 +185,9 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
             @BoostSpeed.started += instance.OnBoostSpeed;
             @BoostSpeed.performed += instance.OnBoostSpeed;
             @BoostSpeed.canceled += instance.OnBoostSpeed;
+            @BoostSpeedMobile.started += instance.OnBoostSpeedMobile;
+            @BoostSpeedMobile.performed += instance.OnBoostSpeedMobile;
+            @BoostSpeedMobile.canceled += instance.OnBoostSpeedMobile;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -172,6 +198,9 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
             @BoostSpeed.started -= instance.OnBoostSpeed;
             @BoostSpeed.performed -= instance.OnBoostSpeed;
             @BoostSpeed.canceled -= instance.OnBoostSpeed;
+            @BoostSpeedMobile.started -= instance.OnBoostSpeedMobile;
+            @BoostSpeedMobile.performed -= instance.OnBoostSpeedMobile;
+            @BoostSpeedMobile.canceled -= instance.OnBoostSpeedMobile;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -193,5 +222,6 @@ public partial class @GameInputAction: IInputActionCollection2, IDisposable
     {
         void OnPositionMouse(InputAction.CallbackContext context);
         void OnBoostSpeed(InputAction.CallbackContext context);
+        void OnBoostSpeedMobile(InputAction.CallbackContext context);
     }
 }

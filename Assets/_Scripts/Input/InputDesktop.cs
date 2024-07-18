@@ -32,8 +32,8 @@ public class InputDesktop : InputGame, IDisposable {
     }
 
     private void Unsubscribe() {
-        _gameInput.Player.BoostSpeed.started += SpeedUp;
-        _gameInput.Player.BoostSpeed.canceled += SpeedDown;
+        _gameInput.Player.BoostSpeed.started -= SpeedUp;
+        _gameInput.Player.BoostSpeed.canceled -= SpeedDown;
     }
 
     public Vector3 GetDirectionMovememt() {

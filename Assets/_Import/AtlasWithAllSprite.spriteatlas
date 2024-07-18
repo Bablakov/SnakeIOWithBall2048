@@ -64,20 +64,28 @@ SpriteAtlas:
     - {fileID: 21300000, guid: c92f52ece0dfa84499062a9b59cf9c20, type: 3}
     - {fileID: 2800000, guid: e08fdaf8417fa144ebc4cce049b5cafd, type: 3}
     - {fileID: 2800000, guid: 75bb4810c182f4d498da1cbb58794023, type: 3}
+    - {fileID: 2800000, guid: bb2fac2829be5ba4b81e7569a39a389d, type: 3}
+    - {fileID: 2800000, guid: 276ecde94753e7b41b784a6f9fb0347f, type: 3}
+    - {fileID: 2800000, guid: bbafec39fb8bbb94bb3fdbb46a89b573, type: 3}
+    - {fileID: 2800000, guid: 6720b7719a6a30c4480b23118c410687, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - 75bb4810c182f4d498da1cbb58794023: 21300000
     - 9f638f6057d65714f8635f44a33bf818: 21300000
+    - 6720b7719a6a30c4480b23118c410687: 21300000
     - a0270791a3e2df74885828c5116acfbd: 21300000
     - 1eff75f5b0cbb86458e848d9b7751ba6: 21300000
     - ccd4b8e60fb2829418c385fd3d845d62: 21300000
     - d00b6cf62b6223644a860e00c97a4920: 21300000
+    - bb2fac2829be5ba4b81e7569a39a389d: 21300000
     - 6b8eb3a8dac4c274da5cbde2be5edbf6: 21300000
     - e08fdaf8417fa144ebc4cce049b5cafd: 21300000
     - 6d702419b67447749b96057c798da84c: 21300000
+    - bbafec39fb8bbb94bb3fdbb46a89b573: 21300000
     - 70535f79e49aad34490d8554d1b94374: 21300000
+    - 276ecde94753e7b41b784a6f9fb0347f: 21300000
     - 31968eca9547cf4408660fafc35f229b: 21300000
     - cdc4d10bdd420844699a4d41dd06fdc1: 21300000
     - 644f30dc26091c6489f584af7bf11555: 21300000
@@ -90,14 +98,18 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 75bb4810c182f4d498da1cbb58794023, type: 3}
   - {fileID: 21300000, guid: 9f638f6057d65714f8635f44a33bf818, type: 3}
+  - {fileID: 21300000, guid: 6720b7719a6a30c4480b23118c410687, type: 3}
   - {fileID: 21300000, guid: a0270791a3e2df74885828c5116acfbd, type: 3}
   - {fileID: 21300000, guid: 1eff75f5b0cbb86458e848d9b7751ba6, type: 3}
   - {fileID: 21300000, guid: ccd4b8e60fb2829418c385fd3d845d62, type: 3}
   - {fileID: 21300000, guid: d00b6cf62b6223644a860e00c97a4920, type: 3}
+  - {fileID: 21300000, guid: bb2fac2829be5ba4b81e7569a39a389d, type: 3}
   - {fileID: 21300000, guid: 6b8eb3a8dac4c274da5cbde2be5edbf6, type: 3}
   - {fileID: 21300000, guid: e08fdaf8417fa144ebc4cce049b5cafd, type: 3}
   - {fileID: 21300000, guid: 6d702419b67447749b96057c798da84c, type: 3}
+  - {fileID: 21300000, guid: bbafec39fb8bbb94bb3fdbb46a89b573, type: 3}
   - {fileID: 21300000, guid: 70535f79e49aad34490d8554d1b94374, type: 3}
+  - {fileID: 21300000, guid: 276ecde94753e7b41b784a6f9fb0347f, type: 3}
   - {fileID: 21300000, guid: 31968eca9547cf4408660fafc35f229b, type: 3}
   - {fileID: 21300000, guid: cdc4d10bdd420844699a4d41dd06fdc1, type: 3}
   - {fileID: 21300000, guid: 644f30dc26091c6489f584af7bf11555, type: 3}
@@ -109,14 +121,18 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - arrow_up
   - RoundedDarkBlueButton
+  - ArrowLeft
   - Stopwatch
   - SquereLDLS
   - Lightning
   - MouseButton
+  - SpeedUp
   - RoundDarkBlueButton
   - RoundedOrangeButton
   - WhiteButton
+  - ArrowRight
   - rewardAdsBtn
+  - PressFinger
   - RoundedRedButton
   - Swords
   - sound_off

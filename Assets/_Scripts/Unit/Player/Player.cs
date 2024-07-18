@@ -14,7 +14,6 @@ public class Player : Unit {
         base.Initialize(nickname);
         Head.SetLevel(YandexGame.savesData.startLevelPlayer);
         Subscribe();
-        Debug.Log("TurnOnInvulnerable");
         TurnOnInvulnerable();   
     }
 
