@@ -317,6 +317,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 880698390}
     m_Modifications:
+    - target: {fileID: 32285905535278507, guid: 1ac61326226ebd64ebb67136449ee3c8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 32285905535278507, guid: 1ac61326226ebd64ebb67136449ee3c8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 767130858195821058, guid: 1ac61326226ebd64ebb67136449ee3c8,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -717,7 +727,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
@@ -1576,6 +1586,11 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1458801142}
+    - target: {fileID: 1280951464930145848, guid: c2e2bfdcc70514340b56e1d61f672c4b,
+        type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4660719066078608727, guid: c2e2bfdcc70514340b56e1d61f672c4b,
         type: 3}
       propertyPath: m_Name

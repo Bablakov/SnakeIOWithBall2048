@@ -9,7 +9,7 @@ public class ButtonGoMenu : ButtonStandart {
         AddEventOnButton();
     }
 
-    private void GoMenu() {
+    public void GoMenu() {
         DOTween.KillAll();
         GameAnalyticsController.SendEvent("WentMenu");
         GameLoadSceneContorller.LoadScene(NAME_MENU_SCENE);

@@ -19,6 +19,11 @@ public abstract class Section : MonoBehaviour {
     private AnimationFlickeringSection _animationFlickeringSection;
     private AnimationIncreaseSection _animationIncreaseSection;
     private StorageSection _storageSection;
+    private Player _player;
+
+    public void SetPlayer(Player player) {
+        _player = player;
+    }
 
     public virtual void Upgrade() {
         UpdateLevel();
@@ -98,6 +103,9 @@ public abstract class Section : MonoBehaviour {
     private void UpdateSection() {
         CalculateValues();
         SetValueAppropriateLevel();
+        if (_player != null && Level == SectionConfig.Sections.Count - 1) {
+            _player.ReacheMaximum();
+        }
     }
 
     protected abstract void CalculateValues();

@@ -6,20 +6,30 @@ public class Player : Unit {
     public event Action KilledEnemy;
     public event Action DiedPlayer;
     public event Action PutOnSection;
+    public event Action ReachedMaximum;
 
     private ControlledElement _controlledElement;
     private ViewFreeSpeedUpOnPlayer _viewFreeSpeedUpOnPlayer;
 
     public override void Initialize(string nickname) {
         base.Initialize(nickname);
+        Head.SetPlayer(this);
         Head.SetLevel(YandexGame.savesData.startLevelPlayer);
         Subscribe();
-        TurnOnInvulnerable();   
+        TurnOnInvulnerable();
     }
 
     public void Enable() {
         gameObject.SetActive(true);
         TurnOnInvulnerable();
+    }
+
+    public void Disable() {
+        gameObject.SetActive(false);
+    }
+
+    public void ReacheMaximum() {
+        ReachedMaximum?.Invoke();
     }
 
     protected override void GetComponents() {

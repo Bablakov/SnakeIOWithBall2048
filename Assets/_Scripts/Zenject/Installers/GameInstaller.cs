@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using YG;
 using Zenject;
 
 public class GameInstaller : MonoInstaller {
@@ -19,7 +20,7 @@ public class GameInstaller : MonoInstaller {
     }
 
     private void BindInputSystem() {
-        if (SystemInfo.deviceType == DeviceType.Handheld) {
+        if (Application.isMobilePlatform) {
             Container.BindInterfacesAndSelfTo<Joystick>().FromInstance(joystick);  
             Container.BindInterfacesAndSelfTo<InputMobile>().AsSingle();
         }

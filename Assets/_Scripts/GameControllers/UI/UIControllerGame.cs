@@ -10,10 +10,12 @@ public class UIControllerGame : UIController {
     private ViewNumberKilledEnemy _viewNumberKilledEnemy;
     private ProcessorPlayerDeath _processorPlayerDeath;
     private DeathPlayerPanel _deathPlayerPanel;
+    private WinPlayerPanel _winPlayerPanel;
     private ResultPanel _resultPanel;
     private KillField _killField;
 
     private bool _isMobile;
+    private Player _player;
 
     public override void Initialize() {
         base.Initialize();
@@ -31,15 +33,24 @@ public class UIControllerGame : UIController {
     }
 
     [Inject]
-    private void Construct(ProcessorPlayerDeath processorPlayerDeath, ProcessorPlayerRevival processorPlayerRevival, InputGame inputGame) {
+    private void Construct(ProcessorPlayerDeath processorPlayerDeath, ProcessorPlayerRevival processorPlayerRevival, InputGame inputGame, Player player) {
         _processorPlayerRevival = processorPlayerRevival;
         _processorPlayerDeath = processorPlayerDeath;
         _isMobile = inputGame is InputMobile;
+        _player = player;
+        _player.ReachedMaximum += OnReachedMaximum;
+    }
+
+    private void OnReachedMaximum() {
+        _winPlayerPanel.Enable();
+        _player.Disable();
+        GameAnalyticsController.SendEvent("WonPlayer");
     }
 
     protected override void GetComponents() {
         _viewNumberKilledEnemy = GetComponentInChildren<ViewNumberKilledEnemy>();
         _deathPlayerPanel = GetComponentInChildren<DeathPlayerPanel>();
+        _winPlayerPanel = GetComponentInChildren<WinPlayerPanel>();
         _resultPanel = GetComponentInChildren<ResultPanel>();
         _killField = GetComponentInChildren<KillField>();
     }
@@ -47,6 +58,7 @@ public class UIControllerGame : UIController {
     protected override void InitializeComponents() {
         _deathPlayerPanel.Initialize(_processorPlayerDeath);
         _viewNumberKilledEnemy.Initialize();
+        _winPlayerPanel.Initialize();
         _resultPanel.Initialize();
         _killField.Initialize();
     }
@@ -59,5 +71,6 @@ public class UIControllerGame : UIController {
     private void DisableComponents() {
         _resultPanel.Disable();
         _deathPlayerPanel.Disable();
+        _winPlayerPanel.Disable();
     }
 }
