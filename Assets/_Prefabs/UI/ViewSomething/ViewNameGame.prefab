@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 26.8739, y: 4.478983}
+  m_AnchoredPosition: {x: -296.6261, y: 4.478983}
   m_SizeDelta: {x: 220, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1221317097806315911
@@ -259,6 +259,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000411027214516425, guid: 026fe0e551b4a744088fe5245aa5d7fd,
+        type: 3}
+      propertyPath: en
+      value: Ball Snake 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000411027214516425, guid: 026fe0e551b4a744088fe5245aa5d7fd,
+        type: 3}
+      propertyPath: ru
+      value: Ball Snake 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000411027214516425, guid: 026fe0e551b4a744088fe5245aa5d7fd,
+        type: 3}
+      propertyPath: processTranslateLabel
+      value: 2/2 completed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2396054049206778803, guid: 026fe0e551b4a744088fe5245aa5d7fd,
+        type: 3}
+      propertyPath: m_text
+      value: 'Ball Snake 2048
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 2396054049206778803, guid: 026fe0e551b4a744088fe5245aa5d7fd,
         type: 3}

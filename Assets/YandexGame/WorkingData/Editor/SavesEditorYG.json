@@ -1,5 +1,5 @@
 {
-  "idSave": 6,
+  "idSave": 7,
   "isFirstSession": false,
   "language": "en",
   "promptDone": false,
@@ -10,7 +10,7 @@
     true,
     false
   ],
-  "bestLevelSection": 13,
+  "bestLevelSection": 26,
   "bestNumberKilled": 42,
   "startLevelPlayer": 0
 }
