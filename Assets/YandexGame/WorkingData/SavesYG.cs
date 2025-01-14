@@ -18,9 +18,9 @@ namespace YG
 
         // Ваши сохранения
 
+        public int startLevelPlayer;
         public int bestLevelSection;
         public int bestNumberKilled;
-        public int startLevelPlayer;
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
@@ -29,7 +29,7 @@ namespace YG
         public SavesYG()
         {
             // Допустим, задать значения по умолчанию для отдельных элементов массива
-            startLevelPlayer = 0;
+
             openLevels[1] = true;
         }
     }
