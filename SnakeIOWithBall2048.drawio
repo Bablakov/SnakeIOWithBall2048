@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-07-20T18:31:43.985Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="OFtEQH91IieCuK6X38AM" version="24.0.4" type="device">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.4 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.4">
   <diagram name="Page-1" id="6ilK39ksNj2KT9Sks7uC">
-    <mxGraphModel dx="3872" dy="4128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="4795" dy="4003" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -914,12 +914,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1RjqgWXyVxkbBXCVlGGC-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.556;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-150" target="1RjqgWXyVxkbBXCVlGGC-27" edge="1">
+        <mxCell id="1RjqgWXyVxkbBXCVlGGC-188" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1RjqgWXyVxkbBXCVlGGC-150" target="1RjqgWXyVxkbBXCVlGGC-27" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-1930" y="-2240" />
               <mxPoint x="-2670" y="-2240" />
-              <mxPoint x="-2670" y="-2117" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -1327,10 +1326,10 @@
         <mxCell id="ZhISShldY4U9bCmY4Wd9-2" value="Что нужно сделать" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-3400" y="-3300" width="310" height="86" as="geometry" />
         </mxCell>
-        <mxCell id="DCHoocqB4nfjPAk97e-r-1" value="+ Сделать иконку" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ZhISShldY4U9bCmY4Wd9-2">
+        <mxCell id="DCHoocqB4nfjPAk97e-r-1" value="+ Сделать иконку" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ZhISShldY4U9bCmY4Wd9-2" vertex="1">
           <mxGeometry y="26" width="310" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="DCHoocqB4nfjPAk97e-r-2" value="+ Сделать обложку" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ZhISShldY4U9bCmY4Wd9-2">
+        <mxCell id="DCHoocqB4nfjPAk97e-r-2" value="+ Сделать обложку" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ZhISShldY4U9bCmY4Wd9-2" vertex="1">
           <mxGeometry y="56" width="310" height="30" as="geometry" />
         </mxCell>
         <mxCell id="ZhISShldY4U9bCmY4Wd9-9" value="Косяки по проекту" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
